@@ -5,14 +5,18 @@
       {
         "name": "OpenTodoApp/OpenTodo",
         "category": "任务管理",
-        "summary": "用自然语言快速记录待办，并提供日历规划、专注计时、离线使用和共享清单；可自托管，也可使用托管服务。",
+        "summary": "用自然语言快速记录待办，提供日历规划、专注计时、离线使用和共享清单；可自托管，也可使用托管服务。",
         "platform": "手机和电脑；提供 Android 应用及网页应用，支持自托管",
         "cost": "资料称应用免费；托管服务费用待核实",
         "installation": "可用 Docker 启动，或选择托管服务；自托管需要配置和维护服务器",
-        "caution": "自托管需要自行维护服务器和备份；加密、AI 等功能需按文档配置。",
-        "scenario": "任务散落在各处？用自然语言记下待办，再按日期安排一天。",
-        "effort": "自建服务",
-        "recommendation_reason": "支持网页使用、离线记录和自然语言快速添加，适合先体验待办整理；自托管则需维护服务器。",
+        "caution": "自托管需要维护服务器和备份；加密、AI 等功能需按文档配置。",
+        "scenario": "任务散落各处？用自然语言记下待办，再按日期安排一天。",
+        "workflow": {
+          "input": "零散任务和截止日期",
+          "action": "用自然语言记录并安排日程",
+          "output": "得到可执行的日程清单"
+        },
+        "recommendation_reason": "支持网页使用、离线记录和自然语言添加，适合先体验待办整理。",
         "is_featured": true,
         "url": "https://github.com/OpenTodoApp/OpenTodo",
         "description": "Your tasks, your server. An open-source, local-first task manager you can host yourself. Everything you expect from a commercial task app, without the subscription or the lock-in.",
@@ -30,14 +34,18 @@
       {
         "name": "ShareX/ShareX",
         "category": "截图识别",
-        "summary": "面向 Windows 的截图与录屏工具，可标注图片、识别屏幕文字，并按设置保存或上传文件；也支持配置快捷键和自动处理流程。",
+        "summary": "面向 Windows 的截图与录屏工具，可标注图片、识别屏幕文字，并按设置保存或上传文件；也支持快捷键和自动处理流程。",
         "platform": "Windows",
         "cost": "资料称免费且无广告；上传目标服务可能另收费",
         "installation": "从官网或 GitHub Releases 下载并安装，难度低",
         "caution": "上传内容会发送到所配置的目标服务；分享前应遮挡隐私信息。",
         "scenario": "要说明软件问题？截取屏幕、标出重点，再保存或分享。",
-        "effort": "下载安装",
-        "recommendation_reason": "Windows 可直接安装，截图、标注与保存流程实用；上传目的地可自行配置。",
+        "workflow": {
+          "input": "需要说明的屏幕内容",
+          "action": "框选截图并标注重点",
+          "output": "得到可分享的说明截图"
+        },
+        "recommendation_reason": "Windows 可直接安装，截图、标注与保存流程实用，上传目的地也可配置。",
         "is_featured": false,
         "url": "https://github.com/ShareX/ShareX",
         "description": "ShareX is a free and open-source application that enables users to capture or record any area of their screen with a single keystroke. It also supports uploading images, text, and various file types to a wide range of destinations.",
@@ -61,8 +69,12 @@
         "installation": "可从 Microsoft Store 等渠道安装，难度低",
         "caution": "跨设备同步需自行选择并配置 iCloud、WebDAV、共享文件夹等方式。",
         "scenario": "待办和想法越积越多？先放进收件箱，再逐步整理成行动。",
-        "effort": "下载安装",
-        "recommendation_reason": "提供 Microsoft Store 安装渠道，离线可用且无需账号，适合想按步骤整理个人任务的人。",
+        "workflow": {
+          "input": "脑中的想法和待办",
+          "action": "放入收件箱并拆分行动",
+          "output": "得到分组清晰的下一步清单"
+        },
+        "recommendation_reason": "有 Microsoft Store 安装渠道，离线可用且无需账号，适合整理个人任务。",
         "is_featured": false,
         "url": "https://github.com/dongdongbh/Mindwtr",
         "description": "Get tasks and ideas out of your head. A free GTD to-do app for desktop and mobile. Works offline, no account needed",
@@ -85,9 +97,13 @@
         "cost": "资料称免费；具体费用待核实",
         "installation": "从 GitHub Releases 下载对应系统的安装包，难度低",
         "caution": "图片 OCR 模型首次使用时可能需要下载；注意索引范围和磁盘占用。",
-        "scenario": "记不清文件名？搜索文档中的内容或截图里的文字来找资料。",
-        "effort": "下载安装",
-        "recommendation_reason": "Windows 有安装包，搜索范围覆盖文档和截图文字，适合找回文件名记不清的资料。",
+        "scenario": "记不清文件名？搜索文档内容或截图文字来找回资料。",
+        "workflow": {
+          "input": "记得的文件内容或关键词",
+          "action": "搜索文件名和文档文字",
+          "output": "找到并打开匹配文件"
+        },
+        "recommendation_reason": "Windows 有安装包，能搜索文档和截图文字，适合找回难定位的资料。",
         "is_featured": false,
         "url": "https://github.com/yjid/kensaku",
         "description": "Search inside documents, code, and even screenshots - instantly and locally. A free, open-source file launcher with OCR, semantic search, and MCP agent access.",
@@ -110,9 +126,13 @@
         "cost": "DMG 和 Homebrew 版本免费；App Store 版本试用 7 天后一次性付费",
         "installation": "可下载 DMG 拖入应用程序，或用 Homebrew 安装，难度低",
         "caution": "iCloud 同步和 iPhone 配套应用仅限 App Store 版本；剪贴板可能包含敏感信息。",
-        "scenario": "刚复制过一段文字却找不到？打开历史记录搜索并重新复制。",
-        "effort": "下载安装",
-        "recommendation_reason": "剪贴板历史可搜索和固定，适合经常复用文字的 Mac 用户；不同版本的功能和收费有明确说明。",
+        "scenario": "刚复制过一段文字却找不到？搜索历史并重新复制。",
+        "workflow": {
+          "input": "已复制的文字或图片",
+          "action": "打开历史并搜索剪贴内容",
+          "output": "恢复需要再次使用的内容"
+        },
+        "recommendation_reason": "剪贴板历史可搜索和固定，适合经常复用文字的 Mac 用户。",
         "is_featured": false,
         "url": "https://github.com/mobrava/Clipbara",
         "description": "Open-source clipboard manager for macOS and iPhone. Card-style history, Pinboards, Quick Look, and optional iCloud sync. Free DMG and Homebrew builds, one-time purchase on the App Store.",
@@ -136,8 +156,12 @@
         "installation": "可从 Releases 下载，或通过 Homebrew 安装，难度低",
         "caution": "OCR 结果可能有误，复制后应检查专有名词和数字。",
         "scenario": "PDF 页面不能选中文字？框选内容识别后粘贴到笔记里。",
-        "effort": "下载安装",
-        "recommendation_reason": "操作流程简单，适合从屏幕上复制无法选中的文字；但仅支持 macOS。",
+        "workflow": {
+          "input": "屏幕上无法复制的文字",
+          "action": "框选区域并执行 OCR",
+          "output": "得到可粘贴的文字内容"
+        },
+        "recommendation_reason": "操作流程简单，适合从屏幕复制无法选中的文字，但仅支持 macOS。",
         "is_featured": false,
         "url": "https://github.com/amebalabs/TRex",
         "description": "Copy any text on your screen, stop retyping.",
@@ -160,9 +184,13 @@
         "cost": "待核实",
         "installation": "README 提供 GitHub Releases 下载入口；安装难度待核实",
         "caution": "主要播放本地音乐；在线歌词来自第三方，版权及可用性需自行确认。",
-        "scenario": "本地歌曲分散难管理？用曲库和歌单整理后集中播放。",
-        "effort": "待核实",
-        "recommendation_reason": "针对 Windows 本地曲库整理与播放，功能用途明确；安装细节和费用仍需核实。",
+        "scenario": "本地歌曲分散难管理？整理曲库和歌单后集中播放。",
+        "workflow": {
+          "input": "本地音乐文件和歌词",
+          "action": "添加曲库并整理歌单",
+          "output": "得到可浏览的音乐库"
+        },
+        "recommendation_reason": "针对 Windows 本地曲库整理与播放，功能用途明确；安装细节仍需核实。",
         "is_featured": false,
         "url": "https://github.com/qingyueyin/Pure-music",
         "description": "Windows端本地音乐播放器",
@@ -185,9 +213,13 @@
         "cost": "待核实",
         "installation": "从 GitHub Releases 下载对应设备版本；安装 APK 可能需要调整系统设置",
         "caution": "部分功能受 Android 版本和设备架构限制；访问网络共享需配置连接权限。",
-        "scenario": "照片或漫画存放在网络共享中？用手机连接文件夹浏览阅读。",
-        "effort": "需要配置",
-        "recommendation_reason": "覆盖本地与网络文件夹阅读，适合手机访问家庭共享内容；设备兼容要求需先确认。",
+        "scenario": "照片或漫画存放在网络共享中？用手机连接文件夹浏览。",
+        "workflow": {
+          "input": "本地或网络共享文件夹",
+          "action": "添加目录并浏览媒体文件",
+          "output": "得到可阅读观看的媒体库"
+        },
+        "recommendation_reason": "覆盖本地与网络文件夹阅读，适合手机访问家庭共享内容。",
         "is_featured": false,
         "url": "https://github.com/zmz125000/LocalViewer",
         "description": "LocalViewer is a fast and full-featured Android SMB/WebDAV/CBZ/RAW photo/comic/ebook viewer and video player with folder and library support.",
@@ -210,9 +242,13 @@
         "cost": "待核实；项目提供赞助入口",
         "installation": "提供 Windows 安装包、便携包及 Winget 渠道，难度低",
         "caution": "连接前核对服务器地址、证书验证和账号凭据；项目称 macOS 安装包未签名。",
-        "scenario": "要在电脑和服务器间传文件？添加连接后用客户端管理文件。",
-        "effort": "下载安装",
-        "recommendation_reason": "提供 Windows 安装包和 Winget 渠道，可用于连接多种常见文件服务；费用需进一步确认。",
+        "scenario": "要在电脑和服务器间传文件？添加连接后集中管理文件。",
+        "workflow": {
+          "input": "服务器地址和登录凭据",
+          "action": "建立连接并传输指定文件",
+          "output": "完成电脑与服务器间的文件传送"
+        },
+        "recommendation_reason": "提供 Windows 安装包和 Winget 渠道，可连接多种常见文件服务。",
         "is_featured": false,
         "url": "https://github.com/axpdev-lab/aeroftp",
         "description": "Cross-platform file manager: 63 storage backends through 70 connection methods (FTP, FTPS, SFTP, SCP, WebDAV, S3 and native cloud providers), built with Rust 🦀 (Tauri) + React",
@@ -235,9 +271,13 @@
         "cost": "待核实",
         "installation": "提供 AppImage、Deb、RPM 等安装包；AppImage 可直接运行，难度低",
         "caution": "项目仍处于 Alpha 阶段，可能存在缺陷或功能不完整。",
-        "scenario": "整理 Linux 电脑里的文件？用标签页和分栏浏览并执行文件操作。",
-        "effort": "下载安装",
-        "recommendation_reason": "文件浏览、压缩和网络共享功能覆盖日常整理需求；但项目仍处于 Alpha 阶段。",
+        "scenario": "整理 Linux 电脑里的文件？用标签页和分栏浏览并操作。",
+        "workflow": {
+          "input": "待整理的本地文件和文件夹",
+          "action": "用分栏视图移动并压缩文件",
+          "output": "得到整理好的目录结构"
+        },
+        "recommendation_reason": "文件浏览、压缩和网络共享覆盖日常整理需求，但项目仍处于 Alpha 阶段。",
         "is_featured": false,
         "url": "https://github.com/m-uvex/loaf-fm",
         "description": "A beautiful and fast rust-based material 3e file manager for linux.",
@@ -256,6 +296,6 @@
     "generated_at": "2026-11-08T02:51:05.333Z",
     "sent_at": "2026-11-08T03:20:40.217Z",
     "delivery_format_version": 3,
-    "editorial_version": 1
+    "editorial_version": 2
   }
 }
