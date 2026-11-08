@@ -1,6 +1,6 @@
 {
   "2026-11-08": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "OpenTodoApp/OpenTodo",
@@ -213,6 +213,7 @@
         "readme_url": "https://github.com/m-uvex/loaf-fm/blob/main/README.md"
       }
     ],
-    "generated_at": "2026-11-08T02:51:05.333Z"
+    "generated_at": "2026-11-08T02:51:05.333Z",
+    "sent_at": "2026-11-08T02:51:08.695Z"
   }
 }
