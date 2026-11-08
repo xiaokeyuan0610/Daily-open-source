@@ -1,0 +1,70 @@
+name: 每日实用开源精选
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      confirm_resend:
+        description: '仅在确认群里未收到当日日报后开启，允许重发状态不确定的消息'
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: daily-open-source
+  cancel-in-progress: false
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      AI_BASE_URL: https://api.metarouters.org/v1
+      AI_MODEL: gpt-6-sol
+      AI_API_KEY: ${{ secrets.AI_API_KEY }}
+      FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
+      FEISHU_SIGN_SECRET: ${{ secrets.FEISHU_SIGN_SECRET }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CONFIRM_RESEND: ${{ inputs.confirm_resend && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+      - name: 设置归档身份
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: 核验项目并生成日报
+        run: node daily.mjs prepare
+      - name: 先保存日报与去重记录
+        run: |
+          git add reports data/history.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Archive daily open source report'
+            git push
+          fi
+      - name: 发送至飞书群
+        run: node daily.mjs send
+      - name: 保存发送状态
+        if: always()
+        run: |
+          git add data/history.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update delivery status'
+            git push
+          fi
+      - name: 保留失败时的本地归档
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-recovery-${{ github.run_id }}
+          path: |
+            reports/
+            data/history.json
+          retention-days: 30
+      - name: 失败提示
+        if: failure()
+        run: echo '任务失败，请检查本次日志及群内消息后再重试。' >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,1 @@
+{"name":"daily-open-source","private":true,"type":"module","scripts":{"test":"node --test","prepare":"node daily.mjs prepare","send":"node daily.mjs send"},"engines":{"node":">=22"}}
