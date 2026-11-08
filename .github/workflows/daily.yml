@@ -1,5 +1,10 @@
 name: 每日实用开源精选
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'daily.mjs'
+      - '.github/workflows/daily.yml'
   schedule:
     - cron: '0 2 * * *'
   workflow_dispatch:
