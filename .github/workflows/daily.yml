@@ -25,7 +25,7 @@ jobs:
     env:
       AI_BASE_URL: https://api.metarouters.org/v1
       AI_MODEL: gpt-6-sol
-      AI_API_KEY: ${{ secrets.AI_API_KEY }}
+      AI_API_KEY: ${{ secrets.AI_API_KEY || secrets.DAILYOPEN }}
       FEISHU_WEBHOOK_URL: ${{ secrets.FEISHU_WEBHOOK_URL }}
       FEISHU_SIGN_SECRET: ${{ secrets.FEISHU_SIGN_SECRET }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
