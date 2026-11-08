@@ -1,7 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHmac } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { navigation, featuredMarkdown, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
+import { navigation, featuredMarkdown, workflowLine, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
 import { validateEditorial, EDITORIAL_PROMPT, EDITORIAL_VERSION } from './editorial.mjs';
 
 const env = process.env;
@@ -108,7 +108,7 @@ async function generate(candidates) {
 
 export function markdown(date, projects) {
   return `# 每日实用开源精选 · ${date}\n\n10 个实用开源项目。许可证与维护日期来自 GitHub API；中文介绍由 AI 辅助生成，安装前请核对项目说明。\n\n` + featuredMarkdown(projects) + navigation(projects) + projects.map((project, index) =>
-    `## ${String(index + 1).padStart(2, '0')} · [${project.name}](${project.url})\n\n分类：${project.category} ｜ 上手门槛：${project.effort || '待核实'}\n\n> ${project.scenario || project.summary}\n\n${project.summary}\n\n- 平台：${project.platform}\n- 费用：${project.cost}\n- 安装：${project.installation}\n- 注意：${project.caution}\n- [许可证 ${project.license}](${project.license_url})\n- [默认分支最近提交：${project.commit}](${project.commit_url})\n- 最近正式发布：${project.release ? `[${project.release.tag} · ${project.release.date}](${project.release.url})` : '无正式 Release'}\n- [安装说明](${project.readme_url})\n`).join('\n');
+    `## ${String(index + 1).padStart(2, '0')} · [${project.name}](${project.url})\n\n分类：${project.category}\n\n> ${project.scenario || project.summary}\n\n**工作流程：**${workflowLine(project)}\n\n${project.summary}\n\n- 平台：${project.platform}\n- 费用：${project.cost}\n- 安装：${project.installation}\n- 注意：${project.caution}\n- [许可证 ${project.license}](${project.license_url})\n- [默认分支最近提交：${project.commit}](${project.commit_url})\n- 最近正式发布：${project.release ? `[${project.release.tag} · ${project.release.date}](${project.release.url})` : '无正式 Release'}\n- [安装说明](${project.readme_url})\n`).join('\n');
 }
 
 async function prepare() {

@@ -1,4 +1,4 @@
-export const DELIVERY_FORMAT_VERSION = 3;
+export const DELIVERY_FORMAT_VERSION = 4;
 
 const groups = [
   { label: '文件与资料', icon: '📁', pattern: /文件|搜索|备份|云存储|传输|PDF|文档/i },
@@ -11,6 +11,10 @@ const groups = [
 export const shortName = project => project.name.split('/').pop();
 const clean = value => String(value || '待核实').replace(/[\r\n]+/g, ' ').trim();
 const escapeMarkdown = value => clean(value).replace(/[\\`*_\[\]<>]/g, character => `\\${character}`);
+
+export function workflowLine(project) {
+  return ['input', 'action', 'output'].map(field => escapeMarkdown(project.workflow?.[field] || '待核实')).join(' → ');
+}
 
 export function groupProjects(projects) {
   return groups.map(group => ({ ...group, projects: projects.filter(project =>
@@ -60,7 +64,8 @@ export function featuredMarkdown(projects) {
   return `## 🌟 今日首选 · [${escapeMarkdown(shortName(project))}](${project.url})\n\n`
     + `> ${escapeMarkdown(project.scenario)}\n\n`
     + `**为什么先试：**${escapeMarkdown(project.recommendation_reason)}\n\n`
-    + `**适用平台：**${escapeMarkdown(platformLabel(project))} ｜ **上手门槛：**${escapeMarkdown(project.effort)}\n\n---\n\n`;
+    + `**工作流程：**${workflowLine(project)}\n\n`
+    + `**适用平台：**${escapeMarkdown(platformLabel(project))}\n\n---\n\n`;
 }
 
 export function feishuCard(date, projects, repository) {
@@ -78,7 +83,8 @@ export function feishuCard(date, projects, repository) {
     elements.push({ tag: 'markdown', content: `**🌟 今日首选 · [${escapeMarkdown(shortName(featured))}](${featured.url})**\n`
       + `${escapeMarkdown(brief(featured))}\n`
       + `**为什么先试：**${escapeMarkdown(featured.recommendation_reason)}\n`
-      + `<font color='grey'>${escapeMarkdown(platformLabel(featured))} · ${escapeMarkdown(featured.effort || '待核实')}</font>` });
+      + `**工作流程：**${workflowLine(featured)}\n`
+      + `<font color='grey'>${escapeMarkdown(platformLabel(featured))}</font>` });
   }
   for (const group of grouped) {
     elements.push({ tag: 'hr' });
@@ -87,7 +93,8 @@ export function feishuCard(date, projects, repository) {
       elements.push({ tag: 'markdown', content:
         `**[${escapeMarkdown(shortName(project))}](${project.url}) · ${escapeMarkdown(project.category)}**\n`
         + `${escapeMarkdown(brief(project))}\n`
-        + `<font color='grey'>${escapeMarkdown(platformLabel(project))} · ${escapeMarkdown(project.effort || '待核实')}</font>` });
+        + `**工作流程：**${workflowLine(project)}\n`
+        + `<font color='grey'>${escapeMarkdown(platformLabel(project))}</font>` });
     }
   }
   elements.push({ tag: 'hr' });
