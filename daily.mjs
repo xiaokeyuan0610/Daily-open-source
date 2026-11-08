@@ -1,6 +1,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHmac } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { navigation, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
 
 const env = process.env;
 export const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -97,14 +98,19 @@ async function generate(candidates) {
 }
 
 export function markdown(date, projects) {
-  return `# 每日实用开源精选 · ${date}\n\n10 个实用开源项目。许可证与维护日期来自 GitHub API；中文介绍由 AI 辅助生成，安装前请核对项目说明。\n\n` + projects.map((project, index) =>
+  return `# 每日实用开源精选 · ${date}\n\n10 个实用开源项目。许可证与维护日期来自 GitHub API；中文介绍由 AI 辅助生成，安装前请核对项目说明。\n\n` + navigation(projects) + projects.map((project, index) =>
     `## ${String(index + 1).padStart(2, '0')} · [${project.name}](${project.url})\n\n分类：${project.category}\n\n${project.summary}\n\n- 平台：${project.platform}\n- 费用：${project.cost}\n- 安装：${project.installation}\n- 注意：${project.caution}\n- [许可证 ${project.license}](${project.license_url})\n- [默认分支最近提交：${project.commit}](${project.commit_url})\n- 最近正式发布：${project.release ? `[${project.release.tag} · ${project.release.date}](${project.release.url})` : '无正式 Release'}\n- [安装说明](${project.readme_url})\n`).join('\n');
 }
 
 async function prepare() {
   const date = today();
   const history = await load('data/history.json');
-  if (history[date]) { console.log('Today already prepared; keeping original issue'); return; }
+  if (history[date]) {
+    await mkdir('reports', { recursive: true });
+    await writeFile(`reports/${date}.md`, markdown(date, history[date].projects));
+    console.log('Refreshed layout using existing verified projects');
+    return;
+  }
   required('AI_API_KEY'); required('FEISHU_WEBHOOK_URL');
   const projects = await generate(await discover(history));
   await mkdir('reports', { recursive: true });
@@ -122,10 +128,11 @@ async function send() {
   const history = await load('data/history.json');
   const issue = history[date];
   if (!issue) throw new Error('No prepared issue today');
-  if (issue.status === 'sent') { console.log('Today already delivered'); return; }
+  if (!shouldDeliver(issue)) { console.log('Today already delivered in current layout'); return; }
   if (issue.status === 'sending' && env.CONFIRM_RESEND !== 'true') throw new Error('Previous delivery uncertain: inspect group before confirming resend');
   const url = new URL(required('FEISHU_WEBHOOK_URL'));
   if (url.protocol !== 'https:' || url.hostname !== 'open.feishu.cn' || !url.pathname.startsWith('/open-apis/bot/v2/hook/')) throw new Error('Invalid Feishu endpoint');
+  const payload = feishuCard(date, issue.projects, required('GITHUB_REPOSITORY'));
   issue.status = 'sending';
   await save('data/history.json', history);
   const { execFileSync } = await import('node:child_process');
@@ -137,11 +144,10 @@ async function send() {
     else if (diff.status !== 0) throw new Error('Cannot inspect delivery state changes');
     execFileSync('git', ['push']);
   }
-  const text = `每日实用开源精选 · ${date}\n\n` + issue.projects.map((project, index) => `${index + 1}. ${project.name}\n${project.summary}\n${project.url}`).join('\n\n')
-    + `\n\n完整日报：https://github.com/${required('GITHUB_REPOSITORY')}/blob/main/reports/${date}.md`;
-  const result = await request(url.href, { body: signed({ msg_type: 'text', content: { text } }, env.FEISHU_SIGN_SECRET) });
+  const result = await request(url.href, { body: signed(payload, env.FEISHU_SIGN_SECRET) });
   if ((result.code ?? result.StatusCode) !== 0) throw new Error('Feishu rejected message; response suppressed');
   issue.status = 'sent'; issue.sent_at = new Date().toISOString();
+  issue.delivery_format_version = DELIVERY_FORMAT_VERSION;
   await save('data/history.json', history);
   console.log('Daily report delivered');
 }
