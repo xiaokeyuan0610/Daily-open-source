@@ -1,6 +1,6 @@
 {
   "2026-11-08": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "OpenTodoApp/OpenTodo",
@@ -294,8 +294,8 @@
       }
     ],
     "generated_at": "2026-11-08T02:51:05.333Z",
-    "sent_at": "2026-11-08T03:20:40.217Z",
-    "delivery_format_version": 3,
+    "sent_at": "2026-11-08T03:27:44.124Z",
+    "delivery_format_version": 4,
     "editorial_version": 2
   }
 }
