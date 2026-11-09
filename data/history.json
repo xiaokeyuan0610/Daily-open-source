@@ -299,7 +299,7 @@
     "editorial_version": 2
   },
   "2026-11-09": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "files-community/Files",
@@ -593,6 +593,8 @@
       }
     ],
     "editorial_version": 2,
-    "generated_at": "2026-11-09T02:10:31.856Z"
+    "generated_at": "2026-11-09T02:10:31.856Z",
+    "sent_at": "2026-11-09T02:10:35.215Z",
+    "delivery_format_version": 4
   }
 }
