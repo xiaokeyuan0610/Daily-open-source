@@ -6,7 +6,7 @@ on:
       - 'daily.mjs'
       - '.github/workflows/daily.yml'
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0,10,30 2 * * *'
   workflow_dispatch:
     inputs:
       confirm_resend:
