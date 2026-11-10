@@ -598,7 +598,7 @@
     "delivery_format_version": 4
   },
   "2026-11-10": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "LingCore/WinShun",
@@ -893,8 +893,8 @@
     ],
     "editorial_version": 2,
     "generated_at": "2026-11-10T05:15:10.475Z",
-    "sent_at": "2026-11-10T05:15:15.044Z",
-    "delivery_format_version": 4,
+    "sent_at": "2026-11-10T06:34:16.894Z",
+    "delivery_format_version": 5,
     "trending": {
       "source": "https://github.com/trending?since=daily",
       "collected_at": "2026-11-10T06:33:39.061Z",
