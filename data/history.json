@@ -894,6 +894,103 @@
     "editorial_version": 2,
     "generated_at": "2026-11-10T05:15:10.475Z",
     "sent_at": "2026-11-10T05:15:15.044Z",
-    "delivery_format_version": 4
+    "delivery_format_version": 4,
+    "trending": {
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-10T06:33:39.061Z",
+      "status": "ok",
+      "projects": [
+        {
+          "name": "meta/astryx",
+          "category": "React设计系统",
+          "summary": "面向网页应用开发的可定制设计系统，提供可组合的React组件、主题、暗色模式、模板和CLI；也为AI编程助手提供配套文档与工具。",
+          "platform": "React网页项目；要求React 19或更高版本",
+          "cost": "README未说明使用费用，需核实；开源不代表所有相关服务均免费。",
+          "installation": "在项目中安装@astryxdesign/core、@astryxdesign/theme-neutral和@stylexjs/stylex，并将@astryxdesign/cli作为开发依赖；按文档导入CSS并配置主题。",
+          "caution": "README标注项目处于Beta阶段；面向React开发者，并非无需开发配置的独立终端软件。",
+          "scenario": "团队为React后台应用统一按钮、表单和主题样式，并通过CLI查询组件用法。",
+          "workflow": {
+            "input": "准备React 19项目与设计需求",
+            "action": "安装组件、主题和CLI",
+            "output": "获得可定制的组件与主题"
+          },
+          "url": "https://github.com/meta/astryx",
+          "description": "An open source design system that's fully customizable and agent ready",
+          "license": "MIT",
+          "license_url": "https://github.com/meta/astryx/blob/main/LICENSE",
+          "commit": "2026-11-10T06:29:46Z",
+          "commit_url": "https://github.com/meta/astryx/commit/5d0a07467cc60c6f0f27aeda49d701d7887fd67d",
+          "release": {
+            "tag": "v0.7.11",
+            "date": "2026-11-07T15:00:47Z",
+            "url": "https://github.com/meta/astryx/releases/tag/v0.7.11"
+          },
+          "readme_url": "https://github.com/meta/astryx/blob/main/README.md",
+          "trending_rank": 2,
+          "stars_today": 3278,
+          "is_featured": false
+        },
+        {
+          "name": "sherlock-project/sherlock",
+          "category": "社交账号检索工具",
+          "summary": "命令行工具，可按用户名检查多个社交网络上的公开账号线索，并将结果保存为文本或表格文件；README称其覆盖400多个网络。",
+          "platform": "Python命令行工具；可通过pipx、Docker等方式使用，具体系统兼容情况需核实。",
+          "cost": "README未说明使用费用，需核实；开源不代表相关网络服务或基础设施免费。",
+          "installation": "可运行pipx install sherlock-project安装；README也提供Docker方式：docker run -it --rm sherlock/sherlock。",
+          "caution": "检索结果可能需要人工核实；README指出忽略排除项可能带来更多误报。请遵守适用法律及平台规则。",
+          "scenario": "在授权的公开信息核查中，输入一个用户名并汇总可能匹配的社交网站账号。",
+          "workflow": {
+            "input": "准备待查用户名",
+            "action": "运行sherlock并检索",
+            "output": "查看账号线索及导出文件"
+          },
+          "url": "https://github.com/sherlock-project/sherlock",
+          "description": "Hunt down social media accounts by username across social networks",
+          "license": "MIT",
+          "license_url": "https://github.com/sherlock-project/sherlock/blob/master/LICENSE",
+          "commit": "2026-11-01T17:41:43Z",
+          "commit_url": "https://github.com/sherlock-project/sherlock/commit/c588d7c8b476df9f9c84912a05d1430fb8cdcdae",
+          "release": {
+            "tag": "v0.16.2",
+            "date": "2026-09-08T20:54:15Z",
+            "url": "https://github.com/sherlock-project/sherlock/releases/tag/v0.16.2"
+          },
+          "readme_url": "https://github.com/sherlock-project/sherlock/blob/master/docs/README.md",
+          "trending_rank": 3,
+          "stars_today": 4267,
+          "is_featured": false
+        },
+        {
+          "name": "google-deepmind/mujoco",
+          "category": "物理仿真引擎",
+          "summary": "用于仿真多关节结构与环境接触的通用物理引擎，面向机器人、生物力学、图形动画和机器学习等研究与开发；提供C API、Python绑定及Unity插件。",
+          "platform": "Linux x86-64和AArch64、Windows x86-64、macOS通用版本；另有浏览器WebAssembly体验。",
+          "cost": "README未说明使用费用，需核实；开源项目不应直接视为所有相关服务免费。",
+          "installation": "推荐从GitHub Releases下载对应平台的预编译版本；也可先用浏览器体验或按文档从源码构建。",
+          "caution": "面向研究人员和开发者；WebAssembly版本比原生C运行慢，模型与仿真配置需具备相关技术知识。",
+          "scenario": "机器人研究者加载关节模型并运行仿真，观察运动和接触效果。",
+          "workflow": {
+            "input": "准备关节模型或XML文件",
+            "action": "加载模型并运行仿真",
+            "output": "获得状态数据与可视化结果"
+          },
+          "url": "https://github.com/google-deepmind/mujoco",
+          "description": "Multi-Joint dynamics with Contact. A general purpose physics simulator.",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/google-deepmind/mujoco/blob/main/LICENSE",
+          "commit": "2026-11-10T01:28:23Z",
+          "commit_url": "https://github.com/google-deepmind/mujoco/commit/a937a4f916dc586660145973b015e56e04043377",
+          "release": {
+            "tag": "4.0.0",
+            "date": "2026-11-06T15:39:53Z",
+            "url": "https://github.com/google-deepmind/mujoco/releases/tag/4.0.0"
+          },
+          "readme_url": "https://github.com/google-deepmind/mujoco/blob/main/README.md",
+          "trending_rank": 4,
+          "stars_today": 574,
+          "is_featured": false
+        }
+      ]
+    }
   }
 }
