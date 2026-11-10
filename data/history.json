@@ -596,5 +596,302 @@
     "generated_at": "2026-11-09T02:10:31.856Z",
     "sent_at": "2026-11-09T02:10:35.215Z",
     "delivery_format_version": 4
+  },
+  "2026-11-10": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "LingCore/WinShun",
+        "category": "文件管理",
+        "summary": "Windows 文件搜索与快速启动工具。双击 Ctrl 打开搜索框，可按文件名、拼音或文档内容查找本机资料，并从结果中打开文件；剪贴板历史等功能可按需启用。",
+        "platform": "Windows 10、11（x64）",
+        "cost": "项目说明称免费；其他费用待核实",
+        "installation": "从发布页下载安装程序，双击安装；入门难度低",
+        "caution": "安装包据说明尚未签名，可能触发系统警告；内容索引和剪贴板历史需按需开启。",
+        "scenario": "忘了报告存在哪？输入文件名或文档中的文字，找到并打开它。",
+        "workflow": {
+          "input": "记得报告中的一句话",
+          "action": "搜索文档内容并选中结果",
+          "output": "打开对应的报告文件"
+        },
+        "recommendation_reason": "安装方式明确，Windows 用户能直接解决找文件难题；基础搜索步骤清楚，适合先尝试。",
+        "is_featured": true,
+        "url": "https://github.com/LingCore/WinShun",
+        "description": "Win顺：免费开源的 Windows 快速搜索启动器。双击 Ctrl，拼音秒搜文件、全文搜索 Word/Excel/PDF、剪贴板历史（代替 Win+V）、对话框搜索、任务栏搜索、插件、AI 助手 MCP。Free Windows search launcher: pinyin file search, full-text search, clipboard history, MCP server. Everything/Listary alternative.",
+        "license": "MIT",
+        "license_url": "https://github.com/LingCore/WinShun/blob/main/LICENSE",
+        "commit": "2026-11-10T05:06:28Z",
+        "commit_url": "https://github.com/LingCore/WinShun/commit/6fff68423285ede40366416304a4191f407e054d",
+        "release": {
+          "tag": "v0.22.0",
+          "date": "2026-11-07T02:44:30Z",
+          "url": "https://github.com/LingCore/WinShun/releases/tag/v0.22.0"
+        },
+        "readme_url": "https://github.com/LingCore/WinShun/blob/main/README.md"
+      },
+      {
+        "name": "TagStudioDev/TagStudio",
+        "category": "文件管理",
+        "summary": "用标签整理照片和其他文件的桌面应用。它在现有文件夹上建立资料库，无须为了分类而搬动或复制原文件；可为文件添加标签和字段，并用于查找资料。",
+        "platform": "桌面平台；具体支持的系统待核实",
+        "cost": "收费情况待核实",
+        "installation": "有发布页；安装包格式与具体安装步骤待核实，难度待核实",
+        "caution": "项目截图标注为测试阶段；资料库会在所选文件夹内建立 .TagStudio 目录，重要资料应备份。",
+        "scenario": "照片散在多个文件夹？给资料库中的照片打标签，按主题找回它们。",
+        "workflow": {
+          "input": "文件夹中的旅行照片",
+          "action": "建立资料库并标记地点",
+          "output": "按地点找到相关照片"
+        },
+        "recommendation_reason": "不必重排原有文件夹，也能为照片建立可检索的分类；平台和安装细节仍需核实。",
+        "is_featured": false,
+        "url": "https://github.com/TagStudioDev/TagStudio",
+        "description": "A User-Focused Photo & File Management System",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/TagStudioDev/TagStudio/blob/main/LICENSE",
+        "commit": "2026-11-09T19:25:06Z",
+        "commit_url": "https://github.com/TagStudioDev/TagStudio/commit/873de7e5bbeabb8d7103811e9e5bedbabf041b32",
+        "release": {
+          "tag": "v9.6.4",
+          "date": "2026-10-02T19:30:15Z",
+          "url": "https://github.com/TagStudioDev/TagStudio/releases/tag/v9.6.4"
+        },
+        "readme_url": "https://github.com/TagStudioDev/TagStudio/blob/main/README.md"
+      },
+      {
+        "name": "krelltunez/dayGLANCE",
+        "category": "任务管理",
+        "summary": "以可视化时间块规划一天的工具，提供任务收集、日程视图、提醒和周期任务。可在网页直接使用，数据默认保存在浏览器本地；同步与自行托管是可选方式。",
+        "platform": "浏览器；另有 Android、iOS 应用",
+        "cost": "项目说明网页使用免费；可选服务费用待核实",
+        "installation": "打开项目提供的网站即可使用，无需安装；也可自行用 Docker 部署",
+        "caution": "浏览器本地数据需自行做好备份；启用同步或外部集成前应确认数据去向。",
+        "scenario": "一天的待办总排不开？把任务放进时间块，看看各时段要做什么。",
+        "workflow": {
+          "input": "今天的待办和可用时段",
+          "action": "把任务安排进时间块",
+          "output": "得到当天的时间安排"
+        },
+        "recommendation_reason": "网页免安装，时间块能把抽象待办变成具体安排，适合想先理清一天的人。",
+        "is_featured": false,
+        "url": "https://github.com/krelltunez/dayGLANCE",
+        "description": "Your day, at a glance",
+        "license": "MIT",
+        "license_url": "https://github.com/krelltunez/dayGLANCE/blob/main/LICENSE",
+        "commit": "2026-11-10T04:59:03Z",
+        "commit_url": "https://github.com/krelltunez/dayGLANCE/commit/f99a87dbef46b555083e7eb847e25ee4aab24bc2",
+        "release": {
+          "tag": "v5.12.0",
+          "date": "2026-11-07T23:52:18Z",
+          "url": "https://github.com/krelltunez/dayGLANCE/releases/tag/v5.12.0"
+        },
+        "readme_url": "https://github.com/krelltunez/dayGLANCE/blob/main/README.md"
+      },
+      {
+        "name": "tasks/tasks",
+        "category": "任务管理",
+        "summary": "源于 Astrid 的任务管理应用，提供 Android 版本，另有测试阶段的桌面版。适合在手机上记录和查看待办；所给 README 未列出具体任务操作细节。",
+        "platform": "Android；桌面版处于测试阶段，具体系统待核实",
+        "cost": "收费情况待核实",
+        "installation": "Android 可通过 Google Play、F-Droid 或发布页获取；桌面版安装细节待核实",
+        "caution": "桌面版仍标为测试阶段；提醒、同步等具体能力不能仅凭所给资料确认。",
+        "scenario": "出门时怕忘记待办？在手机任务应用中记录要做的事。",
+        "workflow": {
+          "input": "需要记住的待办事项",
+          "action": "在应用中记录任务",
+          "output": "得到手机上的待办记录"
+        },
+        "recommendation_reason": "Android 获取渠道明确，适合以手机为主记录任务；高级功能应先查阅使用文档。",
+        "is_featured": false,
+        "url": "https://github.com/tasks/tasks",
+        "description": "Bringing Astrid Tasks back from the dead",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/tasks/tasks/blob/main/LICENSE",
+        "commit": "2026-11-10T05:01:46Z",
+        "commit_url": "https://github.com/tasks/tasks/commit/6973b5261020ff73078558fc271341ded823e450",
+        "release": {
+          "tag": "15.13",
+          "date": "2026-10-14T00:21:52Z",
+          "url": "https://github.com/tasks/tasks/releases/tag/15.13"
+        },
+        "readme_url": "https://github.com/tasks/tasks/blob/main/README.md"
+      },
+      {
+        "name": "jeiel85/markleaf-android",
+        "category": "笔记写作",
+        "summary": "Android 本地优先的 Markdown 笔记应用，支持快捷插入标题、清单和表格，并可切换编辑与预览。笔记保存在设备上，应用本身不会主动上传或同步。",
+        "platform": "Android",
+        "cost": "收费情况待核实",
+        "installation": "可从 F-Droid 获取；发布页亦提供版本信息，安装难度低",
+        "caution": "不要把可选择的文件夹同步理解成应用自动同步；换机前需自行确认笔记备份方式。",
+        "scenario": "逛店时想记采购清单？在手机笔记里插入勾选项并预览。",
+        "workflow": {
+          "input": "待购买的物品名称",
+          "action": "新建笔记并插入清单",
+          "output": "得到可查看的购物笔记"
+        },
+        "recommendation_reason": "手机端用途明确，Markdown 清单和预览都有具体说明，适合随手记事。",
+        "is_featured": false,
+        "url": "https://github.com/jeiel85/markleaf-android",
+        "description": "A lightweight, local-first Markdown note app for Android.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/jeiel85/markleaf-android/blob/main/LICENSE",
+        "commit": "2026-11-10T05:07:31Z",
+        "commit_url": "https://github.com/jeiel85/markleaf-android/commit/149fe5cca997ec244d9e04e34431287b09f2df68",
+        "release": {
+          "tag": "v2.72.0",
+          "date": "2026-11-04T15:30:43Z",
+          "url": "https://github.com/jeiel85/markleaf-android/releases/tag/v2.72.0"
+        },
+        "readme_url": "https://github.com/jeiel85/markleaf-android/blob/main/README.md"
+      },
+      {
+        "name": "memrynote/memry",
+        "category": "笔记写作",
+        "summary": "本地优先的桌面笔记与规划应用，支持 Markdown 笔记、标签、搜索，也整合任务、日记和日历。使用时可将资料保存在自选文件夹；多设备加密同步为可选服务。",
+        "platform": "macOS、Windows、Linux",
+        "cost": "项目说明应用免费，可选同步收费",
+        "installation": "从发布页下载对应系统安装包，安装后选择资料文件夹；难度较低",
+        "caution": "项目标为测试版；使用重要笔记前先备份。同步并非记笔记的必要步骤。",
+        "scenario": "会议笔记和每日记录分散？存进同一资料夹，用标签查找。",
+        "workflow": {
+          "input": "会议讨论要点",
+          "action": "写成笔记并添加标签",
+          "output": "得到可搜索的会议记录"
+        },
+        "recommendation_reason": "提供 Windows 安装包，笔记保存在本地，免费使用与付费同步的边界也有说明。",
+        "is_featured": false,
+        "url": "https://github.com/memrynote/memry",
+        "description": "One private place for everything on your mind. Capture it, write it, plan it.     Notes, tasks, inbox and journal, end-to-end encrypted.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/memrynote/memry/blob/feat/tauri-v2/LICENSE",
+        "commit": "2026-11-10T04:21:14Z",
+        "commit_url": "https://github.com/memrynote/memry/commit/5afdb700658e94bc166ed90ced9ed1aaf1634ac8",
+        "release": {
+          "tag": "v2026-11-09",
+          "date": "2026-11-09T14:37:29Z",
+          "url": "https://github.com/memrynote/memry/releases/tag/v2026-11-09"
+        },
+        "readme_url": "https://github.com/memrynote/memry/blob/feat/tauri-v2/README.md"
+      },
+      {
+        "name": "szTheory/exifcleaner",
+        "category": "系统工具",
+        "summary": "用于清理受支持图片、媒体文件及 PDF 元数据的桌面工具。可拖入文件或文件夹批量处理，查看清理前后的元数据差异，并选择保留原文件、另存副本。",
+        "platform": "Windows 10 及以上、macOS 13 及以上、64 位 Linux",
+        "cost": "项目说明免费",
+        "installation": "Windows 可从发布页选免安装便携版或安装程序；其他系统有对应安装包，难度较低",
+        "caution": "发布包未做代码签名，初次运行可能出现系统提示；处理前建议勾选另存副本，并核对支持的文件类型。",
+        "scenario": "发照片前担心附带拍摄信息？清理元数据并查看前后差异。",
+        "workflow": {
+          "input": "准备分享的照片",
+          "action": "拖入照片并另存清理副本",
+          "output": "得到元数据已清理的副本"
+        },
+        "recommendation_reason": "隐私问题具体，跨平台安装方式和副本选项说明清晰，适合分享文件前使用。",
+        "is_featured": false,
+        "url": "https://github.com/szTheory/exifcleaner",
+        "description": "Cross-platform desktop GUI app to clean image metadata",
+        "license": "MIT",
+        "license_url": "https://github.com/szTheory/exifcleaner/blob/master/LICENSE",
+        "commit": "2026-10-25T13:40:41Z",
+        "commit_url": "https://github.com/szTheory/exifcleaner/commit/1ba131f5dea7c6e51b929e6f37d92ce63fde980f",
+        "release": {
+          "tag": "v4.7.0",
+          "date": "2026-10-25T13:58:00Z",
+          "url": "https://github.com/szTheory/exifcleaner/releases/tag/v4.7.0"
+        },
+        "readme_url": "https://github.com/szTheory/exifcleaner/blob/master/README.md"
+      },
+      {
+        "name": "Mararsh/MyBox",
+        "category": "系统工具",
+        "summary": "图形化综合工具箱，提供文档、图像、文件、数据等多类处理功能。Windows 自包含程序包解压即可运行，无须另装 Java；适合偶尔需要在一个界面处理不同素材的人。",
+        "platform": "Windows x64、Linux Mint x64、macOS x64；另有需 Java 环境的包",
+        "cost": "项目说明免费",
+        "installation": "下载对应系统的自包含程序包，解压后运行；入门安装难度低",
+        "caution": "作者明确警告软件测试不足，可能损坏数据或输出错误；只用副本操作并核对结果。",
+        "scenario": "临时要改一张图片？用图形界面编辑副本，再检查结果。",
+        "workflow": {
+          "input": "待修改图片的副本",
+          "action": "打开图片并调整尺寸",
+          "output": "得到调整后的图片副本"
+        },
+        "recommendation_reason": "Windows 版解压可用，图像处理场景明确；但稳定性警告意味着必须先备份。",
+        "is_featured": false,
+        "url": "https://github.com/Mararsh/MyBox",
+        "description": "Easy tools of document, image, file, network, data, color, and media.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/Mararsh/MyBox/blob/master/LICENSE",
+        "commit": "2026-11-10T05:10:27Z",
+        "commit_url": "https://github.com/Mararsh/MyBox/commit/b1f2f846a89e063bbc2c59e908c61da54047c2b4",
+        "release": {
+          "tag": "v6.9.3",
+          "date": "2026-02-10T11:25:09Z",
+          "url": "https://github.com/Mararsh/MyBox/releases/tag/v6.9.3"
+        },
+        "readme_url": "https://github.com/Mararsh/MyBox/blob/master/README.md"
+      },
+      {
+        "name": "Ranchero-Software/NetNewsWire",
+        "category": "影音阅读",
+        "summary": "macOS 和 iOS 上的资讯订阅阅读器，支持 RSS、Atom、JSON Feed 等格式，适合把不同网站的更新集中阅读。所给资料未说明 Windows 版本。",
+        "platform": "macOS、iOS",
+        "cost": "项目说明免费",
+        "installation": "提供项目网站及发布页；面向普通用户的具体安装步骤待核实",
+        "caution": "需准备目标网站可用的订阅源；从源码自行构建的版本可能缺少部分账户与阅读功能。",
+        "scenario": "常看的博客太分散？订阅它们的资讯源，在一处读更新。",
+        "workflow": {
+          "input": "常看博客的订阅源",
+          "action": "添加订阅并阅读更新",
+          "output": "得到集中的文章列表"
+        },
+        "recommendation_reason": "用途单纯，支持的订阅格式有明确说明，适合苹果设备用户集中阅读资讯。",
+        "is_featured": false,
+        "url": "https://github.com/Ranchero-Software/NetNewsWire",
+        "description": "RSS reader for macOS and iOS.",
+        "license": "MIT",
+        "license_url": "https://github.com/Ranchero-Software/NetNewsWire/blob/main/LICENSE",
+        "commit": "2026-11-10T05:10:22Z",
+        "commit_url": "https://github.com/Ranchero-Software/NetNewsWire/commit/7662c90692288928da3acb0dc8bced05fc0f1ff9",
+        "release": {
+          "tag": "mac-7.2.1",
+          "date": "2026-10-20T16:59:23Z",
+          "url": "https://github.com/Ranchero-Software/NetNewsWire/releases/tag/mac-7.2.1"
+        },
+        "readme_url": "https://github.com/Ranchero-Software/NetNewsWire/blob/main/README.md"
+      },
+      {
+        "name": "nextcloud/all-in-one",
+        "category": "备份同步",
+        "summary": "用于自行部署 Nextcloud 的整合安装方案，包含文件服务及网页管理界面，并可选启用基于 BorgBackup 的备份功能。适合已有服务器、想自己管理家庭文件访问与备份的人。",
+        "platform": "部署于支持 Docker 的主机；具体主机系统要求待核实，客户端平台待核实",
+        "cost": "软件及运行所需主机、存储等费用待核实",
+        "installation": "通过 Docker 部署并在网页界面维护；需要服务器、存储及网络配置，难度较高",
+        "caution": "备份功能为可选项，不会因安装而自动具备完整备份策略；自行托管需负责更新、存储和恢复验证。",
+        "scenario": "家里有闲置服务器？自建文件服务，并按需配置备份。",
+        "workflow": {
+          "input": "需要集中保存的家庭文件",
+          "action": "上传到自建文件服务",
+          "output": "得到可集中访问的文件"
+        },
+        "recommendation_reason": "文件服务与可选备份集中管理，适合已有服务器且愿意维护的人；不适合追求免配置安装。",
+        "is_featured": false,
+        "url": "https://github.com/nextcloud/all-in-one",
+        "description": "📦 The official Nextcloud installation method. Provides easy deployment and maintenance with most features included in this one Nextcloud instance.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/nextcloud/all-in-one/blob/main/LICENSE",
+        "commit": "2026-11-09T14:52:25Z",
+        "commit_url": "https://github.com/nextcloud/all-in-one/commit/6324a90bc72d2cd8b1d5487f6edf3bf2a29e16ad",
+        "release": {
+          "tag": "v15.0.2",
+          "date": "2026-11-03T11:02:16Z",
+          "url": "https://github.com/nextcloud/all-in-one/releases/tag/v15.0.2"
+        },
+        "readme_url": "https://github.com/nextcloud/all-in-one/blob/main/readme.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-10T05:15:10.475Z"
   }
 }
