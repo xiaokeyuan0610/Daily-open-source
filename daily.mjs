@@ -2,7 +2,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHmac } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { navigation, featuredMarkdown, workflowLine, trendingMarkdown, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
-import { collectTrending, validateHotPicks, HOT_PROMPT } from './trending.mjs';
+import { collectTrending, validateHotPicks, HOT_PROMPT, TRENDING_VERSION } from './trending.mjs';
 import { validateEditorial, EDITORIAL_PROMPT, EDITORIAL_VERSION } from './editorial.mjs';
 
 const env = process.env;
@@ -120,8 +120,8 @@ function practicalMarkdown(date, projects) {
 }
 
 async function addTrending(issue, history) {
-  if (issue.trending) return;
-  const exclude = Object.values(history).flatMap(previous => [...previous.projects, ...(previous.trending?.projects || [])].map(project => project.name));
+  if (issue.trending?.version === TRENDING_VERSION) return;
+  const exclude = Object.values(history).flatMap(previous => [...previous.projects, ...(previous === issue ? [] : previous.trending?.projects || [])].map(project => project.name));
   issue.trending = await collectTrending({ github, eligible, generate, exclude: [...exclude, ...issue.projects.map(project => project.name)] });
 }
 

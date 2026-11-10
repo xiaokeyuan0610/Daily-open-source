@@ -1,4 +1,4 @@
-export const DELIVERY_FORMAT_VERSION = 5;
+export const DELIVERY_FORMAT_VERSION = 6;
 
 const groups = [
   { label: '文件与资料', icon: '📁', pattern: /文件|搜索|备份|云存储|传输|PDF|文档/i },
@@ -82,7 +82,8 @@ export function trendingMarkdown(trending) {
   if (!trending) return '';
   return `\n---\n\n## 🔥 今日热门\n\n${trendingNote(trending)}\n\n[来源：GitHub Trending 日榜](${trending.source}) ｜ 采集时间：${trending.collected_at}\n\n`
     + trending.projects.map(project => `### [${escapeMarkdown(shortName(project))}](${project.url})\n\n`
-      + `**${trendLabel(project)}**\n\n${escapeMarkdown(project.scenario)}\n\n`
+      + `**${trendLabel(project)}**\n\n**这是什么：**${escapeMarkdown(project.what_is)}\n\n`
+      + `**适合谁：**${escapeMarkdown(project.audience)}\n\n**举个例子：**${escapeMarkdown(project.example)}\n\n`
       + `**工作流程：**${workflowLine(project)}\n\n${escapeMarkdown(project.summary)}\n\n`
       + `- 平台：${project.platform}\n- 费用：${project.cost}\n- 安装：${project.installation}\n- 注意：${project.caution}\n`
       + `- [许可证 ${project.license}](${project.license_url})\n- [最近提交 ${project.commit}](${project.commit_url})\n`
@@ -105,7 +106,11 @@ export function feishuCard(date, projects, repository, trending) {
     elements.push({ tag: 'markdown', content: `**🔥 今日热门 · 额外栏目**\n${trendingNote(trending)}` });
     for (const project of trending.projects) {
       elements.push({ tag: 'markdown', content: `**[${escapeMarkdown(shortName(project))}](${project.url})**\n`
-        + `${escapeMarkdown(trendLabel(project))}\n${escapeMarkdown(brief(project))}\n**工作流程：**${workflowLine(project)}` });
+        + `${escapeMarkdown(trendLabel(project))}\n\n`
+        + `**这是什么：**${escapeMarkdown(project.what_is)}\n\n`
+        + `**适合谁：**${escapeMarkdown(project.audience)}\n\n`
+        + `**举个例子：**${escapeMarkdown(project.example)}\n\n`
+        + `**工作流程：**${workflowLine(project)}` });
     }
     elements.push({ tag: 'markdown', content: `[来源：GitHub Trending 日榜](${trending.source})\n<font color='grey'>采集时间：${trending.collected_at}</font>` });
   }
