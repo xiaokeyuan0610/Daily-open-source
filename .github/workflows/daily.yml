@@ -6,7 +6,8 @@ on:
       - 'daily.mjs'
       - '.github/workflows/daily.yml'
   schedule:
-    - cron: '0,10,30 2 * * *'
+    - cron: '0 2 * * *'
+    - cron: '13,43 2-10 * * *'
   workflow_dispatch:
     inputs:
       confirm_resend:
@@ -19,7 +20,32 @@ concurrency:
   group: daily-open-source
   cancel-in-progress: false
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    permissions:
+      contents: read
+    outputs:
+      run: ${{ steps.status.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - id: status
+        name: 检查今日是否已发送
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync, appendFileSync } from 'node:fs';
+          import { today } from './daily.mjs';
+          import { shouldDeliver } from './presentation.mjs';
+          const issue = JSON.parse(readFileSync('data/history.json', 'utf8'))[today()];
+          const needed = !issue || shouldDeliver(issue);
+          appendFileSync(process.env.GITHUB_OUTPUT, 'run=' + needed + '\n');
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, needed ? '今日日报尚未完成，继续运行。\n' : '今日日报已发送，跳过本次检查，不调用 AI、不重复推送。\n');
+          NODE
   daily:
+    needs: check
+    if: needs.check.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     env:
