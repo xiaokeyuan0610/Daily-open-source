@@ -1,7 +1,8 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHmac } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { navigation, featuredMarkdown, workflowLine, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
+import { navigation, featuredMarkdown, workflowLine, trendingMarkdown, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
+import { collectTrending, validateHotPicks, HOT_PROMPT } from './trending.mjs';
 import { validateEditorial, EDITORIAL_PROMPT, EDITORIAL_VERSION } from './editorial.mjs';
 
 const env = process.env;
@@ -37,7 +38,7 @@ export function eligible(repo, license, commit, now = Date.now()) {
 }
 
 async function discover(history) {
-  const seen = new Set(Object.values(history).flatMap(issue => issue.projects.map(project => project.name.toLowerCase())));
+  const seen = new Set(Object.values(history).flatMap(issue => [...issue.projects, ...(issue.trending?.projects || [])].map(project => project.name.toLowerCase())));
   const candidates = new Map();
   const topicResults = [];
   const cutoff = new Date(Date.now() - 365 * 86400000).toISOString().slice(0, 10);
@@ -76,8 +77,8 @@ async function discover(history) {
   return verified;
 }
 
-export function validatePicks(picks, candidates) {
-  if (!Array.isArray(picks) || picks.length !== 10) throw new Error('AI must select exactly 10 projects');
+export function validatePicks(picks, candidates, count = 10) {
+  if (!Array.isArray(picks) || picks.length !== count) throw new Error(`AI must select exactly ${count} projects`);
   const names = new Set();
   return picks.map(pick => {
     const project = candidates.find(candidate => candidate.name === pick.name);
@@ -86,29 +87,42 @@ export function validatePicks(picks, candidates) {
     for (const field of ['category', 'summary', 'platform', 'cost', 'installation', 'caution']) {
       if (typeof pick[field] !== 'string' || !pick[field].trim() || pick[field].length > 500) throw new Error('Invalid AI description');
     }
-    const factFields = ['name', 'url', 'description', 'license', 'license_url', 'commit', 'commit_url', 'release', 'readme_url'];
+    const factFields = ['name', 'url', 'description', 'license', 'license_url', 'commit', 'commit_url', 'release', 'readme_url', 'trending_rank', 'stars_today'];
     const facts = Object.fromEntries(factFields.filter(field => field in project).map(field => [field, project[field]]));
     return { ...pick, ...facts };
   });
 }
 
-async function generate(candidates) {
+async function generate(candidates, count = 10, hot = false) {
   const base = new URL(env.AI_BASE_URL || 'https://api.metarouters.org/v1');
   if (base.protocol !== 'https:') throw new Error('AI endpoint requires HTTPS');
   const response = await request(`${base.href.replace(/\/$/, '')}/chat/completions`, {
     token: required('AI_API_KEY'), body: { model: env.AI_MODEL || 'gpt-6-sol', messages: [
-      { role: 'system', content: EDITORIAL_PROMPT },
+      { role: 'system', content: hot ? HOT_PROMPT : EDITORIAL_PROMPT },
       { role: 'user', content: JSON.stringify(candidates) }
     ] } });
   const content = response.choices?.[0]?.message?.content;
   if (typeof content !== 'string') throw new Error('AI returned no text');
   const parsed = JSON.parse(content.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, ''));
-  return validateEditorial(validatePicks(parsed.projects, candidates));
+  const picks = validatePicks(parsed.projects, candidates, count);
+  if (!hot) return validateEditorial(picks);
+  const verified = validateHotPicks(picks);
+  return verified.sort((first, second) => first.trending_rank - second.trending_rank);
 }
 
-export function markdown(date, projects) {
+export function markdown(date, projects, trending) {
+  return practicalMarkdown(date, projects) + trendingMarkdown(trending);
+}
+
+function practicalMarkdown(date, projects) {
   return `# 每日实用开源精选 · ${date}\n\n10 个实用开源项目。许可证与维护日期来自 GitHub API；中文介绍由 AI 辅助生成，安装前请核对项目说明。\n\n` + featuredMarkdown(projects) + navigation(projects) + projects.map((project, index) =>
     `## ${String(index + 1).padStart(2, '0')} · [${project.name}](${project.url})\n\n分类：${project.category}\n\n> ${project.scenario || project.summary}\n\n**工作流程：**${workflowLine(project)}\n\n${project.summary}\n\n- 平台：${project.platform}\n- 费用：${project.cost}\n- 安装：${project.installation}\n- 注意：${project.caution}\n- [许可证 ${project.license}](${project.license_url})\n- [默认分支最近提交：${project.commit}](${project.commit_url})\n- 最近正式发布：${project.release ? `[${project.release.tag} · ${project.release.date}](${project.release.url})` : '无正式 Release'}\n- [安装说明](${project.readme_url})\n`).join('\n');
+}
+
+async function addTrending(issue, history) {
+  if (issue.trending) return;
+  const exclude = Object.values(history).flatMap(previous => [...previous.projects, ...(previous.trending?.projects || [])].map(project => project.name));
+  issue.trending = await collectTrending({ github, eligible, generate, exclude: [...exclude, ...issue.projects.map(project => project.name)] });
 }
 
 async function prepare() {
@@ -127,16 +141,20 @@ async function prepare() {
       issue.editorial_version = EDITORIAL_VERSION;
       await save('data/history.json', history);
     }
+    await addTrending(issue, history);
+    await save('data/history.json', history);
     await mkdir('reports', { recursive: true });
-    await writeFile(`reports/${date}.md`, markdown(date, history[date].projects));
+    await writeFile(`reports/${date}.md`, markdown(date, issue.projects, issue.trending));
     console.log('Refreshed layout using existing verified projects');
     return;
   }
   required('AI_API_KEY'); required('FEISHU_WEBHOOK_URL');
   const projects = await generate(await discover(history));
+  const issue = { status: 'prepared', projects, editorial_version: EDITORIAL_VERSION, generated_at: new Date().toISOString() };
+  await addTrending(issue, history);
   await mkdir('reports', { recursive: true });
-  await writeFile(`reports/${date}.md`, markdown(date, projects));
-  history[date] = { status: 'prepared', projects, editorial_version: EDITORIAL_VERSION, generated_at: new Date().toISOString() };
+  await writeFile(`reports/${date}.md`, markdown(date, projects, issue.trending));
+  history[date] = issue;
   await save('data/history.json', history);
 }
 
@@ -153,7 +171,7 @@ async function send() {
   if (issue.status === 'sending' && env.CONFIRM_RESEND !== 'true') throw new Error('Previous delivery uncertain: inspect group before confirming resend');
   const url = new URL(required('FEISHU_WEBHOOK_URL'));
   if (url.protocol !== 'https:' || url.hostname !== 'open.feishu.cn' || !url.pathname.startsWith('/open-apis/bot/v2/hook/')) throw new Error('Invalid Feishu endpoint');
-  const payload = feishuCard(date, issue.projects, required('GITHUB_REPOSITORY'));
+  const payload = feishuCard(date, issue.projects, required('GITHUB_REPOSITORY'), issue.trending);
   issue.status = 'sending';
   await save('data/history.json', history);
   const { execFileSync } = await import('node:child_process');

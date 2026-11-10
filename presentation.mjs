@@ -1,4 +1,4 @@
-export const DELIVERY_FORMAT_VERSION = 4;
+export const DELIVERY_FORMAT_VERSION = 5;
 
 const groups = [
   { label: '文件与资料', icon: '📁', pattern: /文件|搜索|备份|云存储|传输|PDF|文档/i },
@@ -68,7 +68,29 @@ export function featuredMarkdown(projects) {
     + `**适用平台：**${escapeMarkdown(platformLabel(project))}\n\n---\n\n`;
 }
 
-export function feishuCard(date, projects, repository) {
+export function trendLabel(project) {
+  return `日榜第 ${project.trending_rank} 位` + (Number.isFinite(project.stars_today) ? ` · 今日新增 ${project.stars_today.toLocaleString('en-US')} Star` : ' · 新增 Star 未公布');
+}
+
+function trendingNote(trending) {
+  if (trending.status === 'unavailable') return '今日热榜暂时无法获取，实用精选正常发送。';
+  if (!trending.projects.length) return '暂无通过核验且未重复的热门项目，不凑数。';
+  return `额外 ${trending.projects.length} 项 · 从 GitHub Trending 日榜筛选，排除历史推荐与当天精选，不代表全网热度排名。`;
+}
+
+export function trendingMarkdown(trending) {
+  if (!trending) return '';
+  return `\n---\n\n## 🔥 今日热门\n\n${trendingNote(trending)}\n\n[来源：GitHub Trending 日榜](${trending.source}) ｜ 采集时间：${trending.collected_at}\n\n`
+    + trending.projects.map(project => `### [${escapeMarkdown(shortName(project))}](${project.url})\n\n`
+      + `**${trendLabel(project)}**\n\n${escapeMarkdown(project.scenario)}\n\n`
+      + `**工作流程：**${workflowLine(project)}\n\n${escapeMarkdown(project.summary)}\n\n`
+      + `- 平台：${project.platform}\n- 费用：${project.cost}\n- 安装：${project.installation}\n- 注意：${project.caution}\n`
+      + `- [许可证 ${project.license}](${project.license_url})\n- [最近提交 ${project.commit}](${project.commit_url})\n`
+      + `- 最近正式发布：${project.release ? `[${project.release.tag} · ${project.release.date}](${project.release.url})` : '无正式 Release'}\n`
+      + `- [项目说明](${project.readme_url})\n`).join('\n');
+}
+
+export function feishuCard(date, projects, repository, trending) {
   const featured = projects.find(project => project.is_featured);
   const grouped = groupProjects(projects.filter(project => project !== featured));
   const allGroups = groupProjects(projects);
@@ -78,6 +100,15 @@ export function feishuCard(date, projects, repository) {
     { tag: 'button', text: { tag: 'plain_text', content: '查看需求导航图与完整日报' }, type: 'primary',
       behaviors: [{ type: 'open_url', default_url: reportUrl }] }
   ];
+  if (trending) {
+    elements.push({ tag: 'hr' });
+    elements.push({ tag: 'markdown', content: `**🔥 今日热门 · 额外栏目**\n${trendingNote(trending)}` });
+    for (const project of trending.projects) {
+      elements.push({ tag: 'markdown', content: `**[${escapeMarkdown(shortName(project))}](${project.url})**\n`
+        + `${escapeMarkdown(trendLabel(project))}\n${escapeMarkdown(brief(project))}\n**工作流程：**${workflowLine(project)}` });
+    }
+    elements.push({ tag: 'markdown', content: `[来源：GitHub Trending 日榜](${trending.source})\n<font color='grey'>采集时间：${trending.collected_at}</font>` });
+  }
   if (featured) {
     elements.push({ tag: 'hr' });
     elements.push({ tag: 'markdown', content: `**🌟 今日首选 · [${escapeMarkdown(shortName(featured))}](${featured.url})**\n`
