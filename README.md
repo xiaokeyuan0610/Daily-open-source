@@ -77,3 +77,9 @@ npm test
 - [GitHub 仓库 API](https://docs.github.com/en/rest/repos/repos)
 - [GitHub 提交 API](https://docs.github.com/en/rest/commits/commits)
 - [飞书自定义机器人与签名校验](https://open.feishu.cn/document/client-docs/bot-v3/add-custom-bot?lang=zh-CN)
+
+## 定时可靠性与补发
+
+GitHub schedule 是尽力调度，可能延迟数小时或漏触发。当前保留北京时间10:00主触发，并在10:13至18:43之间每小时13分、43分补偿检查；这些检查仍依赖GitHub，不保证准点。运行前先检查当日发送状态，已发送则跳过AI生成和推送。发送结果不确定时仍需人工核对，不盲目重发。
+
+需要更稳定的时间触发时，应接入独立调度服务，通过HTTPS POST调用：`https://api.github.com/repos/xiaokeyuan0610/Daily-open-source/actions/workflows/daily.yml/dispatches`，请求体为 `{"ref":"main"}`，授权令牌存于调度服务的加密凭据中。仓库限定令牌只授权本仓库，Actions写权限。不要把令牌放进URL、仓库或日志。外部触发绕开schedule队列，但Actions运行资源仍可能排队。独立调度服务尚未配置。
