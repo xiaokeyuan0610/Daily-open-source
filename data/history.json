@@ -598,7 +598,7 @@
     "delivery_format_version": 4
   },
   "2026-11-10": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "LingCore/WinShun",
@@ -892,6 +892,8 @@
       }
     ],
     "editorial_version": 2,
-    "generated_at": "2026-11-10T05:15:10.475Z"
+    "generated_at": "2026-11-10T05:15:10.475Z",
+    "sent_at": "2026-11-10T05:15:15.044Z",
+    "delivery_format_version": 4
   }
 }
