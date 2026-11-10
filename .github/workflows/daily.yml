@@ -75,6 +75,7 @@ jobs:
           git add reports data/history.json
           if ! git diff --cached --quiet; then
             git commit -m 'Archive daily open source report'
+            git pull --rebase origin main
             git push
           fi
       - name: 发送至飞书群
@@ -85,6 +86,7 @@ jobs:
           git add data/history.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update delivery status'
+            git pull --rebase origin main
             git push
           fi
       - name: 保留失败时的本地归档
