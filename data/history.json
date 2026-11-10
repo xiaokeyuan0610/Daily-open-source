@@ -598,7 +598,7 @@
     "delivery_format_version": 4
   },
   "2026-11-10": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "LingCore/WinShun",
