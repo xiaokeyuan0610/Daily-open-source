@@ -1066,7 +1066,7 @@
     }
   },
   "2026-11-11": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Forward-Future/folio",
@@ -1363,6 +1363,8 @@
       "collected_at": "2026-11-11T01:49:51.221Z",
       "status": "unavailable",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-11T01:51:48.706Z",
+    "delivery_format_version": 6
   }
 }
