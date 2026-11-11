@@ -1,7 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
-import { eligible, validatePicks, signed, markdown, today } from './daily.mjs';
+import { eligible, validatePicks, completePicks, signed, markdown, today } from './daily.mjs';
+import { CATEGORIES } from './editorial.mjs';
 
 test('quality gate rejects unknown licenses, old commits, and archived repositories', () => {
   const now = Date.parse('2026-11-08T02:00:00Z');
@@ -36,4 +37,24 @@ test('report labels commit and release dates separately', () => {
   assert.match(report, /默认分支最近提交：2026-11-01/);
   assert.match(report, /无正式 Release/);
   assert.match(today(), /^\d{4}-\d{2}-\d{2}$/);
+});
+
+test('a short model result gets one corrective retry without changing verified facts', async () => {
+  const candidates = Array.from({ length: 10 }, (_, index) => ({ name: `owner/tool${index}`, license: 'MIT' }));
+  const picks = candidates.map((project, index) => ({ ...project, license: 'invented', category: CATEGORIES[Math.floor(index / 2)], summary: '介绍', platform: '待核实', cost: '待核实', installation: '待核实', caution: '核对说明', scenario: '整理资料', recommendation_reason: '解决实际问题', is_featured: index === 0, workflow: { input: '素材', action: '整理', output: '清单' } }));
+  const prompts = [];
+  const result = await completePicks(candidates, async messages => {
+    prompts.push(messages);
+    return JSON.stringify({ projects: prompts.length === 1 ? picks.slice(0, 8) : picks });
+  });
+  assert.equal(prompts.length, 2);
+  assert.match(prompts[1][0].content, /received 8/);
+  assert.equal(result.length, 10);
+  assert.ok(result.every(project => project.license === 'MIT'));
+});
+
+test('two invalid outputs stop rather than send an incomplete issue', async () => {
+  let attempts = 0;
+  await assert.rejects(completePicks([], async () => { attempts++; return '{'; }), /still invalid after one retry: Invalid JSON/);
+  assert.equal(attempts, 2);
 });

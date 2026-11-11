@@ -78,9 +78,10 @@ async function discover(history) {
 }
 
 export function validatePicks(picks, candidates, count = 10) {
-  if (!Array.isArray(picks) || picks.length !== count) throw new Error(`AI must select exactly ${count} projects`);
+  if (!Array.isArray(picks) || picks.length !== count) throw new Error(`AI must select exactly ${count} projects; received ${Array.isArray(picks) ? picks.length : 'no project array'}`);
   const names = new Set();
   return picks.map(pick => {
+    if (!pick || typeof pick.name !== 'string') throw new Error('Missing project name');
     const project = candidates.find(candidate => candidate.name === pick.name);
     if (!project || names.has(pick.name.toLowerCase())) throw new Error('AI selected unknown or duplicate project');
     names.add(pick.name.toLowerCase());
@@ -93,21 +94,39 @@ export function validatePicks(picks, candidates, count = 10) {
   });
 }
 
+export async function completePicks(candidates, complete, count = 10, hot = false) {
+  const prompt = hot ? HOT_PROMPT : EDITORIAL_PROMPT;
+  const requirement = `输出完整的 JSON 对象，projects 必须恰好包含 ${count} 个不同候选。输出前逐项核对数量与必填字段。`;
+  let correction = '';
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const content = await complete([
+      { role: 'system', content: `${prompt}\n${requirement}${correction}` },
+      { role: 'user', content: JSON.stringify(candidates) }
+    ]);
+    try {
+      if (typeof content !== 'string' || !content.trim()) throw new Error('AI returned no text');
+      const parsed = JSON.parse(content.trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, ''));
+      const picks = validatePicks(parsed?.projects, candidates, count);
+      if (!hot) return validateEditorial(picks);
+      return validateHotPicks(picks).sort((first, second) => first.trending_rank - second.trending_rank);
+    } catch (error) {
+      const reason = error instanceof SyntaxError ? 'Invalid JSON' : error.message;
+      if (attempt === 1) throw new Error(`AI output still invalid after one retry: ${reason}`);
+      console.warn(`AI output invalid; retrying once: ${reason}`);
+      correction = `\n上次输出未通过校验：${reason}。请从同一候选池重新选取并返回完整结果。实用精选应至少覆盖五个真实类别、每类最多两项；不要凭空增加仓库。`;
+      if (hot) correction = `\n上次输出未通过校验：${reason}。请逐一介绍全部候选，返回完整结果，不得遗漏。`;
+    }
+  }
+}
+
 async function generate(candidates, count = 10, hot = false) {
   const base = new URL(env.AI_BASE_URL || 'https://api.metarouters.org/v1');
   if (base.protocol !== 'https:') throw new Error('AI endpoint requires HTTPS');
-  const response = await request(`${base.href.replace(/\/$/, '')}/chat/completions`, {
-    token: required('AI_API_KEY'), body: { model: env.AI_MODEL || 'gpt-6-sol', messages: [
-      { role: 'system', content: hot ? HOT_PROMPT : EDITORIAL_PROMPT },
-      { role: 'user', content: JSON.stringify(candidates) }
-    ] } });
-  const content = response.choices?.[0]?.message?.content;
-  if (typeof content !== 'string') throw new Error('AI returned no text');
-  const parsed = JSON.parse(content.replace(/^```(?:json)?\s*/, '').replace(/\s*```$/, ''));
-  const picks = validatePicks(parsed.projects, candidates, count);
-  if (!hot) return validateEditorial(picks);
-  const verified = validateHotPicks(picks);
-  return verified.sort((first, second) => first.trending_rank - second.trending_rank);
+  return completePicks(candidates, async messages => {
+    const response = await request(`${base.href.replace(/\/$/, '')}/chat/completions`, {
+      token: required('AI_API_KEY'), body: { model: env.AI_MODEL || 'gpt-6-sol', messages } });
+    return response.choices?.[0]?.message?.content;
+  }, count, hot);
 }
 
 export function markdown(date, projects, trending) {
