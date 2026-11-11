@@ -1066,7 +1066,7 @@
     }
   },
   "2026-11-11": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "Forward-Future/folio",
