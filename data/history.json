@@ -1064,5 +1064,305 @@
         }
       ]
     }
+  },
+  "2026-11-11": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "Forward-Future/folio",
+        "category": "影音阅读",
+        "summary": "跨平台 PDF 阅读与编辑工具，可阅读、搜索、添加高亮和批注，也支持签名。Windows 10/11 可下载安装程序或便携版。",
+        "platform": "Windows 10/11、macOS、Linux",
+        "cost": "README 称免费；其他费用待核实。",
+        "installation": "下载 Windows 安装程序并运行，难度低；也可使用便携版。",
+        "caution": "Windows 版本未签名，首次启动可能遇到 SmartScreen 提示；打开网页或在线 PDF 需联网。",
+        "scenario": "PDF 不方便标注？打开文件添加高亮和批注，整理出可回看的重点。",
+        "workflow": {
+          "input": "需要阅读的 PDF 文件",
+          "action": "搜索页面并添加高亮批注",
+          "output": "带重点标记的 PDF"
+        },
+        "recommendation_reason": "支持 Windows 安装或便携运行，PDF 阅读和标注用途明确，上手路径清楚。",
+        "is_featured": true,
+        "url": "https://github.com/Forward-Future/folio",
+        "description": "Folio — a simple, clean, open-source PDF reader and editor",
+        "license": "MIT",
+        "license_url": "https://github.com/Forward-Future/folio/blob/main/LICENSE",
+        "commit": "2026-11-11T01:46:45Z",
+        "commit_url": "https://github.com/Forward-Future/folio/commit/4b9cadb6a5be8d955500295b5f7c00001e9bc78b",
+        "release": null,
+        "readme_url": "https://github.com/Forward-Future/folio/blob/main/README.md"
+      },
+      {
+        "name": "Z1Code/iCopy",
+        "category": "备份同步",
+        "summary": "面向 Windows 和 macOS 的 iCloud 照片下载备份工具，可将照片、视频及 Live Photo 相关文件保存到电脑或外接盘，并校验文件、在中断后续传。",
+        "platform": "Windows、macOS（README 标注测试版）",
+        "cost": "费用待核实。",
+        "installation": "README 提供 Windows 发布版本下载；运行安装方式待核实，难度待核实。",
+        "caution": "需要 iCloud 账号访问照片；释放 iCloud 空间是可选操作，删除前应确认本地备份完整。",
+        "scenario": "担心 iCloud 原片没存到电脑？下载到本地并校验后再整理空间。",
+        "workflow": {
+          "input": "iCloud 照片库和备份目标磁盘",
+          "action": "下载原片并检查文件",
+          "output": "按日期整理的本地照片副本"
+        },
+        "recommendation_reason": "针对照片原片备份这一具体需求，提供校验和断点续传，且明确支持 Windows。",
+        "is_featured": false,
+        "url": "https://github.com/Z1Code/iCopy",
+        "description": "Copia de seguridad de iCloud Fotos para Windows: completa, verificada y sin cortes.",
+        "license": "MIT",
+        "license_url": "https://github.com/Z1Code/iCopy/blob/master/LICENSE",
+        "commit": "2026-11-11T01:11:06Z",
+        "commit_url": "https://github.com/Z1Code/iCopy/commit/4a35b2f91866adc0724560e276693ae1a9b0d4f9",
+        "release": {
+          "tag": "v0.3.0",
+          "date": "2026-11-11T01:19:02Z",
+          "url": "https://github.com/Z1Code/iCopy/releases/tag/v0.3.0"
+        },
+        "readme_url": "https://github.com/Z1Code/iCopy/blob/master/README.md"
+      },
+      {
+        "name": "VioletGiraffe/file-commander",
+        "category": "文件管理",
+        "summary": "面向 Windows 的双栏文件管理器，也支持 macOS 和 Linux，提供插件支持；适合并排浏览文件夹并进行文件整理。",
+        "platform": "Windows、macOS、Linux；FreeBSD 尽力支持",
+        "cost": "费用待核实。",
+        "installation": "从 Releases 下载 Windows x64 版本并运行，难度低；自行编译需 Visual Studio 2022 或更新版本及 Qt 6.8+。",
+        "caution": "项目仍有已知问题列表；编译安装需要额外开发环境。",
+        "scenario": "在两个文件夹间整理资料？用双栏同时打开来源和目标位置。",
+        "workflow": {
+          "input": "待整理的来源和目标文件夹",
+          "action": "双栏浏览并整理文件",
+          "output": "整理到目标位置的文件"
+        },
+        "recommendation_reason": "Windows 是主要目标平台，发布页提供 x64 版本，双栏布局适合常见文件整理。",
+        "is_featured": false,
+        "url": "https://github.com/VioletGiraffe/file-commander",
+        "description": "Cross-platform Total Commander-like orthodox file manager for Windows, Mac and Linux",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/VioletGiraffe/file-commander/blob/master/LICENSE",
+        "commit": "2026-11-10T22:56:29Z",
+        "commit_url": "https://github.com/VioletGiraffe/file-commander/commit/fd0713da0e3c965ef94ef2fbeb012192d1ea5924",
+        "release": {
+          "tag": "0.9.9.7",
+          "date": "2026-04-25T09:33:53Z",
+          "url": "https://github.com/VioletGiraffe/file-commander/releases/tag/0.9.9.7"
+        },
+        "readme_url": "https://github.com/VioletGiraffe/file-commander/blob/master/README.md"
+      },
+      {
+        "name": "microsoft/PowerToys",
+        "category": "系统工具",
+        "summary": "微软提供的 Windows 实用工具集合，包含窗口布局、批量重命名、快速搜索、颜色拾取、文件预览等多种日常辅助功能。",
+        "platform": "Windows",
+        "cost": "费用待核实。",
+        "installation": "README 提供安装章节及文档入口；具体安装命令待核实，难度待核实。",
+        "caution": "包含多个独立工具，建议只启用需要的功能；不同工具的系统要求待核实。",
+        "scenario": "文件名要批量修改？用 PowerRename 统一替换文件名中的文字。",
+        "workflow": {
+          "input": "需要统一命名的一批文件",
+          "action": "设置规则并批量重命名",
+          "output": "按规则更新的文件名"
+        },
+        "recommendation_reason": "面向 Windows 日常操作，工具覆盖多种具体小问题，推荐理由可按实际需要选择功能。",
+        "is_featured": false,
+        "url": "https://github.com/microsoft/PowerToys",
+        "description": "Microsoft PowerToys is a collection of utilities that supercharge productivity and customization on Windows",
+        "license": "MIT",
+        "license_url": "https://github.com/microsoft/PowerToys/blob/main/LICENSE",
+        "commit": "2026-11-10T18:22:39Z",
+        "commit_url": "https://github.com/microsoft/PowerToys/commit/b1084dfe27eae7e4089109b2c03e0573e25aec6a",
+        "release": {
+          "tag": "v0.102.3101",
+          "date": "2026-11-06T09:54:30Z",
+          "url": "https://github.com/microsoft/PowerToys/releases/tag/v0.102.3101"
+        },
+        "readme_url": "https://github.com/microsoft/PowerToys/blob/main/README.md"
+      },
+      {
+        "name": "ryanlua/auraclick",
+        "category": "系统工具",
+        "summary": "Windows 自动点击工具，可通过快捷键启动点击，并调整点击间隔和点击类型。README 标注为公开预览版。",
+        "platform": "Windows",
+        "cost": "费用待核实。",
+        "installation": "可通过 Microsoft Store、WinGet 或发布页安装；WinGet 命令为 winget install --id RyanLuu.AuraClick --source winget，难度低。",
+        "caution": "目前为预览版；自动点击可能在不适合的窗口触发操作，使用前确认目标位置。",
+        "scenario": "需要重复点击同一位置？设好间隔和类型后用快捷键控制点击。",
+        "workflow": {
+          "input": "目标窗口和点击间隔要求",
+          "action": "设置点击类型并启停自动点击",
+          "output": "按设定执行的鼠标点击"
+        },
+        "recommendation_reason": "安装方式包括 Store 和 WinGet，功能单一明确，但预览状态值得留意。",
+        "is_featured": false,
+        "url": "https://github.com/ryanlua/auraclick",
+        "description": "A modern, high-performance auto clicker for Windows",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/ryanlua/auraclick/blob/main/COPYING.md",
+        "commit": "2026-11-11T01:34:45Z",
+        "commit_url": "https://github.com/ryanlua/auraclick/commit/1e79f97b6ad865a2636669a125ceaf94bc60335f",
+        "release": {
+          "tag": "v0.0.1.0",
+          "date": "2026-10-31T02:34:47Z",
+          "url": "https://github.com/ryanlua/auraclick/releases/tag/v0.0.1.0"
+        },
+        "readme_url": "https://github.com/ryanlua/auraclick/blob/main/README.md"
+      },
+      {
+        "name": "xournalpp/xournalpp",
+        "category": "笔记写作",
+        "summary": "支持手写笔记和 PDF 批注的应用，可使用压感手写笔、荧光笔、形状和文本工具，并将内容导出为 PDF、PNG 或 SVG。",
+        "platform": "Windows 10、macOS、Linux",
+        "cost": "费用待核实。",
+        "installation": "从 Releases 下载对应 Windows 安装包并运行，难度低。",
+        "caution": "LaTeX 功能需要另行安装可用的 LaTeX 环境；触控笔压感效果取决于设备支持。",
+        "scenario": "想在讲义上手写补充？打开 PDF 后直接标注并保存批注。",
+        "workflow": {
+          "input": "待批注的 PDF 讲义",
+          "action": "手写重点并添加文字说明",
+          "output": "带手写批注的 PDF"
+        },
+        "recommendation_reason": "支持 Windows，适合课堂讲义和 PDF 手写批注，功能与使用场景对应清楚。",
+        "is_featured": false,
+        "url": "https://github.com/xournalpp/xournalpp",
+        "description": "Xournal++ is a handwriting notetaking software with PDF annotation support. Written in C++ with GTK3, supporting Linux (e.g. Ubuntu, Debian, Arch, SUSE), macOS and Windows 10. Supports pen input from devices such as Wacom Tablets.",
+        "license": "GPL-2.0",
+        "license_url": "https://github.com/xournalpp/xournalpp/blob/master/LICENSE",
+        "commit": "2026-11-10T12:35:46Z",
+        "commit_url": "https://github.com/xournalpp/xournalpp/commit/4d6810b3760c7b3f90c6a3271d6a5623cfb5481f",
+        "release": {
+          "tag": "v1.3.8",
+          "date": "2026-09-26T06:23:53Z",
+          "url": "https://github.com/xournalpp/xournalpp/releases/tag/v1.3.8"
+        },
+        "readme_url": "https://github.com/xournalpp/xournalpp/blob/master/README.md"
+      },
+      {
+        "name": "codexu/note-gen",
+        "category": "笔记写作",
+        "summary": "本地优先的 Markdown 笔记应用，可收集文字、录音、截图、链接和文件，再筛选素材整理为结构化笔记；也支持搜索、导出和工作区管理。",
+        "platform": "桌面与移动端；具体系统版本待核实",
+        "cost": "费用待核实；AI 模型服务可能涉及额外费用，具体待核实。",
+        "installation": "README 提供下载页面；具体安装包与步骤待核实，难度待核实。",
+        "caution": "AI 功能需要配置模型提供方；使用云端模型时，需留意素材是否会发送给服务商。",
+        "scenario": "会议记录散落各处？先收集文字和截图，再整理成一份 Markdown 纪要。",
+        "workflow": {
+          "input": "会议文字、截图和链接",
+          "action": "筛选相关记录并整理成笔记",
+          "output": "可继续编辑的 Markdown 纪要"
+        },
+        "recommendation_reason": "收集后整理的流程贴合日常记录，笔记保留为 Markdown 文件，迁移方式直观。",
+        "is_featured": false,
+        "url": "https://github.com/codexu/note-gen",
+        "description": "Capture first. Organize later. A local-first Markdown app that turns scattered records into clear notes with AI.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/codexu/note-gen/blob/dev/LICENSE",
+        "commit": "2026-11-11T00:44:38Z",
+        "commit_url": "https://github.com/codexu/note-gen/commit/4dcaa3f03a661c1259f8dfcdbc4a94c8cba0ffd5",
+        "release": {
+          "tag": "note-gen-v0.39.2",
+          "date": "2026-11-01T09:20:45Z",
+          "url": "https://github.com/codexu/note-gen/releases/tag/note-gen-v0.39.2"
+        },
+        "readme_url": "https://github.com/codexu/note-gen/blob/dev/README.md"
+      },
+      {
+        "name": "alainm23/planify",
+        "category": "任务管理",
+        "summary": "GNOME 桌面任务管理器，可整理项目和任务、设置提醒与重复任务，并与 Todoist、Nextcloud 或 CalDAV 同步。",
+        "platform": "Linux，需支持 GTK4 的发行版",
+        "cost": "费用待核实。",
+        "installation": "可从 Flathub 安装；也可按 README 在 Linux 上编译，后者需要开发依赖，难度较高。",
+        "caution": "README 列出的系统要求是 Linux；Windows 支持待核实。Todoist 等第三方服务需相应账号。",
+        "scenario": "容易忘记待办截止时间？给任务设置提醒并按项目分类查看。",
+        "workflow": {
+          "input": "待办事项和截止时间",
+          "action": "创建任务并设置提醒",
+          "output": "可跟进的任务清单"
+        },
+        "recommendation_reason": "任务、提醒和日历视图对应日常计划需求；需注意其主要面向 Linux。",
+        "is_featured": false,
+        "url": "https://github.com/alainm23/planify",
+        "description": "Task manager with Todoist, Nextcloud & CalDAV support designed for GNOME",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/alainm23/planify/blob/main/LICENSE",
+        "commit": "2026-11-11T01:47:49Z",
+        "commit_url": "https://github.com/alainm23/planify/commit/984fd82a436ccfc21d6f847d3e7f2a68bf47d170",
+        "release": {
+          "tag": "v4.20.0",
+          "date": "2026-09-10T18:06:35Z",
+          "url": "https://github.com/alainm23/planify/releases/tag/v4.20.0"
+        },
+        "readme_url": "https://github.com/alainm23/planify/blob/main/README.md"
+      },
+      {
+        "name": "kopia/kopia",
+        "category": "备份同步",
+        "summary": "跨平台文件备份与恢复工具，提供图形界面和命令行，可将选定文件夹备份到本机、网络存储或云端存储，并支持加密、压缩和去重。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "软件费用待核实；云存储空间可能需要另行付费。",
+        "installation": "按官方安装页面下载 Windows 版本；详细步骤待核实，难度待核实。",
+        "caution": "需自行选择并准备存储位置；启用加密后应妥善保存密钥，避免无法恢复数据。",
+        "scenario": "怕误删重要文件？定期备份指定文件夹，必要时恢复旧版本。",
+        "workflow": {
+          "input": "需要保护的文件夹和备份位置",
+          "action": "创建加密备份快照",
+          "output": "可供恢复的文件备份"
+        },
+        "recommendation_reason": "同时提供图形界面和 Windows 支持，适合建立个人文件备份；存储费用需另行考虑。",
+        "is_featured": false,
+        "url": "https://github.com/kopia/kopia",
+        "description": "Cross-platform backup tool for Windows, macOS & Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/kopia/kopia/blob/master/LICENSE",
+        "commit": "2026-11-10T23:17:42Z",
+        "commit_url": "https://github.com/kopia/kopia/commit/07d64c2273e2297c4b669180ce2e58a0345c3fec",
+        "release": {
+          "tag": "v0.23.1",
+          "date": "2026-06-16T01:27:33Z",
+          "url": "https://github.com/kopia/kopia/releases/tag/v0.23.1"
+        },
+        "readme_url": "https://github.com/kopia/kopia/blob/master/README.md"
+      },
+      {
+        "name": "jitsi/jitsi-meet",
+        "category": "办公处理",
+        "summary": "浏览器可用的视频会议软件，支持音视频通话、屏幕共享、聊天、举手和投票；也可部署自有会议服务。",
+        "platform": "支持当前主流浏览器；另有 Android 和 iOS 应用",
+        "cost": "使用 meet.jit.si 的费用说明为免费；自建部署的主机成本待核实。",
+        "installation": "浏览器打开 meet.jit.si 即可使用；发起会议需 Google、Facebook 或 GitHub 账号；自建需要按文档部署。",
+        "caution": "公共服务需联网；会议隐私和端到端加密设置应按官方安全说明确认。",
+        "scenario": "临时需要远程讨论？打开网页创建会议并共享屏幕。",
+        "workflow": {
+          "input": "会议主题和参会者",
+          "action": "打开会议并共享屏幕",
+          "output": "可进行交流的线上会议"
+        },
+        "recommendation_reason": "浏览器即可开始会议，无需先安装桌面程序，适合临时远程沟通。",
+        "is_featured": false,
+        "url": "https://github.com/jitsi/jitsi-meet",
+        "description": "Jitsi Meet - Secure, Simple and Scalable Video Conferences that you use as a standalone app or embed in your web application.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/jitsi/jitsi-meet/blob/master/LICENSE",
+        "commit": "2026-11-11T00:32:20Z",
+        "commit_url": "https://github.com/jitsi/jitsi-meet/commit/70143c68c21019d9a17a1ce04c39675fff41aa0f",
+        "release": {
+          "tag": "stable/jitsi-meet_11248",
+          "date": "2026-09-14T13:07:11Z",
+          "url": "https://github.com/jitsi/jitsi-meet/releases/tag/stable/jitsi-meet_11248"
+        },
+        "readme_url": "https://github.com/jitsi/jitsi-meet/blob/master/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-11T01:49:51.221Z",
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-11T01:49:51.221Z",
+      "status": "unavailable",
+      "projects": []
+    }
   }
 }
