@@ -1366,5 +1366,467 @@
     },
     "sent_at": "2026-11-11T01:51:48.706Z",
     "delivery_format_version": 6
+  },
+  "2026-11-12": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "neondeex/atlas-filemanager",
+        "category": "文件管理",
+        "summary": "面向 Windows 10/11 的本地文件管理器，支持多种文件视图、标签页、分栏、模糊搜索、文件预览和磁盘空间清理；文件留在本机。项目处于 alpha 阶段。",
+        "platform": "Windows 10/11；Linux 版本在开发中，macOS 计划中",
+        "cost": "可免费使用；可选一次性付费升级 Premium，解锁更高使用限额。",
+        "installation": "可从 Microsoft Store 安装，难度低；也可按 README 指引用 Rust 和 MSVC 工具链从源码构建，难度高。",
+        "caution": "处于 alpha 阶段，功能可能有粗糙之处；云盘连接和部分扩展可能涉及额外配置。",
+        "scenario": "文件夹里资料太多难整理？用标签、搜索和分栏更快定位文件。",
+        "workflow": {
+          "input": "要整理的本地文件夹",
+          "action": "搜索文件并按需移动整理",
+          "output": "更易查找的文件布局"
+        },
+        "recommendation_reason": "Windows 商店可直接安装，文件浏览、搜索和整理用途明确；需留意目前仍是 alpha。",
+        "is_featured": false,
+        "url": "https://github.com/neondeex/atlas-filemanager",
+        "description": "Atlas — a native, GPU-accelerated, local-first file manager for Windows. Built with Rust and GPUI.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/neondeex/atlas-filemanager/blob/main/LICENSE",
+        "commit": "2026-11-12T01:26:37Z",
+        "commit_url": "https://github.com/neondeex/atlas-filemanager/commit/7da9f0fdc129791bca8cb5ea5ab89fa94495a313",
+        "release": {
+          "tag": "v0.1.5",
+          "date": "2026-11-06T00:41:54Z",
+          "url": "https://github.com/neondeex/atlas-filemanager/releases/tag/v0.1.5"
+        },
+        "readme_url": "https://github.com/neondeex/atlas-filemanager/blob/main/README.md"
+      },
+      {
+        "name": "DayuanJiang/PecoFence",
+        "category": "文件管理",
+        "summary": "Windows 桌面文件整理工具，可将桌面图标收纳到分区面板，支持标签页、文件夹视图、规则整理和快捷搜索，也提供 CLI 管理布局与设置。",
+        "platform": "Windows 10/11",
+        "cost": "README 标注可免费使用；其他收费安排待核实。",
+        "installation": "可通过 Microsoft Store 安装，或下载便携 ZIP；难度低。",
+        "caution": "自动整理规则会影响文件在桌面上的呈现；调整前建议先备份配置。",
+        "scenario": "桌面文件越堆越乱？按项目分区收纳，并为新文件设置整理规则。",
+        "workflow": {
+          "input": "桌面上的文件和项目分类",
+          "action": "创建分区并整理图标",
+          "output": "按项目归类的桌面布局"
+        },
+        "recommendation_reason": "针对桌面杂乱这个常见问题，提供直观的分区整理方式，并支持商店或便携安装。",
+        "is_featured": false,
+        "url": "https://github.com/DayuanJiang/PecoFence",
+        "description": "A free, open-source Stardock Fences alternative for Windows 11 and 10. Glass fences, live folders, tabs, Peek. Rust, a few MB of RAM at rest, 11 languages, portable.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/DayuanJiang/PecoFence/blob/main/LICENSE",
+        "commit": "2026-11-12T00:56:42Z",
+        "commit_url": "https://github.com/DayuanJiang/PecoFence/commit/b4fff2e7bdb60fca3551f57fc392231dbb82ab76",
+        "release": {
+          "tag": "v0.3.3",
+          "date": "2026-11-09T13:58:55Z",
+          "url": "https://github.com/DayuanJiang/PecoFence/releases/tag/v0.3.3"
+        },
+        "readme_url": "https://github.com/DayuanJiang/PecoFence/blob/main/README.md"
+      },
+      {
+        "name": "Salvanza/salvanza_client",
+        "category": "备份同步",
+        "summary": "连接 Proxmox Backup Server 的 Windows 和 Linux 备份客户端，可按计划或手动备份文件夹及整机磁盘，并支持恢复文件、回滚和客户端加密。",
+        "platform": "Windows、Linux（amd64、arm64）",
+        "cost": "费用待核实；开源不代表服务端存储或部署没有成本。",
+        "installation": "提供桌面应用、后台服务、命令行工具和恢复 ISO；具体安装步骤见项目手册，难度中等。",
+        "caution": "需要可用的 Proxmox Backup Server；整机备份和恢复涉及磁盘操作，操作前应核对目标和备份。",
+        "scenario": "担心电脑故障丢资料？定期备份文件或整机，并在需要时恢复。",
+        "workflow": {
+          "input": "待备份的文件夹或磁盘",
+          "action": "连接备份服务器并创建备份",
+          "output": "可供恢复的备份数据"
+        },
+        "recommendation_reason": "提供 Windows 整机与文件夹备份及恢复能力，适合已有 PBS 环境的用户；需配置服务端。",
+        "is_featured": false,
+        "url": "https://github.com/Salvanza/salvanza_client",
+        "description": "Salvanza: open-source backup client for Proxmox Backup Server. Folder and whole-machine backups on Windows and Linux (amd64 and arm64), with a desktop app, background service and command line. Restore, Undelete, Roll back, encryption, deduplication and P2V. GPL-3.0",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Salvanza/salvanza_client/blob/master/LICENSE",
+        "commit": "2026-11-08T20:41:57Z",
+        "commit_url": "https://github.com/Salvanza/salvanza_client/commit/b0bbc0fbb2c2f7d7e62e172263532c9bec61d0f8",
+        "release": {
+          "tag": "v2.0.0",
+          "date": "2026-11-08T20:43:43Z",
+          "url": "https://github.com/Salvanza/salvanza_client/releases/tag/v2.0.0"
+        },
+        "readme_url": "https://github.com/Salvanza/salvanza_client/blob/master/README.md"
+      },
+      {
+        "name": "rleeon/hoard",
+        "category": "备份同步",
+        "summary": "跨平台游戏存档备份与同步工具，可自动识别大量游戏和模拟器，保存多个历史版本，并在存档损坏或换机时回滚或恢复。",
+        "platform": "Windows、Linux、macOS、SteamOS、BazziteOS",
+        "cost": "可自托管；README 描述 Hoard One 云服务有免费额度，后续费用待核实。",
+        "installation": "可安装桌面应用或命令行工具；自托管需另行运行服务器，难度中等。",
+        "caution": "云服务额度有限；自托管需要维护服务器和存储。自动识别范围不代表每款游戏都受支持。",
+        "scenario": "换电脑怕游戏存档丢失？自动保存多个版本，需要时恢复旧进度。",
+        "workflow": {
+          "input": "已安装游戏的存档",
+          "action": "备份存档并保留历史版本",
+          "output": "可恢复的游戏存档版本"
+        },
+        "recommendation_reason": "自动发现游戏并保留存档历史，解决换机和误覆盖问题；可按需选择云端或自托管。",
+        "is_featured": false,
+        "url": "https://github.com/rleeon/hoard",
+        "description": "Free Automatic, versioned game save backup and sync for Windows, Linux, macOS, SteamOS, Brazzite.... Auto-detects 22,000+ games and any emulator. Use Hoard Cloud, or self-host with no Hoard One account and no telemetry. Open source (AGPL-3.0).",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/rleeon/hoard/blob/main/LICENSE",
+        "commit": "2026-11-11T22:09:07Z",
+        "commit_url": "https://github.com/rleeon/hoard/commit/05d5304622b8ee30ab887500d5c8b8072020372b",
+        "release": {
+          "tag": "v1.3.0",
+          "date": "2026-10-25T20:17:18Z",
+          "url": "https://github.com/rleeon/hoard/releases/tag/v1.3.0"
+        },
+        "readme_url": "https://github.com/rleeon/hoard/blob/main/README.md"
+      },
+      {
+        "name": "siyuan-note/siyuan",
+        "category": "笔记写作",
+        "summary": "隐私优先的个人知识管理工具，支持块级引用、双向链接和 Markdown 所见即所得编辑，可用于整理笔记与建立知识关联。",
+        "platform": "README 提及桌面应用及 Docker、自托管部署；具体桌面系统支持待核实",
+        "cost": "README 称大多数功能免费；部分功能或服务的费用需查看项目说明。",
+        "installation": "可从项目发布页获取安装包，也支持 Docker 等部署方式；个人桌面安装难度待核实。",
+        "caution": "数据存储和同步方式需按指南配置；使用第三方同步盘或相关服务时需关注数据隐私与备份。",
+        "scenario": "笔记越积越多找不到关联？用双向链接把想法和资料串起来。",
+        "workflow": {
+          "input": "课程、工作或生活中的零散笔记",
+          "action": "创建笔记并添加关联引用",
+          "output": "相互链接的知识笔记"
+        },
+        "recommendation_reason": "适合把零散信息整理成可互相引用的笔记；中文用户可阅读中文说明，但具体安装平台需确认。",
+        "is_featured": false,
+        "url": "https://github.com/siyuan-note/siyuan",
+        "description": "An open-source, privacy-first, self-hosted knowledge workspace where humans and AI agents work together 开源、隐私优先、自托管的知识工作空间，让人与智能体在此协作",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/siyuan-note/siyuan/blob/master/LICENSE",
+        "commit": "2026-11-10T04:12:44Z",
+        "commit_url": "https://github.com/siyuan-note/siyuan/commit/be17ed1e0510bb6371cb8a162e16898a697fa118",
+        "release": {
+          "tag": "v3.8.10",
+          "date": "2026-11-10T04:13:26Z",
+          "url": "https://github.com/siyuan-note/siyuan/releases/tag/v3.8.10"
+        },
+        "readme_url": "https://github.com/siyuan-note/siyuan/blob/master/README.md"
+      },
+      {
+        "name": "campfirium/foliole",
+        "category": "笔记写作",
+        "summary": "渐进式阅读应用，可集中管理文档、摘录段落、制作填空卡片并安排复习；支持 Markdown、PDF、EPUB 等材料。",
+        "platform": "macOS、Windows、Linux（实验性）、iOS、Android",
+        "cost": "费用待核实。",
+        "installation": "可下载安装包，也可先体验在线演示；桌面安装难度低，项目目前处于 beta。",
+        "caution": "Linux 版本为实验性，整体处于 beta；设备间同步通过本地网络，README 未说明中心云同步。",
+        "scenario": "读完资料总记不住重点？摘录关键段落并安排间隔复习。",
+        "workflow": {
+          "input": "要阅读的 PDF 或 EPUB",
+          "action": "摘录重点并创建复习材料",
+          "output": "可定期回顾的阅读笔记"
+        },
+        "recommendation_reason": "Windows 有应用版本，阅读、摘录和复习连成一套流程；需考虑 beta 阶段的稳定性。",
+        "is_featured": false,
+        "url": "https://github.com/campfirium/foliole",
+        "description": "An approachable incremental reading app.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/campfirium/foliole/blob/dev/LICENSE",
+        "commit": "2026-11-11T23:50:56Z",
+        "commit_url": "https://github.com/campfirium/foliole/commit/20ef0685318a7f8694a5d774189fb0e78cc26bc8",
+        "release": {
+          "tag": "v0.8.1",
+          "date": "2026-11-07T07:31:20Z",
+          "url": "https://github.com/campfirium/foliole/releases/tag/v0.8.1"
+        },
+        "readme_url": "https://github.com/campfirium/foliole/blob/dev/README.md"
+      },
+      {
+        "name": "vict0rsch/PaperMemory",
+        "category": "影音阅读",
+        "summary": "浏览器内的科研论文管理扩展，可在打开支持来源的论文时自动记录，搜索、添加标签和评论，并查找代码仓库、已发表版本及 BibTeX 引文。",
+        "platform": "Chrome、Brave、Edge、Firefox",
+        "cost": "费用待核实；README 提供捐赠入口。",
+        "installation": "从 Chrome Web Store 或 Firefox Add-ons 安装扩展，难度低。",
+        "caution": "自动识别仅覆盖 README 列出的来源；查找代码仓库和发表版本依赖外部数据库或 API。",
+        "scenario": "浏览论文时总忘记保存？用浏览器扩展自动记录并整理阅读清单。",
+        "workflow": {
+          "input": "浏览器中打开的论文页面",
+          "action": "记录论文并添加标签或评论",
+          "output": "可搜索的论文阅读清单"
+        },
+        "recommendation_reason": "浏览器扩展安装简单，能减少手动记论文和复制引文的步骤；适用范围以支持来源为限。",
+        "is_featured": false,
+        "url": "https://github.com/vict0rsch/PaperMemory",
+        "description": "Your browser's reference manager: automatic paper detection (Arxiv, OpenReview & more), publication venue matching and code repository discovery! Also enhances ArXiv: BibTex citation, Markdown link, direct download and more!",
+        "license": "MIT",
+        "license_url": "https://github.com/vict0rsch/PaperMemory/blob/master/LICENSE",
+        "commit": "2026-11-12T00:21:16Z",
+        "commit_url": "https://github.com/vict0rsch/PaperMemory/commit/d6bbea7375cfe64b99d3cf9a62d70244d09a7693",
+        "release": {
+          "tag": "1.0.3",
+          "date": "2025-11-15T10:10:20Z",
+          "url": "https://github.com/vict0rsch/PaperMemory/releases/tag/1.0.3"
+        },
+        "readme_url": "https://github.com/vict0rsch/PaperMemory/blob/master/Readme.md"
+      },
+      {
+        "name": "oomol-lab/pdf-craft",
+        "category": "办公处理",
+        "summary": "处理扫描书籍、论文和技术文档的工具，可将扫描 PDF 转成 Markdown 或 EPUB，也支持翻译内容并生成双语电子书或翻译后的 PDF。",
+        "platform": "在线服务可通过浏览器使用；本地方式提供 Python 库，具体桌面平台待核实",
+        "cost": "在线服务及第三方 OCR 的收费情况待核实；本地运行所需资源和模型可能产生额外成本。",
+        "installation": "可直接使用在线转换服务；本地 OCR 需配置 Python、Poppler、CUDA 和模型，安装难度较高。",
+        "caution": "扫描质量和页面排版会影响识别准确度；在线转换会上传文件，敏感资料应谨慎处理。",
+        "scenario": "扫描书籍无法搜索？转成 Markdown 检索内容，或生成 EPUB 阅读。",
+        "workflow": {
+          "input": "扫描版 PDF 文件",
+          "action": "选择 Markdown 或 EPUB 转换",
+          "output": "可搜索或阅读的文档"
+        },
+        "recommendation_reason": "针对扫描 PDF 难编辑、难搜索的问题提供在线试用入口；处理敏感文件前应确认数据去向。",
+        "is_featured": false,
+        "url": "https://github.com/oomol-lab/pdf-craft",
+        "description": "PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books.",
+        "license": "MIT",
+        "license_url": "https://github.com/oomol-lab/pdf-craft/blob/main/LICENSE",
+        "commit": "2026-11-12T01:19:53Z",
+        "commit_url": "https://github.com/oomol-lab/pdf-craft/commit/73371dcbf2137443c27afafa7a9d79da3f63604a",
+        "release": {
+          "tag": "v2.6.7",
+          "date": "2026-10-28T13:22:08Z",
+          "url": "https://github.com/oomol-lab/pdf-craft/releases/tag/v2.6.7"
+        },
+        "readme_url": "https://github.com/oomol-lab/pdf-craft/blob/main/README.md"
+      },
+      {
+        "name": "storytold/filmcraft",
+        "category": "影音阅读",
+        "summary": "面向多轨剪辑、调色和声音处理的视频编辑器，支持 Windows、macOS、Linux 及浏览器版；项目说明其仍较新、快速迭代。",
+        "platform": "Windows、macOS、Linux、浏览器（WebAssembly）",
+        "cost": "费用待核实。",
+        "installation": "README 提供下载入口，具体 Windows 安装包格式与安装步骤待核实；难度待核实。",
+        "caution": "项目状态标注为较新且仍在快速迭代，重要剪辑项目建议保留原素材和独立备份。",
+        "scenario": "想剪辑家庭或旅行视频？把素材放入时间线，剪出一段成片。",
+        "workflow": {
+          "input": "待剪辑的视频与音频素材",
+          "action": "排列片段并编辑时间线",
+          "output": "剪辑后的影片"
+        },
+        "recommendation_reason": "Windows 可用，面向实际视频剪辑工作；项目较新，使用前应确认当前版本是否适合正式项目。",
+        "is_featured": false,
+        "url": "https://github.com/storytold/filmcraft",
+        "description": "FilmCraft: An open-source, nonlinear video editor written from scratch in pure Rust",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/storytold/filmcraft/blob/main/LICENSE-APACHE",
+        "commit": "2026-11-11T22:26:13Z",
+        "commit_url": "https://github.com/storytold/filmcraft/commit/db60ee45c2f5a5a125f26e4f6fc5de0b74fb811b",
+        "release": {
+          "tag": "v0.20.1",
+          "date": "2026-11-12T00:26:09Z",
+          "url": "https://github.com/storytold/filmcraft/releases/tag/v0.20.1"
+        },
+        "readme_url": "https://github.com/storytold/filmcraft/blob/main/README.md"
+      },
+      {
+        "name": "plainhub/plain-app",
+        "category": "系统工具",
+        "summary": "Android 手机管理应用，可在同一网络的电脑浏览器中查看和管理手机文件、媒体、联系人等，也提供屏幕镜像、短信和通知访问等功能。",
+        "platform": "Android；电脑端通过浏览器访问，包含 Windows 可用场景",
+        "cost": "README 标注免费且无广告；其他费用待核实。",
+        "installation": "在 Android 设备上通过 Google Play、F-Droid 或 GitHub Releases 安装；电脑无需安装桌面端，难度低。",
+        "caution": "访问短信、联系人、通话记录等功能需谨慎授予权限；手机与电脑需要处于同一网络。",
+        "scenario": "想用电脑整理手机文件？在同一 Wi-Fi 下用浏览器访问手机管理界面。",
+        "workflow": {
+          "input": "同一网络中的 Android 手机",
+          "action": "浏览器打开手机管理页面",
+          "output": "可在电脑查看的手机资料"
+        },
+        "recommendation_reason": "电脑端无需安装应用，适合临时查看和管理手机内容；需留意权限授予与网络环境。",
+        "is_featured": true,
+        "url": "https://github.com/plainhub/plain-app",
+        "description": "🔥 PlainApp is an open-source app that lets you securely manage your phone from a web browser. Access files, media, contacts, SMS, calls, and more through a simple, easy-to-use interface on your desktop.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/plainhub/plain-app/blob/main/LICENSE",
+        "commit": "2026-11-11T23:38:33Z",
+        "commit_url": "https://github.com/plainhub/plain-app/commit/84b633904370747d13ec26b8367f9d5fa1b72abd",
+        "release": {
+          "tag": "v3.3.25",
+          "date": "2026-09-11T14:10:31Z",
+          "url": "https://github.com/plainhub/plain-app/releases/tag/v3.3.25"
+        },
+        "readme_url": "https://github.com/plainhub/plain-app/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-12T01:32:51.283Z",
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-12T01:32:51.284Z",
+      "status": "ok",
+      "projects": [
+        {
+          "name": "ZhuLinsen/daily_stock_analysis",
+          "category": "股票信息分析与报告推送",
+          "summary": "汇集自选股行情、新闻等资料，借助大模型生成包含趋势、风险和操作检查清单的分析报告。支持网页工作台、定时运行，并可向企业微信、飞书、邮件等渠道推送。",
+          "what_is": "这是一个需要配置后运行的股票分析系统，覆盖多个股票市场及 ETF。原本要分别查询行情、新闻和公告，再自行整理成报告；它把数据汇集起来，交给大模型生成决策仪表盘，并提供查看历史报告和自动推送的途径。它提供分析辅助信息，不是代替用户作出交易决定的服务。",
+          "audience": "适合跟踪自选股的投资者；不一定要编程，但需会配置模型密钥及运行环境，不能直接免配置使用。",
+          "example": "以下仅是帮助理解的示例，非亲测：假设你想每天查看几只自选股的变化，先准备股票代码、可用的大模型 API Key 和接收报告的渠道；配置定时任务后，系统汇集行情与新闻，生成分析报告，并将决策仪表盘推送给你阅读。",
+          "platform": "GitHub Actions、Docker、本地运行；提供网页工作台和桌面工作台。",
+          "cost": "仓库提供免费行情源，README 称可用 GitHub Actions 无服务器定时运行；模型接口、可选数据源及消息服务的实际费用依所选服务而定，不能保证整体免费。",
+          "installation": "可 Fork 仓库，在 GitHub Actions 的 Secrets 中至少配置一个模型服务商的 API Key；README 也列出 Docker 和本地运行方式。具体步骤以项目文档为准。",
+          "caution": "免费行情源可能受限流、接口变动或网络波动影响；不同市场的数据能力不完全相同。报告包含模型生成的判断，应核对数据与风险，不宜直接当作交易指令。",
+          "scenario": "每天整理自选股的行情和新闻，并接收一份便于复查的分析报告。",
+          "workflow": {
+            "input": "自选股代码与可用数据源",
+            "action": "汇集行情新闻并生成分析",
+            "output": "决策仪表盘与推送消息"
+          },
+          "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+          "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+          "license": "MIT",
+          "license_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/main/LICENSE",
+          "commit": "2026-11-10T11:51:09Z",
+          "commit_url": "https://github.com/ZhuLinsen/daily_stock_analysis/commit/ef44660f00e08ce66dcd4dc4d2e700836c45e833",
+          "release": {
+            "tag": "v3.34.0",
+            "date": "2026-11-09T12:39:03Z",
+            "url": "https://github.com/ZhuLinsen/daily_stock_analysis/releases/tag/v3.34.0"
+          },
+          "readme_url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/main/README.md",
+          "trending_rank": 2,
+          "stars_today": 278,
+          "is_featured": false
+        },
+        {
+          "name": "GoogleChrome/modern-web-guidance-src",
+          "category": "网页开发指导资料的源码",
+          "summary": "Modern Web Guidance 的源码仓库，包含编写、校准和评估网页开发指导内容所需的代码与文档。相关指导可供编程智能体检索，帮助其选用现代浏览器能力，并考虑性能、无障碍和兼容性。",
+          "what_is": "这是网页开发指导项目的源码与维护资料库，不是打开就能制作网页的独立软件。过去开发者需要自行查找浏览器新功能、兼容性和实现建议，再把要点告诉编程智能体；相关指导工具可按问题检索资料，让智能体在写代码时参考现代网页平台的做法，而本仓库侧重这些内容的编写与评估。",
+          "audience": "适合网页开发者、编程智能体使用者及指导内容贡献者；需理解网页开发，使用命令行，普通读者不能直接当网页工具使用。",
+          "example": "以下仅是帮助理解的示例，非亲测：假设你要让编程智能体实现对话框动画，先准备需求或现有网页项目，再用 README 给出的 search 命令检索相关指导、按编号读取内容；得到的建议可作为实现参考，最后仍需由开发者检查代码和浏览器表现。",
+          "platform": "命令行与支持接入相关指导的编程智能体；具体系统兼容范围待核实。",
+          "cost": "资料未说明使用所选编程智能体、模型或运行环境的费用；具体成本待核实。",
+          "installation": "README 提供 `npx modern-web-guidance@latest install` 交互式安装；也可先用 `npx modern-web-guidance@latest search` 等命令试用。需具备运行 npx 的环境。",
+          "caution": "本仓库是指导内容的源码仓库，与面向使用者的指导项目有所区别。检索结果是开发参考，具体实现仍需核对目标浏览器的兼容性并测试。",
+          "scenario": "开发网页功能前，检索现代浏览器的实现建议供编程智能体参考。",
+          "workflow": {
+            "input": "网页需求或待检查的代码库",
+            "action": "检索指导或扫描旧写法",
+            "output": "相关建议或待改进线索"
+          },
+          "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+          "description": null,
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/main/LICENSE",
+          "commit": "2026-11-12T01:18:28Z",
+          "commit_url": "https://github.com/GoogleChrome/modern-web-guidance-src/commit/179dbc6fe830be1309f4d0b079a2442d71d983b9",
+          "release": null,
+          "readme_url": "https://github.com/GoogleChrome/modern-web-guidance-src/blob/main/README.md",
+          "trending_rank": 3,
+          "stars_today": 159,
+          "is_featured": false
+        },
+        {
+          "name": "shadcn/improve",
+          "category": "代码库审查与实施计划",
+          "summary": "供编程智能体使用的技能：检查代码库，整理有证据的改进项，并为选中的问题编写可交接的 Markdown 实施计划。它也提供针对分支、安全等范围的审查命令；计划生成后仍需执行和验证。",
+          "what_is": "这是安装到兼容编程智能体中的技能，不是自动修好程序的独立软件。原本开发者要通读代码、判断哪些问题值得处理，再为接手者写清修改步骤和验证办法；它协助完成审查、排序和计划编写。默认产物是计划文件，是否实施由用户决定，也可另行调用其执行命令交给其他智能体处理。",
+          "audience": "适合维护代码库的开发者和技术团队；需要已有项目及兼容的编程智能体，不适合不接触代码的读者直接使用。",
+          "example": "以下仅是帮助理解的示例，非亲测：假设你要梳理现有项目的性能问题，先准备代码库，在其中运行 `/improve perf` 查看有代码位置依据的发现；选定要处理的项目后，请它写出 Markdown 计划，再交给开发者或其他智能体实施和验证。",
+          "platform": "支持 Agent Skills 格式的编程智能体；计划文件为 Markdown，可供人阅读。",
+          "cost": "资料未给出固定使用费用；审查及后续执行所用模型可能产生费用，取决于所选服务。",
+          "installation": "README 给出的安装命令是 `npx skills add shadcn/improve`；还需在支持 Agent Skills 的智能体中打开目标代码库。",
+          "caution": "审查发现和实施计划都需人工核对。技能本身的主要产物是计划；即使使用 `/improve execute` 委派执行，README 也说明合并决定仍由用户作出。",
+          "scenario": "接手维护一个代码库时，先筛选问题，再为选中的改动写实施计划。",
+          "workflow": {
+            "input": "现有代码库和审查范围",
+            "action": "审查发现并选定改进项",
+            "output": "带验证步骤的计划文件"
+          },
+          "url": "https://github.com/shadcn/improve",
+          "description": "Use your most capable model to audit your codebase and write plans for cheaper models to execute.",
+          "license": "MIT",
+          "license_url": "https://github.com/shadcn/improve/blob/main/LICENSE.md",
+          "commit": "2026-09-12T11:29:28Z",
+          "commit_url": "https://github.com/shadcn/improve/commit/cac56e1ebd3c279aa9153616cfeac7b174ab90f9",
+          "release": null,
+          "readme_url": "https://github.com/shadcn/improve/blob/main/README.md",
+          "trending_rank": 4,
+          "stars_today": 361,
+          "is_featured": false
+        },
+        {
+          "name": "addyosmani/agent-skills",
+          "category": "编程智能体开发流程技能集",
+          "summary": "面向编程智能体的一组工程技能，覆盖需求定义、规划、实现、测试、评审和发布等阶段。提供相应命令，可整组或按技能安装；它为智能体提供工作流程和检查要求，而不是独立完成开发的应用。",
+          "what_is": "这是给编程智能体使用的工程技能资料库，不是普通用户点击按钮就能生成软件的成品工具。原本开发者需要反复说明需求澄清、分步实现、测试和评审的要求；它将这些流程写成可调用的技能与命令，帮助智能体在开发不同阶段遵循相应检查步骤。实际代码质量仍取决于项目、模型和人工把关。",
+          "audience": "适合使用编程智能体开发软件的开发者或团队；需要会操作所选智能体并检查代码，普通读者不能独立直接使用。",
+          "example": "以下仅是帮助理解的示例，非亲测：假设你要给现有项目增加一个功能，先准备项目代码和功能需求，再在兼容智能体中调用 `/spec` 梳理需求、用 `/plan` 拆分任务，并在实现后调用 `/test` 检查；最终得到规格、代码和测试结果，仍须人工复核。",
+          "platform": "支持相关技能格式的编程智能体；README 另列 Claude Code 等集成方式。",
+          "cost": "资料未说明模型或智能体服务费用；使用成本取决于所选工具与服务。",
+          "installation": "可运行 `npx skills add addyosmani/agent-skills` 安装整组技能，或用 `--list` 查看后选择单项；README 也提供 Claude Code 插件安装方式。",
+          "caution": "README 提醒：单独安装某项技能时，仓库级 `references/` 补充清单可能不会一并复制。技能提供流程约束，不保证生成代码无需审查。",
+          "scenario": "让编程智能体按需求、计划、实现、测试和评审的步骤处理开发任务。",
+          "workflow": {
+            "input": "项目代码与功能需求",
+            "action": "调用对应阶段的技能",
+            "output": "规格、实现及验证结果"
+          },
+          "url": "https://github.com/addyosmani/agent-skills",
+          "description": "Production-grade engineering skills for AI coding agents.",
+          "license": "MIT",
+          "license_url": "https://github.com/addyosmani/agent-skills/blob/main/LICENSE",
+          "commit": "2026-11-01T19:24:49Z",
+          "commit_url": "https://github.com/addyosmani/agent-skills/commit/301b02b12bff98e4688e6984af6556802322bbde",
+          "release": {
+            "tag": "0.6.15",
+            "date": "2026-10-31T06:40:31Z",
+            "url": "https://github.com/addyosmani/agent-skills/releases/tag/0.6.15"
+          },
+          "readme_url": "https://github.com/addyosmani/agent-skills/blob/main/README.md",
+          "trending_rank": 5,
+          "stars_today": 787,
+          "is_featured": false
+        },
+        {
+          "name": "vercel-labs/agent-browser",
+          "category": "供编程智能体使用的浏览器自动化",
+          "summary": "命令行浏览器自动化工具，让智能体打开网页、读取页面元素的文字表示，并逐步执行点击等操作。页面快照会为元素给出引用编号，便于智能体操作后再次读取页面，检查结果。",
+          "what_is": "这是供编程智能体调用的浏览器命令行工具，不是面向普通读者的图形浏览器。原本要让智能体操作网页，需要另行接入浏览器并说明怎样定位按钮；它把打开页面、读取可访问性树和操作元素变成逐条命令。可访问性树是按页面结构整理的文字信息，智能体据此定位元素并在操作后核对页面变化。",
+          "audience": "适合开发浏览器自动化流程或测试网页的开发者；需使用命令行或编程智能体，普通读者不能把它当作即开即用的浏览器。",
+          "example": "以下仅是帮助理解的示例，非亲测：假设你要检查网站的一个按钮是否跳转，先准备目标网址，用 `agent-browser open` 打开页面，再用 `snapshot -i` 找到按钮引用并点击；最后用 `get url` 读取跳转后的地址，作为检查结果。",
+          "platform": "命令行；默认使用 Chrome for Testing。README 还列出 Linux 安装方式及其他浏览器连接选项。",
+          "cost": "资料未给出工具使用费用；如选用云浏览器提供商或其他外部服务，其费用需另行核实。",
+          "installation": "README 给出 `npm install -g agent-browser`，首次使用再运行 `agent-browser install` 获取 Chrome for Testing；Linux 可用 `agent-browser install --with-deps` 安装所需系统库。",
+          "caution": "元素引用对应获取快照时的页面状态；导航或页面变化后应重新获取快照。被遮挡、禁用或不可见的目标可能无法点击，自动化结果需核对。",
+          "scenario": "让智能体逐步打开网页、定位按钮并检查点击后的页面状态。",
+          "workflow": {
+            "input": "目标网址与待检查操作",
+            "action": "读取快照并操作页面元素",
+            "output": "页面状态或目标地址"
+          },
+          "url": "https://github.com/vercel-labs/agent-browser",
+          "description": "Browser automation CLI for AI agents",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/vercel-labs/agent-browser/blob/main/LICENSE",
+          "commit": "2026-11-11T20:24:28Z",
+          "commit_url": "https://github.com/vercel-labs/agent-browser/commit/51b6f8a40c6f1b330f4f2021b1af154ebc6be464",
+          "release": {
+            "tag": "v0.42.0",
+            "date": "2026-11-10T00:37:19Z",
+            "url": "https://github.com/vercel-labs/agent-browser/releases/tag/v0.42.0"
+          },
+          "readme_url": "https://github.com/vercel-labs/agent-browser/blob/main/README.md",
+          "trending_rank": 6,
+          "stars_today": 708,
+          "is_featured": false
+        }
+      ]
+    }
   }
 }
