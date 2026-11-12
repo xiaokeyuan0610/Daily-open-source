@@ -1368,7 +1368,7 @@
     "delivery_format_version": 6
   },
   "2026-11-12": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "neondeex/atlas-filemanager",
