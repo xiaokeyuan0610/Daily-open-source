@@ -1832,7 +1832,7 @@
     "delivery_format_version": 6
   },
   "2026-11-13": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "super-productivity/super-productivity",
