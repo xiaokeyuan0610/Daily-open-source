@@ -1830,5 +1830,309 @@
     },
     "sent_at": "2026-11-12T01:34:48.262Z",
     "delivery_format_version": 6
+  },
+  "2026-11-13": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "super-productivity/super-productivity",
+        "category": "任务管理",
+        "summary": "集待办清单、每日计划和时间记录于一体的个人工作工具。可用项目、子任务和标签整理事项，并在日程时间线上安排工作；提供网页版和桌面版。",
+        "platform": "Windows、macOS、Linux、Android、iOS、网页；具体版本要求待核实",
+        "cost": "软件费用待核实",
+        "installation": "可直接打开网页版，或从项目下载页安装桌面版；上手较容易",
+        "caution": "与 Jira 等服务的集成是可选功能，使用前需另行配置。",
+        "scenario": "一天的杂事排不开？把任务放进日程时间线，再记录实际用时。",
+        "workflow": {
+          "input": "列出今天要完成的事项",
+          "action": "安排任务并记录用时",
+          "output": "得到任务进度和用时记录"
+        },
+        "recommendation_reason": "待办、排程和计时覆盖常见的个人工作问题；网页版可直接尝试，无需先配置服务。",
+        "is_featured": true,
+        "url": "https://github.com/super-productivity/super-productivity",
+        "description": "Super Productivity is an advanced todo list app with integrated Timeboxing and time tracking capabilities. It also comes with integrations for Jira, GitLab, GitHub and Open Project.",
+        "license": "MIT",
+        "license_url": "https://github.com/super-productivity/super-productivity/blob/master/LICENSE",
+        "commit": "2026-11-12T17:49:55Z",
+        "commit_url": "https://github.com/super-productivity/super-productivity/commit/68ad9657b32073def336a139d18c824120216814",
+        "release": {
+          "tag": "v20.0.0",
+          "date": "2026-11-06T21:02:15Z",
+          "url": "https://github.com/super-productivity/super-productivity/releases/tag/v20.0.0"
+        },
+        "readme_url": "https://github.com/super-productivity/super-productivity/blob/master/README.md"
+      },
+      {
+        "name": "tizuio/TizuMark-Markdown-Editor",
+        "category": "笔记写作",
+        "summary": "面向 Windows 的 Markdown 编辑器，提供所见即所得编辑、实时预览和大纲导航。支持在文档中编写公式与 Mermaid 图表，并可导出 PDF、HTML 和 Word 文档。",
+        "platform": "Windows；macOS、Linux 尚在规划中",
+        "cost": "项目说明为免费",
+        "installation": "从 Releases 下载 Windows 安装包安装；较容易",
+        "caution": "目前不要按跨平台软件选购；其他系统尚无正式支持依据。",
+        "scenario": "写长篇说明总要翻找章节？用大纲定位段落，写完导出 PDF。",
+        "workflow": {
+          "input": "准备一份 Markdown 草稿",
+          "action": "按大纲修改并预览排版",
+          "output": "导出可分享的 PDF"
+        },
+        "recommendation_reason": "安装入口明确，写作、预览和导出构成完整流程，适合经常整理文档的 Windows 用户。",
+        "is_featured": false,
+        "url": "https://github.com/tizuio/TizuMark-Markdown-Editor",
+        "description": "轻量级跨平台 Markdown 编辑器（Windows 平台，macOS/Linux 规划中）：WYSIWYG 实时预览、大纲导航、KaTeX 公式、Mermaid 图表，基于 Tauri + Rust，安装包仅 9MB。Lightweight Markdown editor for Windows with live preview, outline, KaTeX & Mermaid.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/tizuio/TizuMark-Markdown-Editor/blob/master/LICENSE",
+        "commit": "2026-11-12T17:18:32Z",
+        "commit_url": "https://github.com/tizuio/TizuMark-Markdown-Editor/commit/bac8d85c90c3cb4eb1a7ab408423e6de23dec9d4",
+        "release": {
+          "tag": "v1.2.5",
+          "date": "2026-11-01T16:34:34Z",
+          "url": "https://github.com/tizuio/TizuMark-Markdown-Editor/releases/tag/v1.2.5"
+        },
+        "readme_url": "https://github.com/tizuio/TizuMark-Markdown-Editor/blob/master/README.md"
+      },
+      {
+        "name": "TriliumNext/Trilium",
+        "category": "笔记写作",
+        "summary": "用于建立个人知识库的分层笔记应用。笔记可组成多级目录，并支持富文本编辑、全文搜索、版本记录和单篇笔记加密；需要时也可配置自托管同步。",
+        "platform": "跨平台桌面应用；具体系统版本要求待核实",
+        "cost": "项目说明为免费",
+        "installation": "从 Releases 获取稳定版；桌面使用较容易，自托管同步需额外配置",
+        "caution": "同步依赖另行配置的服务器，不是开始记笔记的必经步骤。",
+        "scenario": "资料越记越散？按主题建立多级笔记，再用全文搜索找回内容。",
+        "workflow": {
+          "input": "准备课程资料和随手笔记",
+          "action": "分层整理并补充笔记",
+          "output": "得到可搜索的个人资料库"
+        },
+        "recommendation_reason": "适合笔记数量逐渐增多的人；目录、搜索和版本记录都有明确的使用场景。",
+        "is_featured": false,
+        "url": "https://github.com/TriliumNext/Trilium",
+        "description": "Build your personal knowledge base with Trilium Notes",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/TriliumNext/Trilium/blob/main/LICENSE",
+        "commit": "2026-11-12T15:43:18Z",
+        "commit_url": "https://github.com/TriliumNext/Trilium/commit/c21bcec4fe3e95f4a5bfd661123048d488ad97a8",
+        "release": {
+          "tag": "v0.107.0",
+          "date": "2026-11-08T22:06:59Z",
+          "url": "https://github.com/TriliumNext/Trilium/releases/tag/v0.107.0"
+        },
+        "readme_url": "https://github.com/TriliumNext/Trilium/blob/main/README.md"
+      },
+      {
+        "name": "readest/readest",
+        "category": "影音阅读",
+        "summary": "跨平台电子书阅读器，支持 EPUB、PDF、MOBI、TXT 等格式。可切换翻页或滚动阅读、搜索书内文字，并添加高亮、书签和笔记。",
+        "platform": "Windows、macOS、Linux、Android、iOS、网页",
+        "cost": "软件费用待核实",
+        "installation": "可使用网页版，或从项目下载入口获取对应平台应用；较容易",
+        "caution": "翻译等在线能力可能依赖外部服务；各平台的具体功能差异需核实。",
+        "scenario": "读电子书时找不到前文？搜索书内关键词，给重要段落加书签。",
+        "workflow": {
+          "input": "准备一本 EPUB 电子书",
+          "action": "搜索段落并添加高亮",
+          "output": "留下可回看的阅读标记"
+        },
+        "recommendation_reason": "支持常见书籍格式和多个使用平台，阅读、查找与标记功能直接对应日常需求。",
+        "is_featured": false,
+        "url": "https://github.com/readest/readest",
+        "description": "Readest is a modern, feature-rich ebook reader designed for avid readers offering seamless cross-platform access, powerful tools, and an intuitive interface to elevate your reading experience.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/readest/readest/blob/main/LICENSE",
+        "commit": "2026-11-12T17:22:12Z",
+        "commit_url": "https://github.com/readest/readest/commit/a60b7eee0892f5533edbaca7d6391cd3609e4173",
+        "release": {
+          "tag": "v0.12.20",
+          "date": "2026-11-05T22:40:01Z",
+          "url": "https://github.com/readest/readest/releases/tag/v0.12.20"
+        },
+        "readme_url": "https://github.com/readest/readest/blob/main/README.md"
+      },
+      {
+        "name": "martinrotter/rssguard",
+        "category": "影音阅读",
+        "summary": "桌面订阅阅读器，可集中读取 RSS、Atom、JSON 等信息源，也能播放播客音视频。适合把常看的新闻网站、博客和节目放在一个地方查看。",
+        "platform": "Windows、Linux、BSD、OS/2、macOS",
+        "cost": "项目说明为免费",
+        "installation": "从 Releases 下载对应平台版本；订阅信息源需自行添加，难度较低",
+        "caution": "需有可用的订阅源；连接第三方在线服务时可能需要相应账号。",
+        "scenario": "每天逐个打开博客太费事？添加订阅源，在一处查看新文章。",
+        "workflow": {
+          "input": "准备常看网站的订阅地址",
+          "action": "添加订阅并查看更新",
+          "output": "得到集中的新文章列表"
+        },
+        "recommendation_reason": "桌面应用和平台支持说明清楚，能减少反复访问多个信息源的操作。",
+        "is_featured": false,
+        "url": "https://github.com/martinrotter/rssguard",
+        "description": "Feed reader (podcast player, basic XMPP client and also Gemini protocol client) which supports RSS/ATOM/JSON and many web-based feed services.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/martinrotter/rssguard/blob/master/LICENSE.md",
+        "commit": "2026-11-12T15:37:21Z",
+        "commit_url": "https://github.com/martinrotter/rssguard/commit/e5349ad1ebb1367af339d99a1ed1a918a19c124b",
+        "release": {
+          "tag": "5.3.0",
+          "date": "2026-11-12T13:45:34Z",
+          "url": "https://github.com/martinrotter/rssguard/releases/tag/5.3.0"
+        },
+        "readme_url": "https://github.com/martinrotter/rssguard/blob/master/README.md"
+      },
+      {
+        "name": "excalidraw/excalidraw",
+        "category": "设计创作",
+        "summary": "可在浏览器中使用的手绘风格白板，提供形状、箭头、线条和自由绘制工具，适合画流程图与草图。作品可导出为 PNG、SVG 或项目文件。",
+        "platform": "浏览器；可在 Windows 等有兼容浏览器的系统使用",
+        "cost": "白板编辑器说明为免费；Excalidraw+ 费用待核实",
+        "installation": "打开项目提供的网页应用即可使用；无需安装，较容易",
+        "caution": "浏览器中的本地自动保存不等于异地备份，重要图稿宜另行导出。",
+        "scenario": "开会时讲不清流程？画出步骤和箭头，导出图片发给同事。",
+        "workflow": {
+          "input": "准备要说明的流程",
+          "action": "绘制步骤并连接箭头",
+          "output": "得到可分享的流程图"
+        },
+        "recommendation_reason": "打开网页就能画图，常用绘制与导出能力明确，适合快速说明想法。",
+        "is_featured": false,
+        "url": "https://github.com/excalidraw/excalidraw",
+        "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
+        "license": "MIT",
+        "license_url": "https://github.com/excalidraw/excalidraw/blob/master/LICENSE",
+        "commit": "2026-11-12T17:58:27Z",
+        "commit_url": "https://github.com/excalidraw/excalidraw/commit/82d5847e57dcb6fb5982833ea9ec2137fe0b2bd5",
+        "release": {
+          "tag": "v0.18.1",
+          "date": "2026-04-21T08:43:20Z",
+          "url": "https://github.com/excalidraw/excalidraw/releases/tag/v0.18.1"
+        },
+        "readme_url": "https://github.com/excalidraw/excalidraw/blob/master/README.md"
+      },
+      {
+        "name": "Bitpainter75/FerrumPix",
+        "category": "设计创作",
+        "summary": "本机照片管理与编辑应用，可浏览文件夹、为照片评分和标记，并进行裁剪、调色、RAW 调整及批量导出。既能筛选照片，也能完成日常修图。",
+        "platform": "Windows、Linux；macOS 和 ARM64 构建处于实验阶段",
+        "cost": "项目说明为免费",
+        "installation": "从 Releases 获取对应平台构建；具体安装步骤待核实",
+        "caution": "保存编辑结果前应确认文件处理方式；macOS 与 ARM64 版本仍属实验性。",
+        "scenario": "旅行照片太多难挑？按评分筛选，再裁剪调色并导出成片。",
+        "workflow": {
+          "input": "准备相机照片文件夹",
+          "action": "评分筛选并调整照片",
+          "output": "得到整理后的成片"
+        },
+        "recommendation_reason": "把照片筛选与编辑放在同一桌面应用中，适合有大量本地照片的人。",
+        "is_featured": false,
+        "url": "https://github.com/Bitpainter75/FerrumPix",
+        "description": "FerrumPix is a desktop photo management and editing application for Linux,  Windows and macOS.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Bitpainter75/FerrumPix/blob/main/LICENSE",
+        "commit": "2026-11-12T16:56:51Z",
+        "commit_url": "https://github.com/Bitpainter75/FerrumPix/commit/5ce1381abc0b3fc7cc104a1af9970e516167d4d3",
+        "release": {
+          "tag": "latest",
+          "date": "2026-11-12T08:55:43Z",
+          "url": "https://github.com/Bitpainter75/FerrumPix/releases/tag/latest"
+        },
+        "readme_url": "https://github.com/Bitpainter75/FerrumPix/blob/main/README.md"
+      },
+      {
+        "name": "GyulyVGC/sniffnet",
+        "category": "系统工具",
+        "summary": "图形化网络流量监测应用，用于查看电脑当前的网络活动。项目提供流量概览、连接检查和通知界面，便于排查网络使用情况。",
+        "platform": "跨平台；具体支持系统及版本要求待核实",
+        "cost": "项目说明为完全免费",
+        "installation": "从项目下载入口获取应用；具体系统依赖和安装步骤待核实",
+        "caution": "监测网络流量可能需要系统授予相关权限；它不是拦截或修复网络问题的工具。",
+        "scenario": "网络突然变慢？打开流量概览，查看当时的连接活动。",
+        "workflow": {
+          "input": "发现电脑网络异常变慢",
+          "action": "查看流量和连接概览",
+          "output": "得到排查用的网络活动信息"
+        },
+        "recommendation_reason": "以图形界面呈现网络活动，比直接分析命令行数据更便于普通用户入门。",
+        "is_featured": false,
+        "url": "https://github.com/GyulyVGC/sniffnet",
+        "description": "Comfortably monitor your network traffic 🕵️‍♂️",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/GyulyVGC/sniffnet/blob/main/LICENSE-APACHE",
+        "commit": "2026-11-07T14:43:32Z",
+        "commit_url": "https://github.com/GyulyVGC/sniffnet/commit/f62af85e53253fd9983d4d04948c97cadf8a5356",
+        "release": {
+          "tag": "v1.5.1",
+          "date": "2026-07-22T07:54:30Z",
+          "url": "https://github.com/GyulyVGC/sniffnet/releases/tag/v1.5.1"
+        },
+        "readme_url": "https://github.com/GyulyVGC/sniffnet/blob/main/README.md"
+      },
+      {
+        "name": "TixXin/Fuyu",
+        "category": "系统工具",
+        "summary": "Windows 桌面顶部的悬浮工具，可展开查看待办、图文剪贴板历史、消息和日程，也能暂存待拖往其他程序的文件。各功能可在设置中调整。",
+        "platform": "Windows；从源码构建说明要求 Windows 10 或 11",
+        "cost": "软件费用待核实",
+        "installation": "从 Releases 下载安装包；安装较容易，邮箱等功能需另行配置",
+        "caution": "项目说明安装包未签名；启用消息、邮箱或插件前，应核对来源与所需权限。",
+        "scenario": "刚复制的文字被覆盖了？展开顶部悬浮岛，从剪贴板历史找回。",
+        "workflow": {
+          "input": "需要找回之前复制的文字",
+          "action": "打开岛上的剪贴板历史",
+          "output": "重新取得所需文字"
+        },
+        "recommendation_reason": "提供直接的 Windows 安装入口，剪贴板历史等日常功能有明确用途。",
+        "is_featured": false,
+        "url": "https://github.com/TixXin/Fuyu",
+        "description": "浮屿：Windows 上的轻量灵动岛。在屏幕顶部汇总 QQ、微信和邮件通知，查看 Claude Code / Codex 的运行状态并直接在岛上审批，还有剪贴板历史、快捷翻译、音乐与歌词、待办、日历和文件中转，支持插件扩展。",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/TixXin/Fuyu/blob/main/LICENSE",
+        "commit": "2026-11-12T17:58:46Z",
+        "commit_url": "https://github.com/TixXin/Fuyu/commit/b98ddc8f0d0d61ff90c09db57eec573ce319a150",
+        "release": {
+          "tag": "v0.3.6",
+          "date": "2026-11-10T17:58:48Z",
+          "url": "https://github.com/TixXin/Fuyu/releases/tag/v0.3.6"
+        },
+        "readme_url": "https://github.com/TixXin/Fuyu/blob/main/README.md"
+      },
+      {
+        "name": "PXSYS13/yadisk_backup",
+        "category": "备份同步",
+        "summary": "将 Yandex Disk 中的文件下载到本机的备份工具，可选择整个网盘或指定文件夹，并保留原有目录结构。下载中断后可在再次启动时继续，亦支持将文件保存到外接磁盘。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "项目说明为免费",
+        "installation": "下载 ZIP 并解压，Windows 双击启动脚本，再在浏览器完成授权和保存位置设置；初次配置需约 10 至 15 分钟",
+        "caution": "仅适用于 Yandex Disk；需授权访问，下载完成前不要删除云端原文件。",
+        "scenario": "想给网盘资料留一份本地副本？选定文件夹，下载到外接硬盘。",
+        "workflow": {
+          "input": "准备网盘文件和本地空间",
+          "action": "选择文件夹并执行下载",
+          "output": "得到保留目录的本地副本"
+        },
+        "recommendation_reason": "针对网盘文件落地备份这一具体需求，提供选目录、续传和外接磁盘保存能力。",
+        "is_featured": false,
+        "url": "https://github.com/PXSYS13/yadisk_backup",
+        "description": "Бесплатная программа: сохраняет весь Яндекс.Диск на компьютер — папки, безлимит фото с телефона, папки по публичным ссылкам. Работает при сбоях Яндекса: качает доступное, остальное повторяет сама. Windows, macOS, Linux.",
+        "license": "MIT",
+        "license_url": "https://github.com/PXSYS13/yadisk_backup/blob/main/LICENSE",
+        "commit": "2026-11-12T17:31:50Z",
+        "commit_url": "https://github.com/PXSYS13/yadisk_backup/commit/3cdc13f008d304a00303563ca960383190324718",
+        "release": {
+          "tag": "v2.8.9",
+          "date": "2026-11-12T17:32:57Z",
+          "url": "https://github.com/PXSYS13/yadisk_backup/releases/tag/v2.8.9"
+        },
+        "readme_url": "https://github.com/PXSYS13/yadisk_backup/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-12T18:15:32.395Z",
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-12T18:15:32.395Z",
+      "status": "unavailable",
+      "projects": []
+    }
   }
 }
