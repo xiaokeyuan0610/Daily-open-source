@@ -2136,5 +2136,471 @@
     },
     "sent_at": "2026-11-12T18:16:42.506Z",
     "delivery_format_version": 6
+  },
+  "2026-11-14": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "IncarnaMind/IncarnaMind",
+        "category": "办公处理",
+        "summary": "面向 macOS、Windows 和 Linux 的桌面应用，可从本地文件中提问、写作、分析表格、整理会议记录，并逐句核对文档内容、数字与引用来源，支持导出 Word。可连接 ChatGPT、Claude、Gemini 或 Ollama。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "README称提供免费的开源测试版本；使用云端模型可能产生模型服务费用，具体费用待核实。",
+        "installation": "从 Releases 下载 Windows EXE 后运行；测试版本未签名，可能触发系统安全提示。难度低。",
+        "caution": "项目处于 Alpha/测试阶段，构建版本变化较快；使用云端模型时需注意文件隐私与 API 费用。",
+        "scenario": "报告资料太散？导入文件后生成带出处、可核对的 Word 报告。",
+        "workflow": {
+          "input": "准备 PDF、表格和会议记录",
+          "action": "提问、写作并逐句核对来源",
+          "output": "得到带引用的报告或 Word 文档"
+        },
+        "recommendation_reason": "Windows 可直接下载安装，能把本地资料整理、分析和核验集中在一个桌面工具中。",
+        "is_featured": true,
+        "url": "https://github.com/IncarnaMind/IncarnaMind",
+        "description": "From messy files to a checked report. A free, open-source desktop app for macOS, Windows and Linux: write and analyse with AI from your own files, check each sentence and figure against them, and export to Word. Meeting notes too. Works with ChatGPT, Claude, Gemini or a local model through Ollama.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/IncarnaMind/IncarnaMind/blob/main/LICENSE",
+        "commit": "2026-11-13T17:19:59Z",
+        "commit_url": "https://github.com/IncarnaMind/IncarnaMind/commit/eaf4d42861d29d879c67af66feb4b285821f61a9",
+        "release": null,
+        "readme_url": "https://github.com/IncarnaMind/IncarnaMind/blob/main/README.md"
+      },
+      {
+        "name": "Mahmud0808/TeleDrive",
+        "category": "备份同步",
+        "summary": "把私人 Telegram 频道作为个人云盘，支持 Windows、Linux、macOS、Android，提供文件上传备份、文件夹管理、搜索、预览、音视频播放、断点续传、多存储频道和可选 AES-256-GCM 加密。",
+        "platform": "Windows 10+、Linux x86_64、macOS Apple Silicon、Android 8.0+",
+        "cost": "软件费用待核实；需要 Telegram 账号和 Telegram 服务，云端存储限制及相关费用待核实。",
+        "installation": "Windows 下载 Releases 中的 MSI，按提示安装，无需管理员权限；难度低。",
+        "caution": "文件实际存储在私人 Telegram 频道中；启用加密时必须妥善保管密码，重要资料仍应保留独立备份。",
+        "scenario": "想把电脑文件随身带走？用私人 Telegram 频道备份并跨设备浏览。",
+        "workflow": {
+          "input": "选择要备份的文件夹",
+          "action": "上传文件并按文件夹整理",
+          "output": "得到可跨设备访问的个人云盘"
+        },
+        "recommendation_reason": "提供 Windows 安装包和跨设备访问，适合把私人文件集中备份并随时取用。",
+        "is_featured": false,
+        "url": "https://github.com/Mahmud0808/TeleDrive",
+        "description": "Turn a private Telegram channel into your personal cloud drive. Android, Windows, Linux and macOS, auto backup, optional E2E encryption, built-in file manager and player.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/Mahmud0808/TeleDrive/blob/master/LICENSE",
+        "commit": "2026-11-13T16:16:24Z",
+        "commit_url": "https://github.com/Mahmud0808/TeleDrive/commit/daf2662a7f000e167183a7e58afb6d899c17f5a9",
+        "release": {
+          "tag": "v1.5.0",
+          "date": "2026-10-19T13:30:23Z",
+          "url": "https://github.com/Mahmud0808/TeleDrive/releases/tag/v1.5.0"
+        },
+        "readme_url": "https://github.com/Mahmud0808/TeleDrive/blob/master/README.md"
+      },
+      {
+        "name": "Zettlr/Zettlr",
+        "category": "笔记写作",
+        "summary": "面向写作者、学生和研究人员的 Markdown 写作工作台，支持全文搜索、Zettelkasten 知识管理、代码高亮、引用管理、LaTeX 与 Word 模板，以及通过 Pandoc、LaTeX 和 Textbundle 导出。",
+        "platform": "Windows x64、macOS、Linux",
+        "cost": "README称为免费开源软件；Pandoc、LaTeX 或参考文献工具的安装与使用费用待核实。",
+        "installation": "从官网或 Releases 下载 Windows x64 安装包，也可使用 WinGet 或 Chocolatey；难度低。",
+        "caution": "部分高级导出依赖 Pandoc、LaTeX 等外部工具；32 位 Windows 不支持。",
+        "scenario": "论文资料难整理？用 Markdown 写作并搜索、引用和导出成稿。",
+        "workflow": {
+          "input": "准备 Markdown 笔记和参考文献",
+          "action": "编辑内容并插入引用",
+          "output": "得到可导出的论文或长文初稿"
+        },
+        "recommendation_reason": "Windows 安装渠道清晰，适合从日常笔记一直延伸到论文和出版稿件。",
+        "is_featured": false,
+        "url": "https://github.com/Zettlr/Zettlr",
+        "description": "Your One-Stop Publication Workbench",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Zettlr/Zettlr/blob/develop/LICENSE",
+        "commit": "2026-11-13T16:41:24Z",
+        "commit_url": "https://github.com/Zettlr/Zettlr/commit/92c73f8defd5f2eb7ef7a505ee6db0bbd8c76862",
+        "release": {
+          "tag": "v4.10.0",
+          "date": "2026-11-13T16:40:54Z",
+          "url": "https://github.com/Zettlr/Zettlr/releases/tag/v4.10.0"
+        },
+        "readme_url": "https://github.com/Zettlr/Zettlr/blob/develop/README.md"
+      },
+      {
+        "name": "logseq/logseq",
+        "category": "笔记写作",
+        "summary": "隐私优先的开源知识管理和协作平台，支持本地知识图谱、页面与块级记录，并提供插件 API；README还介绍了新的数据库版本和移动端方向。",
+        "platform": "Windows、macOS、Linux；移动端支持情况以当前发行版为准",
+        "cost": "软件费用待核实；同步、插件或第三方服务可能产生额外费用。",
+        "installation": "从 Releases 下载对应桌面安装包并运行；难度低。",
+        "caution": "README同时包含旧版和数据库版本信息，具体功能与同步能力应以当前发行版文档为准；重要资料需自行备份。",
+        "scenario": "知识越记越乱？把零散想法写成可链接、可检索的本地知识库。",
+        "workflow": {
+          "input": "准备日常想法和项目资料",
+          "action": "按页面与块记录并建立链接",
+          "output": "得到可持续检索的个人知识库"
+        },
+        "recommendation_reason": "本地优先且上手路径简单，适合长期积累个人资料和项目上下文。",
+        "is_featured": false,
+        "url": "https://github.com/logseq/logseq",
+        "description": "A privacy-first, open-source platform for knowledge management and collaboration. Download link:  http://github.com/logseq/logseq/releases. roadmap: https://logseq.io/p/NX4mc_ggEV",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/logseq/logseq/blob/master/LICENSE.md",
+        "commit": "2026-11-12T06:24:16Z",
+        "commit_url": "https://github.com/logseq/logseq/commit/a0f4399cbeaff24d92cb33bb9524f88626056fc4",
+        "release": {
+          "tag": "2.0.2",
+          "date": "2026-10-07T14:18:57Z",
+          "url": "https://github.com/logseq/logseq/releases/tag/2.0.2"
+        },
+        "readme_url": "https://github.com/logseq/logseq/blob/master/README.md"
+      },
+      {
+        "name": "WyattBlue/auto-editor",
+        "category": "影音阅读",
+        "summary": "命令行音视频自动剪辑工具，主要根据音量分析并删除静音或无效片段，也支持按运动量剪辑、调整节奏，以及导出 Premiere、DaVinci Resolve、Final Cut Pro、Shotcut 和 Kdenlive 等编辑器可用的项目文件。",
+        "platform": "README未完整列出预编译平台；通过命令行使用，Windows 支持方式待核实",
+        "cost": "项目代码费用待核实；在线应用和下载版可能有独立授权或费用，README未明确说明。",
+        "installation": "README指向官方安装文档；可使用命令行安装，具体 Windows 安装步骤待核实。难度中等。",
+        "caution": "自动剪辑结果需要人工检查；命令行参数较多，长视频处理时间和外部编解码依赖待核实。",
+        "scenario": "网课录音空白太多？自动删掉静音段，再人工检查成片。",
+        "workflow": {
+          "input": "准备含讲话的长视频",
+          "action": "按音量检测并删除静音",
+          "output": "得到节奏更紧凑的视频"
+        },
+        "recommendation_reason": "能直接解决长视频去空白的重复劳动，输出还可交给常见剪辑软件继续处理。",
+        "is_featured": false,
+        "url": "https://github.com/WyattBlue/auto-editor",
+        "description": "Effort free video editing!",
+        "license": "Unlicense",
+        "license_url": "https://github.com/WyattBlue/auto-editor/blob/master/LICENSE",
+        "commit": "2026-11-13T16:27:24Z",
+        "commit_url": "https://github.com/WyattBlue/auto-editor/commit/1fb5d4939ee2632674d2de117a434622443a0acb",
+        "release": {
+          "tag": "31.8.0",
+          "date": "2026-10-30T01:50:12Z",
+          "url": "https://github.com/WyattBlue/auto-editor/releases/tag/31.8.0"
+        },
+        "readme_url": "https://github.com/WyattBlue/auto-editor/blob/master/README.md"
+      },
+      {
+        "name": "dgtlmoon/changedetection.io",
+        "category": "系统工具",
+        "summary": "用于监控网页变化的自托管工具，可跟踪价格、库存、公告和页面内容，按差异、条件或自然语言规则筛选变化，并通过 Discord、邮件、Slack、Telegram、Webhook 等方式通知。",
+        "platform": "自托管 Web 应用；支持 Docker，Windows 使用方式取决于 Docker 或 Python 环境",
+        "cost": "开源自托管版本的具体费用待核实；云端订阅为 8.99 美元/月，代理和模型服务可能另收费。",
+        "installation": "可使用 Docker 部署并通过浏览器访问；Windows 需先准备 Docker，难度中等。",
+        "caution": "监控登录页面、频繁请求或受限制网站前应确认权限；AI 摘要和代理可能产生额外费用。",
+        "scenario": "怕错过降价或补货？监控商品页变化并通过 Telegram 提醒。",
+        "workflow": {
+          "input": "准备商品或公告网页地址",
+          "action": "设置变化条件和通知渠道",
+          "output": "收到相关页面变化提醒"
+        },
+        "recommendation_reason": "用途明确，能把价格、库存和公告监控变成自动提醒，适合长期运行。",
+        "is_featured": false,
+        "url": "https://github.com/dgtlmoon/changedetection.io",
+        "description": "Best and simplest tool for website change detection, web page monitoring, and website change alerts. Perfect for tracking content changes, price drops, restock alerts, and website defacement monitoring— MCP included! all for free or enjoy our SaaS plan!",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/dgtlmoon/changedetection.io/blob/master/LICENSE",
+        "commit": "2026-11-13T15:44:04Z",
+        "commit_url": "https://github.com/dgtlmoon/changedetection.io/commit/e36975798b3b12145ebf891eaa3a651e68031ae6",
+        "release": {
+          "tag": "0.70.3",
+          "date": "2026-11-09T14:57:31Z",
+          "url": "https://github.com/dgtlmoon/changedetection.io/releases/tag/0.70.3"
+        },
+        "readme_url": "https://github.com/dgtlmoon/changedetection.io/blob/master/README.md"
+      },
+      {
+        "name": "Rongronggg9/RSS-to-Telegram-Bot",
+        "category": "影音阅读",
+        "summary": "把 RSS、Atom 等订阅源的文章内容转发到 Telegram，保留富文本和媒体，支持图片、视频、音频、长消息拆分、Telegraph 发布、OPML 导入导出、代理和多用户配置。",
+        "platform": "Docker、Python/PyPI；Windows 部署方式需依赖 Python 或 Docker，桌面安装包待核实",
+        "cost": "开源软件费用待核实；Telegram、服务器、代理或第三方服务可能产生费用。",
+        "installation": "可从 PyPI 安装或使用 Docker 部署；需要配置 Telegram Bot 和订阅源，难度中等。",
+        "caution": "需要自行维护 Bot 和运行环境；RSS 源格式、版权和 Telegram 限制可能影响转发效果。",
+        "scenario": "订阅太多网站？把重要 RSS 更新自动整理到 Telegram。",
+        "workflow": {
+          "input": "准备 RSS 地址和 Telegram Bot",
+          "action": "配置订阅源并设置格式",
+          "output": "得到集中推送的阅读消息"
+        },
+        "recommendation_reason": "能把分散的信息源汇聚到常用聊天工具，适合持续追踪新闻和博客。",
+        "is_featured": false,
+        "url": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot",
+        "description": "A Telegram RSS bot that cares about your reading experience (calling for new maintainers: https://github.com/Rongronggg9/RSS-to-Telegram-Bot/issues/747)",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot/blob/dev/LICENSE",
+        "commit": "2026-11-13T16:49:44Z",
+        "commit_url": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot/commit/9ecbb291ed04745bdc64d57ef430af416cdb5cf0",
+        "release": {
+          "tag": "v2.10.0",
+          "date": "2025-03-22T16:23:59Z",
+          "url": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot/releases/tag/v2.10.0"
+        },
+        "readme_url": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot/blob/dev/README.md"
+      },
+      {
+        "name": "di-sukharev/opencommit",
+        "category": "开发辅助",
+        "summary": "为 Git 提交生成有意义的提交说明的命令行工具，支持 OpenAI、Claude、其他兼容提供商以及本地 Ollama 和 llama.cpp，可配置 GitMoji、确认流程、模型与 API 地址。",
+        "platform": "Node.js CLI；Windows 可通过 npm 使用",
+        "cost": "工具本身费用待核实；云端模型按服务商计费，本地 Ollama 或 llama.cpp 可能无需 API 费用但需要本地资源。",
+        "installation": "先安装 Node.js，再运行 `npm install -g opencommit`；配置模型密钥后执行 `oco`，难度低到中等。",
+        "caution": "生成内容应在提交前人工检查；API 密钥保存在本地配置中，提交差异可能发送给所选模型服务。",
+        "scenario": "提交说明总是写得乱？让工具根据暂存改动生成可读提交信息。",
+        "workflow": {
+          "input": "准备已修改的 Git 文件",
+          "action": "暂存改动并运行 oco",
+          "output": "得到待确认的提交说明"
+        },
+        "recommendation_reason": "安装命令简单，能减少重复写提交说明的时间，同时保留人工确认环节。",
+        "is_featured": false,
+        "url": "https://github.com/di-sukharev/opencommit",
+        "description": "top #1 and most feature rich GPT wrapper for git — generate commit messages with an LLM in 1 sec — works with Claude, GPT and every other provider, supports local Ollama models too",
+        "license": "MIT",
+        "license_url": "https://github.com/di-sukharev/opencommit/blob/master/LICENSE",
+        "commit": "2026-11-13T17:05:47Z",
+        "commit_url": "https://github.com/di-sukharev/opencommit/commit/e6017762e38dee46decaaa53878abee29d6e5841",
+        "release": {
+          "tag": "github-action-v1.0.2",
+          "date": "2023-05-21T09:13:16Z",
+          "url": "https://github.com/di-sukharev/opencommit/releases/tag/github-action-v1.0.2"
+        },
+        "readme_url": "https://github.com/di-sukharev/opencommit/blob/master/README.md"
+      },
+      {
+        "name": "myYangyunfan/dsh_desktop",
+        "category": "开发辅助",
+        "summary": "面向 DeepSeek Harness 的 Windows、macOS 和 Linux 桌面整合客户端，内置 Node 运行时、DSH 及精选插件，提供文件工作台、会话管理、通知、插件启停、更新和便携版。",
+        "platform": "Windows 10/11、macOS 12+ Apple Silicon、Linux x64",
+        "cost": "README未明确商业收费；使用 DSH 及相关模型、API 或插件服务可能产生费用。",
+        "installation": "Windows 可下载 NSIS 安装包，支持当前用户安装免管理员权限；也提供自带 Node 的便携版，难度低。",
+        "caution": "项目是社区整合客户端，与 DeepSeek 官方不存在隶属或背书关系；需核对下载来源和 SHA256，模型费用另计。",
+        "scenario": "不想配置 Node 和插件？安装整合包后直接使用 DSH 工作台。",
+        "workflow": {
+          "input": "准备需要处理的代码或文件任务",
+          "action": "打开会话并调用内置开发插件",
+          "output": "得到可继续修改的代码结果"
+        },
+        "recommendation_reason": "Windows 有免管理员安装包和便携版，适合希望少配环境的开发者。",
+        "is_featured": false,
+        "url": "https://github.com/myYangyunfan/dsh_desktop",
+        "description": "DeepSeek Harness (dsh) Windows desktop client - bundled Node.js + dsh CLI, one-click launch",
+        "license": "MIT",
+        "license_url": "https://github.com/myYangyunfan/dsh_desktop/blob/main/LICENSE",
+        "commit": "2026-11-13T16:57:52Z",
+        "commit_url": "https://github.com/myYangyunfan/dsh_desktop/commit/07ec3c87bcb243c04abf66886ace19314c712627",
+        "release": {
+          "tag": "v1.1.0",
+          "date": "2026-11-13T15:28:40Z",
+          "url": "https://github.com/myYangyunfan/dsh_desktop/releases/tag/v1.1.0"
+        },
+        "readme_url": "https://github.com/myYangyunfan/dsh_desktop/blob/main/README.md"
+      },
+      {
+        "name": "LibreSign/libresign",
+        "category": "办公处理",
+        "summary": "面向 Nextcloud 的文档签署应用，可定义签署顺序、角色和规则，邀请内部或外部签署人，发送通知和提醒，跟踪签署状态，并验证签名文件、证书和完整操作记录。",
+        "platform": "运行于 Nextcloud 的 Web 应用；Windows 可通过浏览器使用，服务器部署平台待核实",
+        "cost": "开源软件费用待核实；需要 Nextcloud、服务器或托管环境，电子签名证书和相关服务费用待核实。",
+        "installation": "在已有 Nextcloud 实例中安装应用并配置签署流程；需要服务器管理权限，难度中等到高。",
+        "caution": "签署文件涉及法律和合规要求，正式使用前应确认当地法规、证书和审计要求。",
+        "scenario": "合同审批常漏步骤？在 Nextcloud 中按顺序发起并追踪签署。",
+        "workflow": {
+          "input": "准备待签署的合同和签署人",
+          "action": "设置顺序并发送签署请求",
+          "output": "得到可验证的签署文件和记录"
+        },
+        "recommendation_reason": "适合已有 Nextcloud 的团队，把签署、提醒和审计记录放进现有文件流程。",
+        "is_featured": false,
+        "url": "https://github.com/LibreSign/libresign",
+        "description": "Control how your documents get signed",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/LibreSign/libresign/blob/main/COPYING",
+        "commit": "2026-11-13T17:15:42Z",
+        "commit_url": "https://github.com/LibreSign/libresign/commit/676d88ee7f0d610e9ef43306f180772f965530cd",
+        "release": {
+          "tag": "v15.0.12",
+          "date": "2026-11-04T19:41:05Z",
+          "url": "https://github.com/LibreSign/libresign/releases/tag/v15.0.12"
+        },
+        "readme_url": "https://github.com/LibreSign/libresign/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-13T17:26:01.178Z",
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-13T17:26:01.178Z",
+      "status": "ok",
+      "projects": [
+        {
+          "name": "alibaba/open-code-review",
+          "category": "代码审查",
+          "summary": "一款命令行代码审查工具，读取 Git 变更并调用可配置的大语言模型，生成定位到具体代码行的审查意见。它也支持扫描完整文件，适合检查没有明显代码变更的目录。",
+          "what_is": "这是一款供开发者使用的命令行工具，不是打开网页就能自动审查代码的服务。以往审查者需要逐一阅读改动、查找相关文件，再写下问题所在的行号；它把读取变更、补充代码上下文和生成逐行意见串成一次审查流程。还可用文件扫描功能检查没有可用变更记录的代码。",
+          "audience": "适合开发者和代码审查人员；需要会使用命令行、Git，并配置模型接口，普通读者不能直接拿来审查文档。",
+          "example": "帮助理解的示例，并非亲测：假设你要审查同事提交的登录功能改动，先准备包含该改动的 Git 仓库，并配置可用的模型接口；运行审查后，工具读取变更及相关代码，输出指向具体行的意见。你再核对这些意见，决定哪些需要修改。",
+          "platform": "README 标注支持 Windows、macOS、Linux；通过命令行使用。",
+          "cost": "候选资料未说明实际使用费用；模型接口及运行环境是否收费待核实。",
+          "installation": "README 说明需配置模型接口；所给 README 在安装步骤前截断，具体安装命令和环境要求待核实。",
+          "caution": "审查意见仍须由开发者核对。发送给模型的代码范围及数据处理方式，应在接入前核实。",
+          "scenario": "团队希望先获得带行号的代码审查意见，再由开发者逐条复核。",
+          "workflow": {
+            "input": "Git 变更和模型接口",
+            "action": "运行审查并核对意见",
+            "output": "带代码行号的审查意见"
+          },
+          "url": "https://github.com/alibaba/open-code-review",
+          "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/alibaba/open-code-review/blob/main/LICENSE",
+          "commit": "2026-11-13T08:44:46Z",
+          "commit_url": "https://github.com/alibaba/open-code-review/commit/0e9060da66af36a96a15516e76a001953095318b",
+          "release": {
+            "tag": "v1.13.9",
+            "date": "2026-11-13T09:47:57Z",
+            "url": "https://github.com/alibaba/open-code-review/releases/tag/v1.13.9"
+          },
+          "readme_url": "https://github.com/alibaba/open-code-review/blob/main/README.md",
+          "trending_rank": 1,
+          "stars_today": 206,
+          "is_featured": false
+        },
+        {
+          "name": "openai/codex-security",
+          "category": "代码安全检查",
+          "summary": "提供命令行工具和 TypeScript 开发工具包，可扫描仓库、指定路径或 Git 变更，保存安全问题报告；还支持验证候选问题、生成补丁、检查修复，以及将结果导出或接入自动化流程。",
+          "what_is": "这是一套面向代码仓库的安全检查工具，包括可在终端运行的命令行程序和供开发者集成的工具包。以往团队需要自行安排扫描、整理疑似漏洞的代码证据，再跟进修复；它将扫描、保存发现、验证问题和检查补丁放进同一工作流程。它提供调查材料，不代替人工判断风险。",
+          "audience": "适合软件开发、安全工程及维护代码仓库的团队；使用命令行需技术经验，集成工具包需要编程。",
+          "example": "帮助理解的示例，并非亲测：假设你要检查一个应用的身份验证代码，准备该应用的代码仓库和所需登录凭据，在仓库目录运行扫描，或指定相关路径；完成后打开保存的报告，查看代码证据及未覆盖范围，再请工具验证疑似问题或检查已有修复。",
+          "platform": "可在终端、Codex 工作流程或支持相应自动化的环境中使用；README 未在所给内容中明确列出操作系统。",
+          "cost": "README 提及登录、API 密钥和成本限制，但未给出实际收费标准；使用费用待核实。",
+          "installation": "需要 Node.js 22.13.0 及以上的 22.x，或 24.x、26.x，以及 Python 3.10 及以上；Python 3.10 另需 tomli。可用 npm 全局安装 @openai/codex-security，再运行 cs login。",
+          "caution": "报告应结合代码证据和未覆盖范围阅读；部分网络安全请求或受保护发现需要额外访问权限。",
+          "scenario": "在合并代码前扫描仓库，核查疑似安全问题及修复情况。",
+          "workflow": {
+            "input": "代码仓库和扫描范围",
+            "action": "扫描并核对代码证据",
+            "output": "保存的报告与问题记录"
+          },
+          "url": "https://github.com/openai/codex-security",
+          "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/openai/codex-security/blob/main/LICENSE",
+          "commit": "2026-11-13T05:50:46Z",
+          "commit_url": "https://github.com/openai/codex-security/commit/f26b669b56a4423abd773c81f6c6c9c2ebadc42a",
+          "release": {
+            "tag": "npm-v0.10.0",
+            "date": "2026-11-12T02:18:52Z",
+            "url": "https://github.com/openai/codex-security/releases/tag/npm-v0.10.0"
+          },
+          "readme_url": "https://github.com/openai/codex-security/blob/main/README.md",
+          "trending_rank": 3,
+          "stars_today": 754,
+          "is_featured": false
+        },
+        {
+          "name": "we-promise/sure",
+          "category": "个人财务管理",
+          "summary": "一款由社区维护的个人财务应用，可自行部署，并通过浏览器等客户端访问。所给 README 展示了现金流、净资产和支出信息的界面，但未提供这些数据的具体录入或同步步骤。",
+          "what_is": "这是一款可自行部署的个人财务应用，不是只供开发者调用的框架。原本想集中查看自己的财务状况，需要自己整理不同项目的数据和展示方式；它提供用于查看现金流、净资产与支出信息的应用界面，并允许通过浏览器等客户端访问。如何导入或同步账户数据，所给 README 未作说明。",
+          "audience": "适合想自行管理财务资料、且有人能负责部署的个人或团队；使用界面不一定需要编程，自建服务需要技术支持。",
+          "example": "帮助理解的示例，并非亲测：假设你想在一个地方查看家庭财务状况，先由具备部署经验的人按项目指引运行 Sure，再准备要管理的财务资料；通过浏览器打开应用，查看现金流、净资产和支出等页面。资料怎样录入或连接账户，需进一步核对文档。",
+          "platform": "可通过浏览器、macOS 桌面客户端、移动客户端及 API 客户端访问；服务端可用 Docker 自行部署。",
+          "cost": "README 提及自行部署，未说明当前托管服务价格或部署成本；服务器等费用需自行核实。",
+          "installation": "自行部署应参阅 README 指向的 Docker 托管指南；README 中的 Ruby、PostgreSQL、Redis 与 bin/setup 步骤是本地开发说明，不应直接当作普通用户的安装流程。",
+          "caution": "项目是已归档 Maybe Finance 的社区分支。涉及个人财务资料，自行部署前应核实数据存储、备份和访问控制；所给 README 未说明账户同步细节。",
+          "scenario": "愿意自行部署服务，希望通过应用界面集中查看个人财务信息。",
+          "workflow": {
+            "input": "待管理的财务资料",
+            "action": "在应用中查看财务页面",
+            "output": "现金流、净资产及支出视图"
+          },
+          "url": "https://github.com/we-promise/sure",
+          "description": "The personal finance app for everyone (by everyone)",
+          "license": "AGPL-3.0",
+          "license_url": "https://github.com/we-promise/sure/blob/main/LICENSE",
+          "commit": "2026-11-13T05:52:26Z",
+          "commit_url": "https://github.com/we-promise/sure/commit/d74ee9f284d293709a99056c32b5ec534ff9f4d7",
+          "release": {
+            "tag": "v0.7.6-hotfix.1",
+            "date": "2026-11-12T21:54:09Z",
+            "url": "https://github.com/we-promise/sure/releases/tag/v0.7.6-hotfix.1"
+          },
+          "readme_url": "https://github.com/we-promise/sure/blob/main/README.md",
+          "trending_rank": 5,
+          "stars_today": 944,
+          "is_featured": false
+        },
+        {
+          "name": "backnotprop/plannotator",
+          "category": "AI 编程协作审阅",
+          "summary": "一个在本地浏览器中使用的 AI 编程代理审阅界面。可批注代理提出的计划、说明和 HTML 内容，审阅代码变更，并把反馈发送回代理；Inbox 用于集中处理多个代理留下的问题和文件。",
+          "what_is": "这是连接 AI 编程代理的本地浏览器审阅工具，并非独立完成开发任务的软件。原本使用代理时，你可能要在对话、文件和代码变更之间来回切换，逐条说明修改意见；它把计划、页面内容、代理消息及代码差异放到可批注的界面，再将你的反馈送回对应代理，方便保留人的决策环节。",
+          "audience": "适合使用 AI 编程代理的开发者、产品设计或审阅人员；批注可不写代码，但需先配置兼容代理及其连接方式。",
+          "example": "帮助理解的示例，并非亲测：假设编程代理为新功能写了一份实施计划并生成 HTML 页面，你先准备这份代理产出；在浏览器审阅界面标出需要调整的段落和页面位置，写下意见后发送给代理。代理收到反馈后可继续处理，你仍需检查其后续结果。",
+          "platform": "本地浏览器界面，配合 README 列出的多种 AI 编程代理；所给内容未明确列出操作系统要求。",
+          "cost": "所给 README 未说明使用价格、代理费用或内置 AI 功能的费用；待核实。",
+          "installation": "README 说明通过插件、钩子或命令连接代理，并展示 plannotator inbox 命令；所给内容未包含完整安装步骤和环境要求，待核实。",
+          "caution": "它用于审阅和反馈，不代表代理产出已经正确；不同代理的连接方式及可用功能应按各自设置核实。",
+          "scenario": "同时使用多个编程代理时，集中批注计划、页面和代码改动。",
+          "workflow": {
+            "input": "代理提交的计划或代码变更",
+            "action": "在浏览器批注并发送反馈",
+            "output": "返回对应代理的审阅意见"
+          },
+          "url": "https://github.com/backnotprop/plannotator",
+          "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/backnotprop/plannotator/blob/main/LICENSE-APACHE",
+          "commit": "2026-11-13T16:45:48Z",
+          "commit_url": "https://github.com/backnotprop/plannotator/commit/b2eb7d6931106ceea5454f788a00f21a7bf34bf1",
+          "release": {
+            "tag": "v0.28.64",
+            "date": "2026-11-13T17:24:36Z",
+            "url": "https://github.com/backnotprop/plannotator/releases/tag/v0.28.64"
+          },
+          "readme_url": "https://github.com/backnotprop/plannotator/blob/main/README.md",
+          "trending_rank": 6,
+          "stars_today": 100,
+          "is_featured": false
+        },
+        {
+          "name": "louislam/uptime-kuma",
+          "category": "服务可用性监控",
+          "summary": "一款可自行部署的监控应用，可检查网站、网络端口、DNS 记录及容器等目标的状态，在界面查看图表和证书信息，并通过多种渠道发送通知或展示状态页。",
+          "what_is": "这是一款需要自行部署的服务监控软件，不是替你托管网站的服务。原本想知道网站或接口何时无法访问，需要自己定时检查并通知相关人员；它让你设置监控目标，持续记录检测状态，并在异常时通过所配置的渠道通知。它还提供图表与状态页，方便查看和分享服务状况。",
+          "audience": "适合网站管理员、运维人员和维护线上服务的小团队；日常配置可用界面完成，首次部署仍需服务器或容器操作经验。",
+          "example": "帮助理解的示例，并非亲测：假设你负责一个商店网站，先准备网站地址和用于接收通知的渠道；自行部署 Uptime Kuma 后，在界面添加网站监控并设置通知。之后可查看访问状态和图表，在检测到异常时由已配置的渠道收到提醒。",
+          "platform": "可使用 Docker 部署；非 Docker 安装支持 README 列出的主流 Linux 发行版及符合要求的 Windows，不支持所列 BSD 系统。",
+          "cost": "所给 README 未列出软件使用价格；自行部署所需机器、网络和通知服务可能产生费用，具体待核实。",
+          "installation": "README 提供 Docker Compose、Docker 命令及非 Docker 安装方式。非 Docker 方式需要 Node.js 20.4 及以上和 Git；如需后台运行，README 给出 PM2 步骤。",
+          "caution": "README 提醒不要将 uptimekuma.co 当作项目官网；Docker 数据目录不支持 NFS。公开访问监控界面前，应核实网络暴露与访问保护设置。",
+          "scenario": "监控网站和服务是否在线，并在异常时通知维护人员。",
+          "workflow": {
+            "input": "服务地址和通知渠道",
+            "action": "设置监控目标与提醒",
+            "output": "状态图表和异常通知"
+          },
+          "url": "https://github.com/louislam/uptime-kuma",
+          "description": "A fancy self-hosted monitoring tool",
+          "license": "MIT",
+          "license_url": "https://github.com/louislam/uptime-kuma/blob/master/LICENSE",
+          "commit": "2026-11-13T17:16:10Z",
+          "commit_url": "https://github.com/louislam/uptime-kuma/commit/4f6661cfa83a06be0353d5536ef3d9ee0064f534",
+          "release": {
+            "tag": "2.5.11",
+            "date": "2026-11-12T09:20:06Z",
+            "url": "https://github.com/louislam/uptime-kuma/releases/tag/2.5.11"
+          },
+          "readme_url": "https://github.com/louislam/uptime-kuma/blob/master/README.md",
+          "trending_rank": 7,
+          "stars_today": 61,
+          "is_featured": false
+        }
+      ]
+    }
   }
 }
