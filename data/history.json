@@ -2138,7 +2138,7 @@
     "delivery_format_version": 6
   },
   "2026-11-14": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "IncarnaMind/IncarnaMind",
@@ -2601,6 +2601,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-13T17:26:46.106Z",
+    "delivery_format_version": 6
   }
 }
