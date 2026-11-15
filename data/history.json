@@ -3074,7 +3074,7 @@
     "delivery_format_version": 6
   },
   "2026-11-16": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Lertaro/Lertaro",
@@ -3508,6 +3508,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-15T16:36:58.227Z",
+    "delivery_format_version": 6
   }
 }
