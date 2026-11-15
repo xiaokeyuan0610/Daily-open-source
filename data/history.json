@@ -2606,7 +2606,7 @@
     "delivery_format_version": 6
   },
   "2026-11-15": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "dezoomify/dezoomify",
@@ -3069,6 +3069,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-15T01:33:27.403Z",
+    "delivery_format_version": 6
   }
 }
