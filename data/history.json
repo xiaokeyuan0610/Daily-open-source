@@ -3074,7 +3074,7 @@
     "delivery_format_version": 6
   },
   "2026-11-16": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "Lertaro/Lertaro",
