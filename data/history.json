@@ -3513,7 +3513,7 @@
     "delivery_format_version": 6
   },
   "2026-11-17": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Koimsurai/Arke",
@@ -3976,6 +3976,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-16T19:53:37.839Z",
+    "delivery_format_version": 6
   }
 }
