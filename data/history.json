@@ -3513,7 +3513,7 @@
     "delivery_format_version": 6
   },
   "2026-11-17": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "Koimsurai/Arke",
