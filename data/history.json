@@ -4066,7 +4066,7 @@
     }
   },
   "2026-11-18": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "Matteo842/SaveState",
