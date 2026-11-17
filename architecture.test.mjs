@@ -20,9 +20,9 @@ test('architecture verifies license and recent default branch commit, excludes a
       if (path.endsWith('/readme')) return {path:'README.md',content:Buffer.from('3D modeling and rendering design tool').toString('base64')};
       return {full_name:path.slice(7),html_url:'https://example.org/project',default_branch:'main'};
     },
-    generate:async (candidates,count,mode) => {assert.equal(count,3);assert.equal(mode,'architecture');return candidates;}
+    generate:async (candidates,count,mode) => {assert.equal(count,5);assert.equal(mode,'architecture');return candidates;}
   });
-  assert.equal(result.status,'ok'); assert.equal(result.projects.length,3);
+  assert.equal(result.status,'ok'); assert.equal(result.projects.length,5);
   assert.ok(!queried.some(path => path.startsWith('/repos/'+excluded)));
   assert.ok(result.projects.every(p => p.license === 'MIT' && p.commit === now.toISOString()));
 });
