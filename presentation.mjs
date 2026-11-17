@@ -91,7 +91,14 @@ export function trendingMarkdown(trending) {
       + `- [项目说明](${project.readme_url})\n`).join('\n');
 }
 
-export function feishuCard(date, projects, repository, trending) {
+export function architectureMarkdown(section) {
+  if (!section) return '';
+  const note = section.status === 'unavailable' ? '建筑栏目本次获取失败，主日报正常发送。' : section.projects.length ? '面向建筑设计、BIM、参数化、城市 GIS 与建筑性能工作。按许可证与近期维护核验，排除历史重复；不足 3 个时不凑数。' : '暂无通过核验且未重复的建筑工具，不凑数。';
+  return '\n---\n\n## 🏛️ 建筑与设计开源工具\n\n' + note + '\n\n' + section.projects.map(p =>
+    '### [' + escapeMarkdown(shortName(p)) + '](' + p.url + ')\n\n**这是什么：**' + escapeMarkdown(p.what_is) + '\n\n**适合谁：**' + escapeMarkdown(p.audience) + '\n\n**建筑工作示例：**' + escapeMarkdown(p.example) + '\n\n**工作流程：**' + workflowLine(p) + '\n\n- 平台：' + escapeMarkdown(p.platform) + '\n- 费用：' + escapeMarkdown(p.cost) + '\n- 安装：' + escapeMarkdown(p.installation) + '\n- 注意：' + escapeMarkdown(p.caution) + '\n- [许可证 ' + p.license + '](' + p.license_url + ')\n- [最近提交 ' + p.commit + '](' + p.commit_url + ')\n- [项目说明](' + p.readme_url + ')\n').join('\n');
+}
+
+export function feishuCard(date, projects, repository, trending, architecture) {
   const featured = projects.find(project => project.is_featured);
   const grouped = groupProjects(projects.filter(project => project !== featured));
   const allGroups = groupProjects(projects);
@@ -101,6 +108,11 @@ export function feishuCard(date, projects, repository, trending) {
     { tag: 'button', text: { tag: 'plain_text', content: '查看需求导航图与完整日报' }, type: 'primary',
       behaviors: [{ type: 'open_url', default_url: reportUrl }] }
   ];
+  if (architecture) {
+    elements.push({ tag: 'hr' });
+    elements.push({ tag: 'markdown', content: '**🏛️ 建筑与设计开源工具**\n' + (architecture.status === 'unavailable' ? '本次建筑栏目获取失败，主日报正常发送。' : architecture.projects.length ? '额外 ' + architecture.projects.length + ' 项 · 完整建筑场景示例、平台与安装说明见日报' : '暂无通过核验且未重复的建筑工具，不凑数。') });
+    for (const p of architecture.projects) elements.push({ tag: 'markdown', content: '**[' + escapeMarkdown(shortName(p)) + '](' + p.url + ')**\n' + escapeMarkdown(p.what_is) + '\n**适合谁：**' + escapeMarkdown(p.audience) + '\n**工作流程：**' + workflowLine(p) });
+  }
   if (trending) {
     elements.push({ tag: 'hr' });
     elements.push({ tag: 'markdown', content: `**🔥 今日热门 · 额外栏目**\n${trendingNote(trending)}` });

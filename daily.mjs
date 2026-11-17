@@ -1,10 +1,11 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHmac } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { navigation, featuredMarkdown, workflowLine, trendingMarkdown, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
+import { navigation, featuredMarkdown, workflowLine, architectureMarkdown, trendingMarkdown, feishuCard, shouldDeliver, DELIVERY_FORMAT_VERSION } from './presentation.mjs';
 import { collectTrending, validateHotPicks, HOT_PROMPT, TRENDING_VERSION } from './trending.mjs';
 import { validateEditorial, EDITORIAL_PROMPT, EDITORIAL_VERSION } from './editorial.mjs';
 
+import { collectArchitecture, historyNames, ARCHITECTURE_VERSION } from './architecture.mjs';
 const env = process.env;
 export const today = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Shanghai', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const required = name => { if (!env[name]) throw new Error(`Missing configuration: ${name}`); return env[name]; };
@@ -38,7 +39,7 @@ export function eligible(repo, license, commit, now = Date.now()) {
 }
 
 async function discover(history) {
-  const seen = new Set(Object.values(history).flatMap(issue => [...issue.projects, ...(issue.trending?.projects || [])].map(project => project.name.toLowerCase())));
+  const seen = new Set(historyNames(history).map(name => name.toLowerCase()));
   const candidates = new Map();
   const topicResults = [];
   const cutoff = new Date(Date.now() - 365 * 86400000).toISOString().slice(0, 10);
@@ -95,7 +96,7 @@ export function validatePicks(picks, candidates, count = 10) {
 }
 
 export async function completePicks(candidates, complete, count = 10, hot = false) {
-  const prompt = hot ? HOT_PROMPT : EDITORIAL_PROMPT;
+  const prompt = hot ? HOT_PROMPT + (hot === "architecture" ? "\n本栏目面向建筑师、建筑设计学生与BIM人员。用建筑工作场景解释：设计建模、BIM/IFC协作、参数化、城市GIS、日照采光或建筑性能。明确是软件、插件还是编程库；不要把一般软件架构误当建筑设计。" : "") : EDITORIAL_PROMPT;
   const requirement = `输出完整的 JSON 对象，projects 必须恰好包含 ${count} 个不同候选。输出前逐项核对数量与必填字段。`;
   let correction = '';
   for (let attempt = 0; attempt < 2; attempt++) {
@@ -129,8 +130,8 @@ async function generate(candidates, count = 10, hot = false) {
   }, count, hot);
 }
 
-export function markdown(date, projects, trending) {
-  return practicalMarkdown(date, projects) + trendingMarkdown(trending);
+export function markdown(date, projects, trending, architecture) {
+  return practicalMarkdown(date, projects) + architectureMarkdown(architecture) + trendingMarkdown(trending);
 }
 
 function practicalMarkdown(date, projects) {
@@ -140,8 +141,13 @@ function practicalMarkdown(date, projects) {
 
 async function addTrending(issue, history) {
   if (issue.trending?.version === TRENDING_VERSION) return;
-  const exclude = Object.values(history).flatMap(previous => [...previous.projects, ...(previous === issue ? [] : previous.trending?.projects || [])].map(project => project.name));
+  const exclude = Object.values(history).flatMap(previous => [...previous.projects, ...(previous.architecture?.projects || []), ...(previous === issue ? [] : previous.trending?.projects || [])].map(project => project.name));
   issue.trending = await collectTrending({ github, eligible, generate, exclude: [...exclude, ...issue.projects.map(project => project.name)] });
+}
+
+async function addArchitecture(issue, history) {
+  if (issue.architecture?.version === ARCHITECTURE_VERSION) return;
+  issue.architecture = await collectArchitecture({ github, eligible, generate, exclude: [...historyNames(history), ...issue.projects.map(project => project.name), ...(issue.trending?.projects || []).map(project => project.name)] });
 }
 
 async function prepare() {
@@ -160,19 +166,21 @@ async function prepare() {
       issue.editorial_version = EDITORIAL_VERSION;
       await save('data/history.json', history);
     }
+    await addArchitecture(issue, history);
     await addTrending(issue, history);
     await save('data/history.json', history);
     await mkdir('reports', { recursive: true });
-    await writeFile(`reports/${date}.md`, markdown(date, issue.projects, issue.trending));
+    await writeFile(`reports/${date}.md`, markdown(date, issue.projects, issue.trending, issue.architecture));
     console.log('Refreshed layout using existing verified projects');
     return;
   }
   required('AI_API_KEY'); required('FEISHU_WEBHOOK_URL');
   const projects = await generate(await discover(history));
   const issue = { status: 'prepared', projects, editorial_version: EDITORIAL_VERSION, generated_at: new Date().toISOString() };
-  await addTrending(issue, history);
+  await addArchitecture(issue, history);
+    await addTrending(issue, history);
   await mkdir('reports', { recursive: true });
-  await writeFile(`reports/${date}.md`, markdown(date, projects, issue.trending));
+  await writeFile(`reports/${date}.md`, markdown(date, projects, issue.trending, issue.architecture));
   history[date] = issue;
   await save('data/history.json', history);
 }
@@ -190,7 +198,7 @@ async function send() {
   if (issue.status === 'sending' && env.CONFIRM_RESEND !== 'true') throw new Error('Previous delivery uncertain: inspect group before confirming resend');
   const url = new URL(required('FEISHU_WEBHOOK_URL'));
   if (url.protocol !== 'https:' || url.hostname !== 'open.feishu.cn' || !url.pathname.startsWith('/open-apis/bot/v2/hook/')) throw new Error('Invalid Feishu endpoint');
-  const payload = feishuCard(date, issue.projects, required('GITHUB_REPOSITORY'), issue.trending);
+  const payload = feishuCard(date, issue.projects, required('GITHUB_REPOSITORY'), issue.trending, issue.architecture);
   issue.status = 'sending';
   await save('data/history.json', history);
   const { execFileSync } = await import('node:child_process');
