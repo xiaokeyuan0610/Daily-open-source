@@ -4060,8 +4060,9 @@
           "is_featured": false
         }
       ],
-      "supplement_status": "sending",
-      "supplement_attempted_at": "2026-11-17T05:47:26.884Z"
+      "supplement_status": "sent",
+      "supplement_attempted_at": "2026-11-17T05:47:26.884Z",
+      "supplement_sent_at": "2026-11-17T05:48:15.183Z"
     }
   }
 }
