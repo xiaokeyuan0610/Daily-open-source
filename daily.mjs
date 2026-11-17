@@ -96,7 +96,7 @@ export function validatePicks(picks, candidates, count = 10) {
 }
 
 export async function completePicks(candidates, complete, count = 10, hot = false) {
-  const prompt = hot ? HOT_PROMPT + (hot === "architecture" ? "\n本栏目面向建筑师、建筑设计学生与BIM人员。用建筑工作场景解释：设计建模、BIM/IFC协作、参数化、城市GIS、日照采光或建筑性能。明确是软件、插件还是编程库；不要把一般软件架构误当建筑设计。" : "") : EDITORIAL_PROMPT;
+  const prompt = hot ? HOT_PROMPT + (hot === "architecture" ? "\n本栏目只面向建筑与空间设计创作者，专注概念方案、形态推敲、参数化造型、三维建模、材质渲染、图纸排版和效果图后期。不要推荐或举例BIM/IFC协作、气候、能耗、日照性能模拟、GIS、结构工程和施工管理。优先设计师能直接使用的软件或插件；编程工具必须说明门槛。明确工具实际能做哪一步，不把通用美术工具包装成建筑专用软件；不把软件架构误当建筑设计。" : "") : EDITORIAL_PROMPT;
   const requirement = `输出完整的 JSON 对象，projects 必须恰好包含 ${count} 个不同候选。输出前逐项核对数量与必填字段。`;
   let correction = '';
   for (let attempt = 0; attempt < 2; attempt++) {

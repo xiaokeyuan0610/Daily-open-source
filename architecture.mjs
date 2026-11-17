@@ -1,6 +1,12 @@
-export const ARCHITECTURE_VERSION = 1;
+export const ARCHITECTURE_VERSION = 2;
 export const ARCHITECTURE_LIMIT = 3;
-export const SEEDS = ['IfcOpenShell/IfcOpenShell', 'FreeCAD/FreeCAD', 'ladybug-tools/ladybug', 'ladybug-tools/honeybee', 'ladybug-tools/dragonfly-core', 'NREL/EnergyPlus', 'NREL/OpenStudio', 'NatLabRockies/OpenStudio', 'specklesystems/speckle-server', 'ThatOpen/engine_components', 'ThatOpen/engine_web-ifc', 'cove-tool/mesh', 'ladybug-tools/lbt-grasshopper', 'ladybug-tools/honeybee-energy', 'ladybug-tools/honeybee-radiance', 'compas-dev/compas', 'compas-dev/compas_fab', 'BlockResearchGroup/compas_tna', 'geometryprocessing/geometry-central', 'OSGeo/grass', 'qgis/QGIS', 'osmnx/osmnx', 'cityjson/cjio', 'tudelft3d/3dfier', 'tudelft3d/val3dity', 'domlysz/BlenderGIS', 'buildingSMART/IDS', 'buildingSMART/BCF-XML'];
+export const SEEDS = ["blender/blender","FreeCAD/FreeCAD","LibreCAD/LibreCAD","openscad/openscad","nortikin/sverchok","JacquesLucke/animation_nodes","armory3d/armorpaint","LuxCoreRender/LuxCore","mitsuba-renderer/mitsuba3","GIMP/gimp","inkscape/inkscape","KDE/krita","darktable-org/darktable","RawTherapee/RawTherapee","chaiNNer-org/chaiNNer","upscayl/upscayl","Acly/krita-ai-diffusion","lllyasviel/Fooocus","Comfy-Org/ComfyUI"];
+
+export function designRelevant(repo) {
+  const text = `${repo.full_name || ""} ${repo.description || ""}`;
+  if (/\bbim\b|\bifc\b|climate|weather|energy simulation|building performance|structural analysis|地理信息|气候|能耗|结构分析/i.test(text)) return false;
+  return SEEDS.some(name => name.toLowerCase() === repo.full_name?.toLowerCase()) || /3d|cad|model(l)?ing|render|parametric|graphic|illustrat|paint|image|sketch|texture|建模|渲染|造型|绘图|图像|排版/i.test(text);
+}
 
 export function historyNames(history) {
   return Object.values(history).flatMap(issue => [...(issue.projects || []), ...(issue.trending?.projects || []), ...(issue.architecture?.projects || [])]).map(project => project.name);
@@ -14,7 +20,7 @@ export async function collectArchitecture({ github, eligible, generate, exclude,
     const offset = Math.floor(now.getTime() / 86400000) % SEEDS.length;
     const names = [...SEEDS.slice(offset), ...SEEDS.slice(0, offset)];
     if (names.filter(name => !seen.has(name.toLowerCase())).length < 6) {
-      for (const topic of ['bim', 'ifc', 'building-energy', 'building-information-modeling']) {
+      for (const topic of ['parametric-design', '3d-modeling', 'rendering', 'vector-graphics']) {
         const response = await github(`/search/repositories?q=${encodeURIComponent(`topic:${topic} archived:false fork:false stars:>20`)}&sort=updated&per_page=10`);
         names.push(...response.items.map(repo => repo.full_name));
         await new Promise(resolve => setTimeout(resolve, 2100));
@@ -28,6 +34,7 @@ export async function collectArchitecture({ github, eligible, generate, exclude,
       const repo = await github(path, true);
       if (!repo || (repo.full_name.toLowerCase() !== name.toLowerCase() && seen.has(repo.full_name.toLowerCase()))) continue;
       seen.add(repo.full_name.toLowerCase());
+      if (!designRelevant(repo)) continue;
       const license = await github(`${path}/license`, true);
       const commits = await github(`${path}/commits?per_page=1`, true);
       const commit = commits?.[0]?.commit?.committer?.date;
