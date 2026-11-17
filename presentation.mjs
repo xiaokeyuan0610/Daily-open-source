@@ -93,7 +93,7 @@ export function trendingMarkdown(trending) {
 
 export function architectureMarkdown(section) {
   if (!section) return '';
-  const note = section.status === 'unavailable' ? '建筑栏目本次获取失败，主日报正常发送。' : section.projects.length ? '只关注概念方案、形态推敲、参数化造型、建模渲染与图纸表达。按许可证与近期维护核验，排除历史重复；不足 3 个时不凑数。' : '暂无通过核验且未重复的建筑工具，不凑数。';
+  const note = section.status === 'unavailable' ? '建筑栏目本次获取失败，主日报正常发送。' : section.projects.length ? '只关注概念方案、形态推敲、参数化造型、建模渲染与图纸表达。按许可证与近期维护核验，排除历史重复；不足 5 个时不凑数。' : '暂无通过核验且未重复的建筑工具，不凑数。';
   return '\n---\n\n## 🏛️ 建筑设计与表达工具\n\n' + note + '\n\n' + section.projects.map(p =>
     '### [' + escapeMarkdown(shortName(p)) + '](' + p.url + ')\n\n**这是什么：**' + escapeMarkdown(p.what_is) + '\n\n**适合谁：**' + escapeMarkdown(p.audience) + '\n\n**建筑工作示例：**' + escapeMarkdown(p.example) + '\n\n**工作流程：**' + workflowLine(p) + '\n\n- 平台：' + escapeMarkdown(p.platform) + '\n- 费用：' + escapeMarkdown(p.cost) + '\n- 安装：' + escapeMarkdown(p.installation) + '\n- 注意：' + escapeMarkdown(p.caution) + '\n- [许可证 ' + p.license + '](' + p.license_url + ')\n- [最近提交 ' + p.commit + '](' + p.commit_url + ')\n- [项目说明](' + p.readme_url + ')\n').join('\n');
 }
