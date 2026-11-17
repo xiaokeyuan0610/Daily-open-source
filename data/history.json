@@ -3978,6 +3978,90 @@
       ]
     },
     "sent_at": "2026-11-16T19:53:37.839Z",
-    "delivery_format_version": 6
+    "delivery_format_version": 6,
+    "architecture": {
+      "version": 1,
+      "collected_at": "2026-11-17T05:46:52.776Z",
+      "status": "ok",
+      "projects": [
+        {
+          "name": "FreeCAD/FreeCAD",
+          "category": "参数化建筑建模",
+          "what_is": "这是一款能直接安装使用的参数化三维建模软件，也适用于建筑设计。你可以从带尺寸约束的二维草图建立三维对象，再修改历史参数调整方案，并从模型生成图纸。",
+          "audience": "建筑设计学生、建筑师及 CAD 用户；基础操作不需要编程。",
+          "example": "例如设计一组入口构件：先画带尺寸约束的平面草图，再建立三维对象；方案调整时修改草图尺寸，检查模型与图纸变化。此为理解用途的示例，非亲测。",
+          "workflow": {
+            "input": "带尺寸的二维草图",
+            "action": "约束建模并修改参数",
+            "output": "三维对象与图纸"
+          },
+          "platform": "Windows / macOS / Linux",
+          "cost": "开源，可免费下载安装",
+          "installation": "下载官方稳定版安装包；无需自行编译。",
+          "caution": "先用副本验证模型和图纸；已有商业 CAD 工作流的兼容性需要具体测试。",
+          "license": "LGPL-2.1",
+          "license_url": "https://github.com/FreeCAD/FreeCAD/blob/main/LICENSE",
+          "commit": "2026-11-16T19:37:32Z",
+          "commit_url": "https://github.com/FreeCAD/FreeCAD/commit/9fc061fd4cc30ad9ce593a0e3670c8f3700558ca",
+          "readme_url": "https://github.com/FreeCAD/FreeCAD/blob/main/README.md",
+          "url": "https://github.com/FreeCAD/FreeCAD",
+          "summary": "这是一款能直接安装使用的参数化三维建模软件，也适用于建筑设计。你可以从带尺寸约束的二维草图建立三维对象，再修改历史参数调整方案，并从模型生成图纸。",
+          "scenario": "参数化建筑建模",
+          "is_featured": false
+        },
+        {
+          "name": "IfcOpenShell/IfcOpenShell",
+          "category": "BIM与IFC协作",
+          "what_is": "这是处理 IFC 建筑模型的开源库和工具生态。IFC 是不同 BIM 软件交换建筑信息的标准格式。它能读取模型及属性、处理几何，并提供格式转换工具；其中 Bonsai 是在 Blender 中使用的图形化 IFC 编辑插件。",
+          "audience": "BIM 工程师、建筑师和开发者；Python 接口需要编程，Bonsai 图形操作门槛不同。",
+          "example": "例如收到其他团队导出的 IFC 模型：可通过 Bonsai 在 Blender 中浏览模型，或用 Python 读取构件信息；需要其他格式时研究 IfcConvert 的转换选项。此为用途示例，非亲测。",
+          "workflow": {
+            "input": "协作方提供的IFC模型",
+            "action": "浏览构件属性或转换格式",
+            "output": "可检查的模型与构件信息"
+          },
+          "platform": "依使用组件而定；Bonsai 需要兼容的 Blender",
+          "cost": "开源；不同组件使用不同许可证，外部软件成本单独核对",
+          "installation": "普通用户从官方 Bonsai 安装指南入手；开发者按 IfcOpenShell Python 文档配置。",
+          "caution": "仓库含多个组件，根许可证不能代替各组件许可；Bonsai 标注 GPL-3.0-or-later。不能保证所有 IFC 导出结果完全一致。",
+          "license": "LGPL-3.0",
+          "license_url": "https://github.com/IfcOpenShell/IfcOpenShell/blob/v0.9.0/COPYING",
+          "commit": "2026-11-16T20:56:18Z",
+          "commit_url": "https://github.com/IfcOpenShell/IfcOpenShell/commit/7092a6ae22fd351fdabf34524b3ad91d0aae0a0b",
+          "readme_url": "https://github.com/IfcOpenShell/IfcOpenShell/blob/v0.9.0/README.md",
+          "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+          "summary": "这是处理 IFC 建筑模型的开源库和工具生态。IFC 是不同 BIM 软件交换建筑信息的标准格式。它能读取模型及属性、处理几何，并提供格式转换工具；其中 Bonsai 是在 Blender 中使用的图形化 IFC 编辑插件。",
+          "scenario": "BIM与IFC协作",
+          "is_featured": false
+        },
+        {
+          "name": "ladybug-tools/ladybug",
+          "category": "建筑气候分析",
+          "what_is": "这是分析和可视化 EPW 气象文件的 Python 核心库。EPW 可以理解为建筑环境分析使用的逐时天气数据。它能读取气温等数据并计算太阳位置，是 Ladybug Grasshopper 插件的基础库，本仓库本身不是独立图形软件。",
+          "audience": "做建筑气候分析、环境研究的设计师和开发者；直接使用核心库需要 Python。",
+          "example": "例如为场地分析整理气候信息：准备当地 EPW 文件，读取气温数据，并按日期和时刻计算太阳高度与方位，作为后续设计研究的依据。此为理解用途的示例，非亲测，也不是完整建筑能耗模拟。",
+          "workflow": {
+            "input": "场地所在地区的EPW文件",
+            "action": "读取气象并计算太阳位置",
+            "output": "气候数据与太阳高度方位"
+          },
+          "platform": "兼容的 Python 环境；Grasshopper 插件另行配置",
+          "cost": "核心库开源；Rhino 等外部软件许可费用另计",
+          "installation": "开发者可安装 ladybug-core；图形化使用请另看官方 Ladybug Grasshopper 插件文档。",
+          "caution": "核心库不等于插件安装包，也不是完整能耗或采光模拟器；核对气象文件适用地区与年份。",
+          "license": "AGPL-3.0",
+          "license_url": "https://github.com/ladybug-tools/ladybug/blob/master/LICENSE",
+          "commit": "2026-11-12T20:55:53Z",
+          "commit_url": "https://github.com/ladybug-tools/ladybug/commit/e09af91cb3c8fdc61d4591a2ec7516619e7b4475",
+          "readme_url": "https://github.com/ladybug-tools/ladybug/blob/master/README.md",
+          "url": "https://github.com/ladybug-tools/ladybug",
+          "summary": "这是分析和可视化 EPW 气象文件的 Python 核心库。EPW 可以理解为建筑环境分析使用的逐时天气数据。它能读取气温等数据并计算太阳位置，是 Ladybug Grasshopper 插件的基础库，本仓库本身不是独立图形软件。",
+          "scenario": "建筑气候分析",
+          "is_featured": false
+        }
+      ],
+      "supplement_status": "sending",
+      "supplement_attempted_at": "2026-11-17T05:47:26.884Z"
+    }
   }
 }
