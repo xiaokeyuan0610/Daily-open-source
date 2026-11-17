@@ -4066,7 +4066,7 @@
     }
   },
   "2026-11-18": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Matteo842/SaveState",
@@ -4625,6 +4625,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-17T19:25:32.964Z",
+    "delivery_format_version": 6
   }
 }
