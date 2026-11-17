@@ -1,5 +1,5 @@
 export const ARCHITECTURE_VERSION = 2;
-export const ARCHITECTURE_LIMIT = 3;
+export const ARCHITECTURE_LIMIT = 5;
 export const SEEDS = ["blender/blender","FreeCAD/FreeCAD","LibreCAD/LibreCAD","openscad/openscad","nortikin/sverchok","JacquesLucke/animation_nodes","armory3d/armorpaint","LuxCoreRender/LuxCore","mitsuba-renderer/mitsuba3","GIMP/gimp","inkscape/inkscape","KDE/krita","darktable-org/darktable","RawTherapee/RawTherapee","chaiNNer-org/chaiNNer","upscayl/upscayl","Acly/krita-ai-diffusion","lllyasviel/Fooocus","Comfy-Org/ComfyUI"];
 
 export function designRelevant(repo) {
