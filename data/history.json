@@ -4628,5 +4628,606 @@
     },
     "sent_at": "2026-11-17T19:25:32.964Z",
     "delivery_format_version": 6
+  },
+  "2026-11-19": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "koodo-reader/koodo-reader",
+        "category": "影音阅读",
+        "summary": "跨平台电子书管理与阅读工具，支持 EPUB、PDF、TXT、漫画压缩包等多种格式，可导入书籍、调整排版，并在阅读时添加书签、笔记和高亮。云端同步与备份是可选功能。",
+        "platform": "Windows、macOS、Linux、Android、iOS、网页",
+        "cost": "软件收费情况待核实；使用第三方云存储等服务可能另有费用",
+        "installation": "可从官网下载桌面版；Windows 也支持 Winget 或 Scoop 安装，难度较低",
+        "caution": "部分 Kindle 格式仅支持无 DRM 文件；同步前需自行选择并配置存储服务。",
+        "scenario": "电子书散落在电脑里？导入书库，集中阅读并标记重要段落。",
+        "workflow": {
+          "input": "准备 EPUB 或 PDF 书籍",
+          "action": "导入书库并高亮段落",
+          "output": "得到带阅读标记的书籍"
+        },
+        "recommendation_reason": "覆盖常见阅读格式，Windows 有明确的下载和包管理安装方式，不配置同步也能先从本地书籍开始。",
+        "is_featured": true,
+        "url": "https://github.com/koodo-reader/koodo-reader",
+        "description": "A modern ebook manager and reader with sync and backup capacities for Windows, macOS, Linux, Android, iOS and Web",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/koodo-reader/koodo-reader/blob/dev/LICENSE",
+        "commit": "2026-11-19T01:04:33Z",
+        "commit_url": "https://github.com/koodo-reader/koodo-reader/commit/6e71c769a5c1e4f156f074fe07234da9b2a57e69",
+        "release": {
+          "tag": "v2.4.7",
+          "date": "2026-11-08T06:44:36Z",
+          "url": "https://github.com/koodo-reader/koodo-reader/releases/tag/v2.4.7"
+        },
+        "readme_url": "https://github.com/koodo-reader/koodo-reader/blob/dev/README.md"
+      },
+      {
+        "name": "LumiBearStudio/SpanFinder",
+        "category": "文件管理",
+        "summary": "面向 Windows 的文件浏览器，以多列视图逐级展示文件夹层级，也提供标签页、双栏视图、文件预览和批量重命名，适合经常在深层目录间查找、整理文件的人。",
+        "platform": "Windows",
+        "cost": "待核实",
+        "installation": "README 提供 Microsoft Store 下载入口及 Winget 安装方式，难度较低",
+        "caution": "批量重命名前应先核对规则和目标文件；商店版本的具体收费情况待核实。",
+        "scenario": "项目文件夹套得太深？用多列视图同时看清各级目录。",
+        "workflow": {
+          "input": "准备一个多层文件夹",
+          "action": "逐列展开子文件夹",
+          "output": "找到目标文件及其路径"
+        },
+        "recommendation_reason": "解决深层目录反复前进、返回的问题，且提供明确的 Windows 安装入口。",
+        "is_featured": false,
+        "url": "https://github.com/LumiBearStudio/SpanFinder",
+        "description": "macOS Finder-style Miller Columns file explorer for Windows — multi-tab, split view, 10 themes, keyboard-first, FTP/SFTP",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/LumiBearStudio/SpanFinder/blob/main/LICENSE",
+        "commit": "2026-11-19T01:30:21Z",
+        "commit_url": "https://github.com/LumiBearStudio/SpanFinder/commit/02bcb1211914edcd43f2335284a6f0d30b1ee4e4",
+        "release": {
+          "tag": "v2.1.0",
+          "date": "2026-11-15T04:48:04Z",
+          "url": "https://github.com/LumiBearStudio/SpanFinder/releases/tag/v2.1.0"
+        },
+        "readme_url": "https://github.com/LumiBearStudio/SpanFinder/blob/main/README.md"
+      },
+      {
+        "name": "genesistoxical/drop-icons",
+        "category": "设计创作",
+        "summary": "Windows 图片转图标工具。把 PNG、JPG、SVG 等图片拖入窗口，可一次转换多张，并选择图标包含的尺寸及保存位置，适合制作文件夹或快捷方式使用的 ICO 文件。",
+        "platform": "Windows",
+        "cost": "待核实",
+        "installation": "可从 GitHub Releases 获取发行版；具体安装包形式待核实，难度较低",
+        "caution": "README 标示使用 .NET Framework 4.8；转换前留意输出目录和尺寸选项。",
+        "scenario": "想用自己的图片做 Windows 图标？拖入图片并转换成 ICO。",
+        "workflow": {
+          "input": "准备一张 PNG 图片",
+          "action": "拖入窗口并选择尺寸转换",
+          "output": "得到可用的 ICO 文件"
+        },
+        "recommendation_reason": "用途具体，拖放操作直观，还支持一次处理多张图片。",
+        "is_featured": false,
+        "url": "https://github.com/genesistoxical/drop-icons",
+        "description": "Utility to convert images to icons (.ico) for Windows.",
+        "license": "MIT",
+        "license_url": "https://github.com/genesistoxical/drop-icons/blob/main/LICENSE",
+        "commit": "2026-11-19T01:17:06Z",
+        "commit_url": "https://github.com/genesistoxical/drop-icons/commit/abf558ddb36ae7e13bcd83b100556c7da63fba8a",
+        "release": {
+          "tag": "3.6.1",
+          "date": "2026-03-15T03:19:56Z",
+          "url": "https://github.com/genesistoxical/drop-icons/releases/tag/3.6.1"
+        },
+        "readme_url": "https://github.com/genesistoxical/drop-icons/blob/main/README.md"
+      },
+      {
+        "name": "Demizo/Daily_You",
+        "category": "笔记写作",
+        "summary": "Android 私人日记与心情记录应用，可写文字、添加照片等附件，使用标签整理记录，并查看心情变化。支持离线使用，另有加密备份和可选同步功能。",
+        "platform": "Android",
+        "cost": "README 称无付费墙、账户或订阅；捐赠自愿",
+        "installation": "可通过 F-Droid、IzzyOnDroid 或 GitHub Releases 获取，难度较低",
+        "caution": "换机前应自行确认备份文件及恢复方式；同步不是写日记的必经步骤。",
+        "scenario": "想回顾这周的情绪变化？每天记一段日记并选择心情。",
+        "workflow": {
+          "input": "准备当天经历和心情",
+          "action": "写日记并标记心情",
+          "output": "留下可回顾的每日记录"
+        },
+        "recommendation_reason": "无需账户即可离线记录，文字、附件和心情标记适合日常使用。",
+        "is_featured": false,
+        "url": "https://github.com/Demizo/Daily_You",
+        "description": "Private diary & mood journal",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Demizo/Daily_You/blob/master/LICENSE.txt",
+        "commit": "2026-11-19T01:16:59Z",
+        "commit_url": "https://github.com/Demizo/Daily_You/commit/97b785b89cc74712d847fca7a923f3e1de04dbd3",
+        "release": {
+          "tag": "v3.10.0",
+          "date": "2026-11-11T01:56:34Z",
+          "url": "https://github.com/Demizo/Daily_You/releases/tag/v3.10.0"
+        },
+        "readme_url": "https://github.com/Demizo/Daily_You/blob/master/README.md"
+      },
+      {
+        "name": "AlienTechSoftware/notecraft",
+        "category": "笔记写作",
+        "summary": "以笔记本、分区和页面组织内容的本地笔记工具，可在页面中放入文字、图片和附件。笔记以设备上的普通文件夹和文件保存，不要求使用专属账户或同步服务器。",
+        "platform": "Windows、Linux",
+        "cost": "待核实",
+        "installation": "README 提供 GitHub Releases 下载入口；具体安装包形式待核实",
+        "caution": "项目版本仍处早期；本地保存不等于自动备份，重要笔记需自行备份。",
+        "scenario": "课程资料和随手笔记混在一起？按笔记本、分区和页面整理。",
+        "workflow": {
+          "input": "准备课程笔记和图片",
+          "action": "按分区建立页面并插入内容",
+          "output": "得到分类清楚的本地笔记"
+        },
+        "recommendation_reason": "组织方式贴近常见笔记本习惯，资料也明确说明了本地文件的保存形式。",
+        "is_featured": false,
+        "url": "https://github.com/AlienTechSoftware/notecraft",
+        "description": "Note taking and organization; an open-source, clean-room reimplementation of Microsoft OneNote, rebuilt in pure Rust",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/AlienTechSoftware/notecraft/blob/main/LICENSE-APACHE",
+        "commit": "2026-11-19T00:15:56Z",
+        "commit_url": "https://github.com/AlienTechSoftware/notecraft/commit/200cb141745b72b461ad657c07fffc9f8b185272",
+        "release": {
+          "tag": "v0.0.15",
+          "date": "2026-11-18T17:20:20Z",
+          "url": "https://github.com/AlienTechSoftware/notecraft/releases/tag/v0.0.15"
+        },
+        "readme_url": "https://github.com/AlienTechSoftware/notecraft/blob/main/README.md"
+      },
+      {
+        "name": "YILS-LIN/short-video-factory",
+        "category": "设计创作",
+        "summary": "用于制作产品介绍等短视频的桌面工具。根据提示词和分镜视频素材生成文案，结合语音、视频与字幕进行合成，并支持批量任务。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "软件及所接入的 AI 服务费用待核实",
+        "installation": "README 指向 GitHub Releases 下载桌面版本；具体安装步骤待核实",
+        "caution": "文案生成使用兼容 OpenAI 的接口，可能需要自行配置服务；字幕特效的多样式支持仍列在路线图中。",
+        "scenario": "要为小店商品做短视频？备好分镜素材和主题，合成介绍视频。",
+        "workflow": {
+          "input": "准备商品主题和分镜视频",
+          "action": "生成文案并合成配音字幕",
+          "output": "得到商品介绍短视频"
+        },
+        "recommendation_reason": "把文案、配音和剪辑放在同一流程中，适合已有视频素材的创作者尝试。",
+        "is_featured": false,
+        "url": "https://github.com/YILS-LIN/short-video-factory",
+        "description": "一键生成产品营销与泛内容短视频，AI批量自动剪辑，高颜值跨平台桌面端工具 One click generation of product marketing and general content short videos, AI batch automatic cliping, beautiful cross platform desktop tool",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/YILS-LIN/short-video-factory/blob/main/LICENSE",
+        "commit": "2026-11-19T01:19:19Z",
+        "commit_url": "https://github.com/YILS-LIN/short-video-factory/commit/b81b212f5f4a030debd8161f55e40684864c6666",
+        "release": {
+          "tag": "v1.4.0",
+          "date": "2026-11-09T02:58:47Z",
+          "url": "https://github.com/YILS-LIN/short-video-factory/releases/tag/v1.4.0"
+        },
+        "readme_url": "https://github.com/YILS-LIN/short-video-factory/blob/main/README.md"
+      },
+      {
+        "name": "oinkvm/oink",
+        "category": "系统工具",
+        "summary": "让局域网内的 Windows 和 Mac 电脑共享键盘、鼠标及触控板的工具，也支持跨设备剪贴板、拖放文件和集中播放设备音频，设备间通信默认加密。",
+        "platform": "Windows 10 1809 及更新版本、Windows 11；macOS 14.2 及更新版本",
+        "cost": "README 称个人及商业使用均无需购买许可",
+        "installation": "从 GitHub Releases 下载各设备对应的安装包并分别安装，难度中等",
+        "caution": "部分旧版 Windows 10 尚未测试；Windows 10 LTSC 可能需先安装 WebView2 Runtime。",
+        "scenario": "桌上两台电脑总要换鼠标？让一套键鼠控制两台设备。",
+        "workflow": {
+          "input": "准备同一局域网内的两台电脑",
+          "action": "连接设备并跨屏移动鼠标",
+          "output": "用一套键鼠操作两台电脑"
+        },
+        "recommendation_reason": "针对多电脑桌面的具体麻烦，Windows 与 Mac 均有安装包和兼容性说明。",
+        "is_featured": false,
+        "url": "https://github.com/oinkvm/oink",
+        "description": "Your computers, working as one. Share keyboard, mouse, trackpad, clipboard, drag and drop and audio across Macs and PCs.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/oinkvm/oink/blob/main/LICENSE",
+        "commit": "2026-11-19T00:50:15Z",
+        "commit_url": "https://github.com/oinkvm/oink/commit/913b817bbf54889a76b793bb9c578af2ab8f341f",
+        "release": {
+          "tag": "v0.3.6",
+          "date": "2026-11-11T23:20:54Z",
+          "url": "https://github.com/oinkvm/oink/releases/tag/v0.3.6"
+        },
+        "readme_url": "https://github.com/oinkvm/oink/blob/main/README.md"
+      },
+      {
+        "name": "tw93/Pake",
+        "category": "系统工具",
+        "summary": "把常用网站封装为独立桌面窗口的工具。仓库提供免费命令行版本，也列出部分已制作好的 Windows、macOS 和 Linux 安装包；图形化桌面应用是单独下载的产品。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "仓库中的命令行版本免费；单独的图形化桌面应用费用待核实",
+        "installation": "可下载现成网站安装包直接使用；自制网站应用需安装命令行工具或使用文档所述在线构建，难度因方式而异",
+        "caution": "封装后的网站仍依赖原网站；不要把命令行版本与单独的图形化应用混为一谈。",
+        "scenario": "常用网页总淹没在标签页里？把它封装成独立桌面窗口。",
+        "workflow": {
+          "input": "准备常用网站的网址",
+          "action": "将网址构建为桌面应用",
+          "output": "得到独立打开的网站窗口"
+        },
+        "recommendation_reason": "现成安装包方便先试，命令行版本则能处理自己的常用网站。",
+        "is_featured": false,
+        "url": "https://github.com/tw93/Pake",
+        "description": "Turn any website into a lightweight desktop app with one command, on macOS, Windows and Linux.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/tw93/Pake/blob/main/LICENSE",
+        "commit": "2026-11-19T01:00:49Z",
+        "commit_url": "https://github.com/tw93/Pake/commit/89bbdf32f967178ceb202efa5dcc5a85f90335ce",
+        "release": {
+          "tag": "V3.19.0",
+          "date": "2026-11-14T10:42:36Z",
+          "url": "https://github.com/tw93/Pake/releases/tag/V3.19.0"
+        },
+        "readme_url": "https://github.com/tw93/Pake/blob/main/README.md"
+      },
+      {
+        "name": "tfonteyn/Sshd4a",
+        "category": "备份同步",
+        "summary": "在 Android 设备上提供 SSH、SFTP、SCP 和经 SSH 使用的 rsync 服务，让电脑通过这些协议访问或备份手机文件。它提供的是连接服务，备份操作仍需由另一端发起。",
+        "platform": "Android 11 及更新版本",
+        "cost": "待核实",
+        "installation": "可从 GitHub Releases 或 IzzyOnDroid 获取，安装后需配置连接与文件权限，难度中等",
+        "caution": "访问手机全部文件需要手动授予特殊权限；应保护 SSH 连接凭据，且不要将服务直接暴露到不可信网络。",
+        "scenario": "想从电脑备份手机文件？在手机开启服务后，通过 SFTP 传到电脑。",
+        "workflow": {
+          "input": "准备手机文件和电脑端 SFTP 客户端",
+          "action": "连接手机并下载所需文件",
+          "output": "得到电脑上的文件副本"
+        },
+        "recommendation_reason": "为熟悉 SFTP 的用户提供明确的手机文件传输途径，权限要求也有说明。",
+        "is_featured": false,
+        "url": "https://github.com/tfonteyn/Sshd4a",
+        "description": "An Android 'sshd' server with shell access, rsync and scp/sftp services.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/tfonteyn/Sshd4a/blob/dev/LICENSE",
+        "commit": "2026-11-18T21:39:15Z",
+        "commit_url": "https://github.com/tfonteyn/Sshd4a/commit/46162ce542a8ab84e1f7913f7a64cd58124ef9e4",
+        "release": {
+          "tag": "v1.13.2",
+          "date": "2026-08-14T13:51:55Z",
+          "url": "https://github.com/tfonteyn/Sshd4a/releases/tag/v1.13.2"
+        },
+        "readme_url": "https://github.com/tfonteyn/Sshd4a/blob/dev/README.md"
+      },
+      {
+        "name": "regrevia/Envoy",
+        "category": "办公处理",
+        "summary": "将网页、PDF 或视频链接提取为带来源位置的材料，供已配置的 AI 助手继续整理摘要、报告或知识库。视频可使用已有字幕，缺少字幕时可按需安装本地转写组件。",
+        "platform": "提供 Windows PowerShell 及类 Unix 系统安装方式；具体系统兼容范围待核实",
+        "cost": "工具费用待核实；所用 AI 服务可能另行收费",
+        "installation": "从 GitHub Release 获取 Python 包，或按文档接入支持的 AI 宿主；需配置运行环境，浏览器和转写组件按需另装，难度较高",
+        "caution": "需要配合支持的 AI 宿主使用；登录限制、网络限制及未读取到的视频片段不会被自动补全。",
+        "scenario": "长视频来不及看？提取指定片段，让 AI 整理带时间点的摘要。",
+        "workflow": {
+          "input": "准备视频链接和关注的问题",
+          "action": "提取片段并交给 AI 整理",
+          "output": "得到标注时间点的摘要"
+        },
+        "recommendation_reason": "适合需要核对资料出处的人；来源定位和未覆盖范围比单纯生成摘要更有用。",
+        "is_featured": false,
+        "url": "https://github.com/regrevia/Envoy",
+        "description": "蒸馏一切链接：长视频、长 PDF、网页 → 带来源定位的材料，Wiki 和知识库交给你的 AI 组装。别刷干货视频，让 AI 替你刷。 / Distill any link into located material; your AI writes the wiki.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/regrevia/Envoy/blob/main/LICENSE",
+        "commit": "2026-11-19T01:30:29Z",
+        "commit_url": "https://github.com/regrevia/Envoy/commit/282616c8a099ee0ee17a5173f4d1dab86d54ec0a",
+        "release": {
+          "tag": "v0.1.60",
+          "date": "2026-11-17T06:12:35Z",
+          "url": "https://github.com/regrevia/Envoy/releases/tag/v0.1.60"
+        },
+        "readme_url": "https://github.com/regrevia/Envoy/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-19T01:33:07.464Z",
+    "architecture": {
+      "version": 2,
+      "collected_at": "2026-11-19T01:33:07.464Z",
+      "status": "ok",
+      "projects": [
+        {
+          "name": "upscayl/upscayl",
+          "category": "效果图后期与图像放大",
+          "summary": "Upscayl 是一款跨平台桌面软件，使用 AI 算法放大并增强低分辨率图像，适合处理建筑效果图、概念草图、材质细节或展示图。它面向单张或批量图像的清晰度提升，重点是放大时尽量保留视觉质量。软件需要兼容 Vulkan 的显卡，部分集成显卡可能无法正常工作。",
+          "what_is": "Upscayl 是独立的 AI 图像放大软件，不是建筑建模或渲染工具。过去把低分辨率效果图用于展板或汇报时，通常需要重新渲染、手工修补，或依赖在线放大服务；它通过图像放大和增强模型完成其中的清晰度提升工作，帮助设计师把已有图片处理到更适合展示的尺寸。",
+          "audience": "适合建筑设计师、效果图后期和作品集制作者。无需编程，可直接使用桌面界面，但需要兼容 Vulkan 的显卡。",
+          "example": "假设你要把一张低分辨率的建筑概念效果图放进作品集：准备原始图片，在 Upscayl 中选择图像放大和增强处理，导出更大尺寸的版本，再用于排版。此例仅帮助理解，不代表亲测结果。",
+          "platform": "Linux、macOS、Windows；需要 Vulkan 兼容 GPU，部分集成显卡可能不支持。",
+          "cost": "README 将其描述为免费且开源；具体使用费用以项目页面和发行版本说明为准。",
+          "installation": "从项目 Releases 下载对应系统版本。Linux 提供 Flathub 安装方式；运行前确认设备具备 Vulkan 兼容显卡。具体安装选项以 README 的系统分节为准。",
+          "caution": "README 明确要求 Vulkan 兼容 GPU，许多集成显卡可能无法工作。它主要改善已有图像，不会替代建模、渲染或重新设计。",
+          "scenario": "放大低清建筑效果图，改善作品集或展板中的图像清晰度。",
+          "workflow": {
+            "input": "准备低分辨率效果图",
+            "action": "选择图像并执行 AI 放大",
+            "output": "得到更大尺寸的增强图像"
+          },
+          "url": "https://github.com/upscayl/upscayl",
+          "description": "🆙 Upscayl - #1 Free and Open Source AI Image Upscaler for Linux, MacOS and Windows.",
+          "license": "AGPL-3.0",
+          "license_url": "https://github.com/upscayl/upscayl/blob/main/LICENSE",
+          "commit": "2026-03-27T16:33:02Z",
+          "commit_url": "https://github.com/upscayl/upscayl/commit/a00d55fee90e0f9435d5eaa86e76700df8199af8",
+          "release": {
+            "tag": "v2.15.0",
+            "date": "2024-12-25T13:44:34Z",
+            "url": "https://github.com/upscayl/upscayl/releases/tag/v2.15.0"
+          },
+          "readme_url": "https://github.com/upscayl/upscayl/blob/main/README.md",
+          "is_featured": false
+        },
+        {
+          "name": "Acly/krita-ai-diffusion",
+          "category": "概念图生成与效果图编辑",
+          "summary": "这是 Krita 的生成式 AI 插件，把文生图、局部重绘、扩图、放大和参考图控制整合到绘画与图像编辑流程中。设计师可以在选区内生成或修改内容，也可以用草图、线稿、深度图、姿态等信息约束结果。插件支持本地运行，也可连接云端或自定义 ComfyUI 服务。",
+          "what_is": "Krita AI Diffusion 是 Krita 的插件，不是独立的三维建模软件。过去在概念图中修改局部、补画画面或尝试不同风格，往往要在多个工具间切换并手工处理；它把生成、局部重绘、扩图和参考控制接入 Krita 画布，帮助用户直接围绕现有图像完成概念方案和效果图推敲。",
+          "audience": "适合建筑概念设计师、效果图后期和视觉设计师。需要会使用 Krita；不要求编程，但本地运行涉及模型和显卡配置。",
+          "example": "假设你要探索一个建筑入口的不同立面表达：准备一张带线稿或草图的 Krita 画布，框选入口区域并输入文字描述，使用参考图或控制条件生成多个版本，最后在画布中继续绘制和整理。此例仅帮助理解，不代表亲测结果。",
+          "platform": "Windows、Linux、macOS；Krita 5.2.0 或更新版本。NVIDIA、AMD、Intel GPU、Apple Silicon 和 CPU 均有支持路径。",
+          "cost": "README 描述本地开源且可免费使用，同时提供云端生成选项；云端具体费用未在候选资料中说明，待核实。",
+          "installation": "先安装 Krita 5.2.0 或更新版本，再下载插件 ZIP，在 Krita 中通过 Tools ▸ Scripts ▸ Import Python Plugin from File 导入，重启后从 Settings ▸ Dockers 打开 AI Image Generation，并完成配置。",
+          "caution": "本地运行建议至少 6 GB NVIDIA 显存，CPU 可用但很慢。插件使用 ComfyUI 后端，连接自定义服务器时还需准备兼容的模型和扩展。",
+          "scenario": "在 Krita 中对建筑草图局部重绘、扩图并探索多种概念表达。",
+          "workflow": {
+            "input": "准备 Krita 画布和参考图",
+            "action": "框选区域并输入描述",
+            "output": "得到可继续编辑的生成结果"
+          },
+          "url": "https://github.com/Acly/krita-ai-diffusion",
+          "description": "Streamlined interface for generating images with AI in Krita. Inpaint and outpaint with optional text prompt, no tweaking required.",
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Acly/krita-ai-diffusion/blob/main/LICENSE",
+          "commit": "2026-10-03T10:51:45Z",
+          "commit_url": "https://github.com/Acly/krita-ai-diffusion/commit/828b70c33c5c97f326e03170cd693beef798231e",
+          "release": {
+            "tag": "v1.53.0",
+            "date": "2026-08-22T19:38:06Z",
+            "url": "https://github.com/Acly/krita-ai-diffusion/releases/tag/v1.53.0"
+          },
+          "readme_url": "https://github.com/Acly/krita-ai-diffusion/blob/main/README.md",
+          "is_featured": false
+        },
+        {
+          "name": "Comfy-Org/ComfyUI",
+          "category": "参数化生成工作流与效果图制作",
+          "summary": "ComfyUI 是面向视觉内容创作的 AI 引擎和图形化工作流工具，用节点连接模型、提示词、图像、遮罩、参考条件和放大器，构建可重复的生成或编辑流程。它支持图像生成与编辑，也覆盖视频、音频和 3D 等内容；对建筑创作者而言，主要可用于概念图探索、图像编辑、局部重绘、参考图控制和效果图后期。",
+          "what_is": "ComfyUI 是带节点图界面的 AI 内容生成软件与后端，不是建筑设计软件或三维 CAD。过去使用生成模型时，用户通常需要在脚本、参数面板或多个工具之间手工串联步骤；它把模型加载、提示词、图像处理、遮罩和输出连接成可视化流程，让设计师能保存、复用并逐步调整概念图和效果图生成过程。",
+          "audience": "适合希望精细控制 AI 概念图和后期流程的设计师。基础工作流可不编程，但节点、模型和显卡配置需要学习；不属于即装即用的建筑软件。",
+          "example": "假设你要从一张体块草图探索建筑外观：准备草图、文字描述和可用模型，在节点图中连接输入图、提示词、控制条件与输出节点，运行后比较不同结果并保存工作流。此例仅帮助理解，不代表亲测结果。",
+          "platform": "Windows、Linux、macOS；可本地桌面运行、手动安装或使用云端。手动安装支持 NVIDIA、AMD、Intel、Apple Silicon 等 GPU 类型。",
+          "cost": "README 提供本地运行方式，并明确 Comfy Cloud 为官方付费云版本；本地硬件、模型和具体云端价格未在候选资料中完整说明。",
+          "installation": "可选择 Windows 或 macOS 桌面应用，也可按 README 手动安装；另有云端版本。运行本地工作流前，需要准备相应模型和硬件环境，具体步骤以官方安装文档为准。",
+          "caution": "节点工作流和模型配置有一定学习门槛，不应视为建筑建模软件。不同模型、显存和节点组合会影响可用性；云端版本为付费服务。",
+          "scenario": "用节点工作流把草图、文字和参考条件组合成建筑概念图。",
+          "workflow": {
+            "input": "准备草图、提示词和模型",
+            "action": "连接节点并运行工作流",
+            "output": "得到可复用的图像结果"
+          },
+          "url": "https://github.com/Comfy-Org/ComfyUI",
+          "description": "The most powerful and modular diffusion model GUI, api and backend with a graph/nodes interface. The fastest local inference engine in the world.",
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/Comfy-Org/ComfyUI/blob/master/LICENSE",
+          "commit": "2026-11-18T21:41:27Z",
+          "commit_url": "https://github.com/Comfy-Org/ComfyUI/commit/a277b5bf213e8a44fa34817b7770b54f86ef4cea",
+          "release": {
+            "tag": "v0.46.0",
+            "date": "2026-11-18T22:55:32Z",
+            "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.46.0"
+          },
+          "readme_url": "https://github.com/Comfy-Org/ComfyUI/blob/master/README.md",
+          "is_featured": false
+        },
+        {
+          "name": "nortikin/sverchok",
+          "category": "参数化造型与计算几何",
+          "summary": "Sverchok 是 Blender 的节点式视觉编程插件，面向参数化三维建模和计算几何。它提供大量节点，用于组合和变换点、边、面、曲线、曲面、实体及变换矩阵，并支持参数、公式、截面、挤出、布尔和自定义脚本节点。设计师可以在 Blender 中搭建可调的形态生成逻辑，适合概念方案和复杂几何推敲。",
+          "what_is": "Sverchok 是 Blender 插件和节点式视觉编程工具，不是独立建模软件。过去制作可调参数的复杂形体，常需要手写脚本、反复手工建模，或在多个修改器之间试错；它把几何数据和变换过程组织成节点网络，让用户通过参数、公式和节点连接生成、修改并重复使用三维形态。",
+          "audience": "适合建筑师、参数化设计师和 Blender 用户。基础操作可用可视化节点完成，但复杂节点、脚本节点和依赖配置需要编程或技术学习。",
+          "example": "假设你要推敲一组可调节的立面格栅：准备基础曲线或点阵，在 Blender 的 Sverchok 节点中连接分布、变换和网格生成节点，用参数控制间距与形态，输出可继续渲染的三维几何。此例仅帮助理解，不代表亲测结果。",
+          "platform": "Blender 插件；README 列出 Blender 5.1、4.5、3.6 和 2.8，另有 Blender 2.79 的特殊安装说明。",
+          "cost": "候选资料未说明具体费用，待核实。",
+          "installation": "下载项目 ZIP，在 Blender 的 Edit > Preferences > Add-ons 中选择 Install，启用 Node: Sverchok。部分可选节点还需要 scipy、geomdl、shapely 等额外库，安装方式见项目 Wiki。",
+          "caution": "它依赖 Blender，学习节点式几何编程需要时间。不同节点可能需要额外第三方库；README 还列出若干超出基础功能的扩展能力，应按实际任务核对依赖。",
+          "scenario": "在 Blender 中用参数和节点反复推敲可调节的建筑表皮形态。",
+          "workflow": {
+            "input": "准备基础曲线或点阵",
+            "action": "连接几何节点并调整参数",
+            "output": "生成可继续编辑的三维形体"
+          },
+          "url": "https://github.com/nortikin/sverchok",
+          "description": "Sverchok is Node-based visual programming for parametric 3D modeling and computational geometry in Blender",
+          "license": "GPL-3.0",
+          "license_url": "https://github.com/nortikin/sverchok/blob/master/LICENSE",
+          "commit": "2026-11-18T18:06:38Z",
+          "commit_url": "https://github.com/nortikin/sverchok/commit/0257095a54365575fdd1741c0f9a35c916c4dfe0",
+          "release": {
+            "tag": "v1.4.0",
+            "date": "2026-03-05T21:05:01Z",
+            "url": "https://github.com/nortikin/sverchok/releases/tag/v1.4.0"
+          },
+          "readme_url": "https://github.com/nortikin/sverchok/blob/master/README.md",
+          "is_featured": false
+        }
+      ]
+    },
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-19T01:34:31.311Z",
+      "status": "ok",
+      "projects": [
+        {
+          "name": "HKUDS/CLI-Anything",
+          "category": "为软件制作智能体可用的命令行接口",
+          "summary": "CLI-Anything 帮助开发者为软件制作命令行接口，让智能体能够通过命令调用软件。README 还介绍了 CLI-Hub，可浏览、安装和管理社区制作的接口；具体软件是否已有可用接口，需要在目录中确认。",
+          "what_is": "这是面向开发者的命令行工具及社区接口目录，目标是让智能体通过命令操作其他软件。过去要让智能体使用某款软件，开发者通常需要自行准备可调用的操作接口；它提供制作接口的项目和查找社区接口的途径。命令行接口就是通过输入命令来执行软件操作，具体支持范围应按所选接口核对。",
+          "audience": "适合为智能体接入软件的开发者；需要使用命令行，不能当作普通读者即装即用的图形软件。",
+          "example": "以下是假设示例，并非亲测：假设你要让智能体操作一款已有社区接口的软件，先准备目标软件及其使用环境，再到 CLI-Hub 查找对应接口，按目录说明安装并交给智能体调用。最终得到的是一条可通过命令操作该软件的路径；是否支持所需动作，要查看该接口的说明。",
+          "platform": "命令行环境；各社区接口支持的平台取决于对应软件，待核实。",
+          "cost": "项目及社区接口的具体费用、所连接软件的费用，候选资料未说明，待核实。",
+          "installation": "README 给出 CLI-Hub 的安装方式：pip install cli-anything-hub；之后用 cli-hub install <name> 安装选定接口。目标软件及接口的其他要求需另查说明。",
+          "caution": "“让所有软件可供智能体使用”是项目目标，不代表每款软件都已有接口或支持全部操作；所给 README 内容也未提供完整的接口制作步骤。",
+          "scenario": "为智能体寻找一款软件的命令行接口，并核对它能执行哪些操作。",
+          "workflow": {
+            "input": "目标软件和希望执行的操作",
+            "action": "在目录查找并核对对应接口",
+            "output": "可供智能体调用的命令接口"
+          },
+          "url": "https://github.com/HKUDS/CLI-Anything",
+          "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/HKUDS/CLI-Anything/blob/main/LICENSE",
+          "commit": "2026-09-22T02:01:28Z",
+          "commit_url": "https://github.com/HKUDS/CLI-Anything/commit/34f519533bc175d2fe287ab8316b0dd99bb9cc43",
+          "release": {
+            "tag": "v0.4.0",
+            "date": "2026-06-25T15:17:49Z",
+            "url": "https://github.com/HKUDS/CLI-Anything/releases/tag/v0.4.0"
+          },
+          "readme_url": "https://github.com/HKUDS/CLI-Anything/blob/main/README.md",
+          "trending_rank": 2,
+          "stars_today": 389,
+          "is_featured": false
+        },
+        {
+          "name": "nvm-sh/nvm",
+          "category": "Node.js 版本管理",
+          "summary": "nvm 是按用户安装、在命令行中使用的 Node.js 版本管理工具。它可以安装多个 Node.js 版本，并为当前 shell 切换正在使用的版本，适合需要在不同项目之间切换开发环境的人。",
+          "what_is": "这是一个命令行版本管理工具，用来在同一用户环境中安装和切换不同版本的 Node.js。Node.js 是运行 JavaScript 程序的环境。过去同时维护要求不同版本的项目时，开发者需要自己处理版本安装和切换；nvm 把这些操作集中到命令中，并允许在当前 shell 中选择要用的版本。",
+          "audience": "适合维护 Node.js 项目的开发者；不一定要写脚本，但需会使用终端。普通读者通常没有直接使用需求。",
+          "example": "以下是假设示例，并非亲测：假设你要维护两个分别使用不同 Node.js 版本的项目，先确认各项目要求的版本，再用 nvm 安装所需版本。进入其中一个项目工作前执行 nvm use 切换，并用 node -v 检查当前版本，最终在该终端中使用符合项目要求的 Node.js。",
+          "platform": "Unix、macOS 和 Windows WSL 等支持的 shell 环境；不是原生 Windows 工具。",
+          "cost": "候选资料未说明使用费用，待核实。",
+          "installation": "README 建议运行官方安装脚本，也提供手动安装等方式；安装后按文档验证 nvm 命令是否可用。它按用户安装，并在 shell 中调用。",
+          "caution": "nvm 的切换作用于当前 shell；Windows 用户应留意 README 所述的 WSL 使用方式和兼容性说明。",
+          "scenario": "两个开发项目要求不同 Node.js 版本，在各自工作时切换。",
+          "workflow": {
+            "input": "项目要求的 Node.js 版本",
+            "action": "用 nvm 选择版本并检查",
+            "output": "当前终端使用指定版本"
+          },
+          "url": "https://github.com/nvm-sh/nvm",
+          "description": "Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions.",
+          "license": "MIT",
+          "license_url": "https://github.com/nvm-sh/nvm/blob/master/LICENSE.md",
+          "commit": "2026-11-16T23:13:13Z",
+          "commit_url": "https://github.com/nvm-sh/nvm/commit/ad42d9086090ec3e0c0fed12c74dd7f7f06b7758",
+          "release": {
+            "tag": "v0.41.0",
+            "date": "2026-11-04T21:25:25Z",
+            "url": "https://github.com/nvm-sh/nvm/releases/tag/v0.41.0"
+          },
+          "readme_url": "https://github.com/nvm-sh/nvm/blob/master/README.md",
+          "trending_rank": 6,
+          "stars_today": 237,
+          "is_featured": false
+        },
+        {
+          "name": "astral-sh/uv",
+          "category": "Python 包与项目管理",
+          "summary": "uv 是 Python 包和项目的命令行管理工具，支持管理项目依赖与环境、锁定依赖版本、运行脚本、管理 Python 版本，以及运行作为 Python 包发布的工具。它面向已有 Python 开发任务的人，而非直接完成业务工作的应用。",
+          "what_is": "这是一个面向 Python 开发的命令行工具，可统一处理项目依赖、运行环境、脚本和 Python 版本。依赖是程序运行时需要的其他软件包；开发者原本可能分别使用多个工具安装包、创建环境并运行脚本。uv 帮助把这些步骤放进一套命令中，还能用锁文件记录项目所需的依赖版本。",
+          "audience": "适合 Python 开发者或运行 Python 脚本的人；需要使用命令行，开发项目通常需要编程。",
+          "example": "以下是假设示例，并非亲测：假设你要建立一个使用 Ruff 检查代码的 Python 项目，先准备项目目录，再用 uv init 初始化、uv add ruff 添加工具，随后执行 uv run ruff check。最终得到已记录依赖的项目，并看到该次代码检查的结果。",
+          "platform": "macOS、Linux、Windows。",
+          "cost": "候选资料未说明费用；使用第三方包或相关服务是否收费需另行核实。",
+          "installation": "README 提供 macOS、Linux 和 Windows 的独立安装脚本，也可通过 pip install uv 或 pipx install uv 安装；独立安装方式不要求预先安装 Rust 或 Python。",
+          "caution": "uv 管理开发环境和依赖，不会替你编写项目代码；添加的第三方包及其使用条件需分别确认。",
+          "scenario": "为 Python 项目添加依赖、运行工具并记录依赖版本。",
+          "workflow": {
+            "input": "Python 项目与所需软件包",
+            "action": "添加依赖并运行项目命令",
+            "output": "依赖记录和命令运行结果"
+          },
+          "url": "https://github.com/astral-sh/uv",
+          "description": "An extremely fast Python package and project manager, written in Rust.",
+          "license": "Apache-2.0",
+          "license_url": "https://github.com/astral-sh/uv/blob/main/LICENSE-APACHE",
+          "commit": "2026-11-18T18:50:42Z",
+          "commit_url": "https://github.com/astral-sh/uv/commit/469fe6513a86ebb59f64390669a64fd165b65b8a",
+          "release": {
+            "tag": "0.13.9",
+            "date": "2026-11-17T09:57:55Z",
+            "url": "https://github.com/astral-sh/uv/releases/tag/0.13.9"
+          },
+          "readme_url": "https://github.com/astral-sh/uv/blob/main/README.md",
+          "trending_rank": 7,
+          "stars_today": 258,
+          "is_featured": false
+        },
+        {
+          "name": "jquery/jquery",
+          "category": "JavaScript 开发库",
+          "summary": "jQuery 是供开发者在项目中使用的 JavaScript 库，不是独立应用。所给 README 主要说明获取最新版本、版本支持状态，以及从源码构建标准版或按模块定制版本的方法；具体功能用法需查阅项目文档。",
+          "what_is": "这是 JavaScript 开发库，即供其他程序调用的代码，而不是打开后就能操作的独立软件。开发者原本需要自行编写项目中的相关 JavaScript 代码；将库加入项目后，可以调用它提供的能力。所给 README 没有展开这些能力的具体用法，主要介绍版本支持、下载及自行构建，因此不宜把它描述成无须编程的现成工具。",
+          "audience": "适合编写或维护 JavaScript 项目的开发者；需要编程，普通读者不能直接把它当成应用使用。",
+          "example": "以下是假设示例，并非亲测：假设你维护一个使用 jQuery 的网页项目，先确认项目现用版本和需要的构建文件，再从项目所指的下载页获取最新版本，或按 README 在源码目录运行构建命令。最终得到可供项目接入的库文件；实际调用方式还需查阅相应文档。",
+          "platform": "浏览器；README 还提到 Node、浏览器扩展及其他非浏览器环境。",
+          "cost": "候选资料未说明库本身的使用费用；README 提及旧版本有第三方商业支持，费用需另查。",
+          "installation": "可从 README 指向的下载页获取最新版本。若自行构建，需准备 Node.js、npm 和 Git，克隆仓库后运行 npm install 与 npm run build；构建文件位于 dist/。",
+          "caution": "README 标明旧分支的支持范围不同，部分已停止支持；升级前应检查现有项目的兼容性。源码构建步骤不等于网页项目的完整接入教程。",
+          "scenario": "维护使用 jQuery 的项目时，获取受支持版本或自行构建库文件。",
+          "workflow": {
+            "input": "现有项目和所需库版本",
+            "action": "确认支持状态并取得库文件",
+            "output": "供项目接入的 jQuery 文件"
+          },
+          "url": "https://github.com/jquery/jquery",
+          "description": "jQuery JavaScript Library",
+          "license": "MIT",
+          "license_url": "https://github.com/jquery/jquery/blob/main/LICENSE.txt",
+          "commit": "2026-11-17T19:00:42Z",
+          "commit_url": "https://github.com/jquery/jquery/commit/effd615f0009e927dfd1f41d04fb6073478076d4",
+          "release": {
+            "tag": "4.1.0",
+            "date": "2026-11-17T18:59:37Z",
+            "url": "https://github.com/jquery/jquery/releases/tag/4.1.0"
+          },
+          "readme_url": "https://github.com/jquery/jquery/blob/main/README.md",
+          "trending_rank": 11,
+          "stars_today": 266,
+          "is_featured": false
+        },
+        {
+          "name": "appwrite/appwrite",
+          "category": "应用后端平台",
+          "summary": "Appwrite 为应用提供身份验证、数据库、文件存储、函数、消息、实时事件和托管等后端能力。开发者可选托管的 Appwrite Cloud，也可用 Docker 自建；README 还介绍了供编码智能体连接项目的 MCP 服务。",
+          "what_is": "这是供开发者构建应用的后端平台，可使用托管云服务，也可自行部署。后端是处理用户账户、数据和文件等工作的服务；开发者原本需要分别搭建或接入这些能力。Appwrite 将身份验证、数据库、存储、函数等功能放在同一平台，并提供让编码智能体连接项目的 MCP 接口，即供智能体调用项目能力的连接方式。",
+          "audience": "适合开发应用的团队和开发者；通常需要编程。可用托管云服务，也可自行运行服务器，不是普通读者即装即用的应用。",
+          "example": "以下是假设示例，并非亲测：假设你要开发一个允许用户登录并保存文件的应用，先准备应用项目，选择注册 Appwrite Cloud 或部署自己的实例，再在项目中接入身份验证与文件存储能力。最终应用可以使用平台提供的登录和存储服务；界面与业务流程仍需开发。",
+          "platform": "托管云服务；自建可运行在支持 Docker CLI 的操作系统上。",
+          "cost": "README 明确 Appwrite Cloud 有免费方案和付费方案；自建的服务器等资源费用需自行核算，具体价格待核实。",
+          "installation": "最简入门方式是注册 Appwrite Cloud。自建需先安装 Docker，再按 README 对应系统的命令启动安装向导并完成设置。",
+          "caution": "自建安装向导默认仅监听本机，并会输出一次性安装密钥；远程部署应遵循 README 的 SSH 隧道说明，不要直接将安装端口公开。",
+          "scenario": "为需要登录和文件上传的应用配置后端服务。",
+          "workflow": {
+            "input": "应用项目及账户、文件需求",
+            "action": "配置验证和存储并接入应用",
+            "output": "应用可调用的后端能力"
+          },
+          "url": "https://github.com/appwrite/appwrite",
+          "description": "The open-source cloud for agents & devs. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime, WAF and more",
+          "license": "BSD-3-Clause",
+          "license_url": "https://github.com/appwrite/appwrite/blob/main/LICENSE",
+          "commit": "2026-11-18T22:16:59Z",
+          "commit_url": "https://github.com/appwrite/appwrite/commit/e91e636235743d059e401b77efef4e388392d705",
+          "release": {
+            "tag": "2.7.3",
+            "date": "2026-11-17T12:55:27Z",
+            "url": "https://github.com/appwrite/appwrite/releases/tag/2.7.3"
+          },
+          "readme_url": "https://github.com/appwrite/appwrite/blob/main/README.md",
+          "trending_rank": 12,
+          "stars_today": 232,
+          "is_featured": false
+        }
+      ]
+    }
   }
 }
