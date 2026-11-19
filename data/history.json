@@ -4630,7 +4630,7 @@
     "delivery_format_version": 6
   },
   "2026-11-19": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "koodo-reader/koodo-reader",
@@ -5228,6 +5228,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-19T01:35:32.306Z",
+    "delivery_format_version": 6
   }
 }
