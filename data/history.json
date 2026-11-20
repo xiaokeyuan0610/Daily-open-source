@@ -5233,7 +5233,7 @@
     "delivery_format_version": 6
   },
   "2026-11-20": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "OpenAEC-Foundation/open-pdf-studio",
