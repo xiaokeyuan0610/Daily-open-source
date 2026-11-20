@@ -5707,7 +5707,7 @@
     "delivery_format_version": 6
   },
   "2026-11-21": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "hddq/restoid",
@@ -6044,6 +6044,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-20T18:36:32.365Z",
+    "delivery_format_version": 6
   }
 }
