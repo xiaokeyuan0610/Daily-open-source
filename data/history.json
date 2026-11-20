@@ -5233,7 +5233,7 @@
     "delivery_format_version": 6
   },
   "2026-11-20": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "OpenAEC-Foundation/open-pdf-studio",
@@ -5702,6 +5702,8 @@
           "is_featured": false
         }
       ]
-    }
+    },
+    "sent_at": "2026-11-20T01:34:30.944Z",
+    "delivery_format_version": 6
   }
 }
