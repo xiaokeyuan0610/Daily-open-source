@@ -6049,7 +6049,7 @@
     "delivery_format_version": 6
   },
   "2026-11-22": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "ifer47/markeron",
@@ -6356,6 +6356,8 @@
       "collected_at": "2026-11-21T16:58:19.833Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-21T16:58:28.674Z",
+    "delivery_format_version": 6
   }
 }
