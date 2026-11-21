@@ -6049,7 +6049,7 @@
     "delivery_format_version": 6
   },
   "2026-11-22": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "ifer47/markeron",
