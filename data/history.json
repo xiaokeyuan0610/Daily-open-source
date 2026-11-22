@@ -6361,7 +6361,7 @@
     "delivery_format_version": 6
   },
   "2026-11-23": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Tianyu199509/DeskBox",
@@ -6668,6 +6668,8 @@
       "collected_at": "2026-11-22T17:25:28.039Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-22T17:25:34.813Z",
+    "delivery_format_version": 6
   }
 }
