@@ -6359,5 +6359,315 @@
     },
     "sent_at": "2026-11-21T16:58:28.674Z",
     "delivery_format_version": 6
+  },
+  "2026-11-23": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "Tianyu199509/DeskBox",
+        "category": "文件管理",
+        "summary": "Windows 桌面整理工具，以普通文件夹为基础提供文件小组件、文件映射、拖放整理、全局搜索、剪贴板历史、待办和快速笔记，不要求将文件迁移到专有数据库。",
+        "platform": "Windows 10 2004及以上、Windows 11；支持x64和ARM64",
+        "cost": "README标注GPLv3或商业许可；费用待核实",
+        "installation": "可从GitHub Releases下载安装包、Microsoft Store安装；支持离线使用，难度低",
+        "caution": "部分功能与Windows版本及系统组件有关；运行安装包前可使用随附SHA256文件校验完整性",
+        "scenario": "桌面文件太乱？用文件小组件按文件夹分区整理。",
+        "workflow": {
+          "input": "准备常用文件夹和桌面链接",
+          "action": "映射文件夹并拖放整理",
+          "output": "得到按区域组织的桌面文件入口"
+        },
+        "recommendation_reason": "提供Windows安装包和商店版本，直接解决桌面与文件整理问题，适合先试用。",
+        "is_featured": true,
+        "url": "https://github.com/Tianyu199509/DeskBox",
+        "description": "A free, open-source Windows desktop organizer with native-feeling WinUI 3 widgets.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Tianyu199509/DeskBox/blob/main/LICENSE",
+        "commit": "2026-11-22T01:58:46Z",
+        "commit_url": "https://github.com/Tianyu199509/DeskBox/commit/cb4d2526234a2a5b7390c074a50bd9562e56c202",
+        "release": {
+          "tag": "v1.5.9",
+          "date": "2026-10-23T01:35:53Z",
+          "url": "https://github.com/Tianyu199509/DeskBox/releases/tag/v1.5.9"
+        },
+        "readme_url": "https://github.com/Tianyu199509/DeskBox/blob/main/README.md"
+      },
+      {
+        "name": "spacedriveapp/spacedrive",
+        "category": "文件管理",
+        "summary": "跨平台文件浏览与索引工具，将本地磁盘、移动介质、NAS、远程节点和云端来源纳入统一数据目录，支持跨来源搜索、重复文件检测、历史快照和文件状态查看。",
+        "platform": "跨平台；README明确提到Windows nightly版本，稳定支持范围待核实",
+        "cost": "开源项目；费用待核实",
+        "installation": "可从GitHub Releases下载；Windows版本位于nightly渠道，安装方式待核实，难度中等",
+        "caution": "Windows nightly未必稳定且未签名；README建议为指向其库的文件保留备份",
+        "scenario": "文件散落多块硬盘？统一建立目录后跨设备搜索。",
+        "workflow": {
+          "input": "准备多个磁盘或NAS文件来源",
+          "action": "添加来源并建立统一索引",
+          "output": "得到可跨来源搜索的文件目录"
+        },
+        "recommendation_reason": "适合管理多硬盘和NAS资料，但Windows版本仍属nightly，需接受稳定性风险。",
+        "is_featured": false,
+        "url": "https://github.com/spacedriveapp/spacedrive",
+        "description": "Spacedrive is an open source cross-platform file explorer, powered by a virtual distributed filesystem written in Rust.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/spacedriveapp/spacedrive/blob/main/LICENSE",
+        "commit": "2026-11-22T16:29:08Z",
+        "commit_url": "https://github.com/spacedriveapp/spacedrive/commit/30576ad1e5567b26dacdd0a68083ad77f714e960",
+        "release": {
+          "tag": "0.4.3",
+          "date": "2025-03-24T14:16:59Z",
+          "url": "https://github.com/spacedriveapp/spacedrive/releases/tag/0.4.3"
+        },
+        "readme_url": "https://github.com/spacedriveapp/spacedrive/blob/main/README.md"
+      },
+      {
+        "name": "restic/restic",
+        "category": "备份同步",
+        "summary": "命令行备份工具，支持Windows、macOS和Linux，可将文件备份到本地目录、SFTP、REST服务、S3兼容存储及多种云存储，提供加密、完整性校验、去重、快照和恢复能力。",
+        "platform": "Windows、macOS、Linux及部分BSD系统",
+        "cost": "开源项目；存储服务或云端空间可能产生费用",
+        "installation": "从项目文档安装预编译程序后使用命令行；具体安装方式依平台而定，难度中等",
+        "caution": "仓库密码丢失会无法访问备份；同一台机器上的备份不能替代异地备份",
+        "scenario": "担心电脑损坏？把重要文件加密备份到另一块盘或云端。",
+        "workflow": {
+          "input": "准备要保护的文件和备份仓库",
+          "action": "创建仓库并执行增量备份",
+          "output": "得到可验证和可恢复的快照"
+        },
+        "recommendation_reason": "支持Windows且后端选择多，适合建立可验证的本地或云端备份。",
+        "is_featured": false,
+        "url": "https://github.com/restic/restic",
+        "description": "Fast, secure, efficient backup program",
+        "license": "BSD-2-Clause",
+        "license_url": "https://github.com/restic/restic/blob/master/LICENSE",
+        "commit": "2026-11-22T17:08:20Z",
+        "commit_url": "https://github.com/restic/restic/commit/1d80020e288d7af356090a03521eef1f0ccb0536",
+        "release": {
+          "tag": "v0.20.0",
+          "date": "2026-11-19T12:11:52Z",
+          "url": "https://github.com/restic/restic/releases/tag/v0.20.0"
+        },
+        "readme_url": "https://github.com/restic/restic/blob/master/README.md"
+      },
+      {
+        "name": "aandrew-me/ytDownloader",
+        "category": "影音阅读",
+        "summary": "支持数百个网站的视频和音频下载桌面应用，提供播放列表、字幕、范围选择、多主题和硬件加速压缩功能，支持Windows、macOS和Linux。",
+        "platform": "Windows、macOS、Linux；Windows支持Microsoft Store、EXE、MSI、Chocolatey、Scoop和WinGet",
+        "cost": "开源项目；第三方网站内容及服务的使用限制可能适用",
+        "installation": "Microsoft Store或下载安装包即可，也可用WinGet安装；难度低",
+        "caution": "下载内容需遵守网站条款和版权规定；Windows Defender提示时应先核验来源",
+        "scenario": "想离线观看公开视频？粘贴链接并选择格式保存。",
+        "workflow": {
+          "input": "准备合法使用的视频或播放列表链接",
+          "action": "粘贴链接并选择画质字幕",
+          "output": "得到本地视频或音频文件"
+        },
+        "recommendation_reason": "Windows安装渠道完整，操作路径清晰，适合处理合法的公开视频保存需求。",
+        "is_featured": false,
+        "url": "https://github.com/aandrew-me/ytDownloader",
+        "description": "Desktop app to download audio/video from hundreds of sites",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/aandrew-me/ytDownloader/blob/main/LICENSE",
+        "commit": "2026-11-22T14:21:17Z",
+        "commit_url": "https://github.com/aandrew-me/ytDownloader/commit/fba3c68b05241f6f846ce97552d37915514bbf5d",
+        "release": {
+          "tag": "v4.1.0",
+          "date": "2026-11-11T13:50:38Z",
+          "url": "https://github.com/aandrew-me/ytDownloader/releases/tag/v4.1.0"
+        },
+        "readme_url": "https://github.com/aandrew-me/ytDownloader/blob/main/README.md"
+      },
+      {
+        "name": "richardr1126/openreader",
+        "category": "影音阅读",
+        "summary": "面向EPUB、PDF、TXT、Markdown和DOCX的文本转语音阅读器，支持同步高亮、多语言朗读、本地Kokoro语音、音频缓存以及M4B或MP3有声书导出。",
+        "platform": "Windows 10及以上；另支持macOS和Linux桌面应用",
+        "cost": "开源项目；云端语音服务可能收费，本地语音费用待核实",
+        "installation": "下载Windows x64或ARM安装程序即可，无需服务器、Docker或账户；难度低",
+        "caution": "可用语言和语音取决于配置的TTS提供方；部分功能可能需要额外模型或服务",
+        "scenario": "长文档没时间看？导入PDF后边听边看同步高亮。",
+        "workflow": {
+          "input": "准备PDF、EPUB或DOCX文档",
+          "action": "导入文档并选择本地语音",
+          "output": "得到同步朗读和高亮阅读内容"
+        },
+        "recommendation_reason": "有Windows桌面安装包和本地语音选项，适合把文档转成可听内容。",
+        "is_featured": false,
+        "url": "https://github.com/richardr1126/openreader",
+        "description": "An open-source read-along document reader server with high-quality TTS options, synchronized highlighting, and audiobook export for EPUB, PDF, DOCX, TXT, and MD.",
+        "license": "MIT",
+        "license_url": "https://github.com/richardr1126/openreader/blob/main/LICENSE",
+        "commit": "2026-11-22T15:41:39Z",
+        "commit_url": "https://github.com/richardr1126/openreader/commit/ca7241b4b571084671d6a81ce167144112ed6c45",
+        "release": {
+          "tag": "v5.5.2",
+          "date": "2026-11-21T16:16:38Z",
+          "url": "https://github.com/richardr1126/openreader/releases/tag/v5.5.2"
+        },
+        "readme_url": "https://github.com/richardr1126/openreader/blob/main/README.md"
+      },
+      {
+        "name": "LinwoodDev/Butterfly",
+        "category": "笔记写作",
+        "summary": "跨平台开放式笔记和绘图应用，提供无限画布，可混合手写、文本、Markdown、形状、图片、PDF和SVG，适合课堂笔记、会议记录、白板、规划与草图创作。",
+        "platform": "跨平台；README提供下载入口，Windows支持情况需以下载页为准",
+        "cost": "开源项目；费用待核实",
+        "installation": "从项目下载页获取对应平台版本；具体Windows安装包形式待核实，难度低至中等",
+        "caution": "项目采用AGPL-3.0；大画布和复杂内容的性能取决于设备",
+        "scenario": "会议内容很杂？在无限画布上同时写字、画图和贴资料。",
+        "workflow": {
+          "input": "准备会议要点、草图和参考文件",
+          "action": "在画布上手写并排列素材",
+          "output": "得到可继续编辑的视觉化会议笔记"
+        },
+        "recommendation_reason": "适合把文字、手写和资料放在同一画布，满足非线性记录需求。",
+        "is_featured": false,
+        "url": "https://github.com/LinwoodDev/Butterfly",
+        "description": "🎨 Powerful, minimalistic, cross-platform, opensource note-taking app",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/LinwoodDev/Butterfly/blob/develop/LICENSE",
+        "commit": "2026-11-22T15:32:55Z",
+        "commit_url": "https://github.com/LinwoodDev/Butterfly/commit/0bce0a768e6173ab11e724f075da3e8960c5a3f7",
+        "release": {
+          "tag": "v2.6.3",
+          "date": "2026-11-16T09:57:38Z",
+          "url": "https://github.com/LinwoodDev/Butterfly/releases/tag/v2.6.3"
+        },
+        "readme_url": "https://github.com/LinwoodDev/Butterfly/blob/develop/README.md"
+      },
+      {
+        "name": "lbalazscs/Pixelitor",
+        "category": "设计创作",
+        "summary": "桌面图像编辑器，支持图层、图层蒙版、文字图层、110多种图像滤镜、颜色调整和多级撤销，适合照片处理与基础平面图像编辑。",
+        "platform": "基于Java的桌面应用；README未明确列出运行平台，Windows可用性待核实",
+        "cost": "开源项目；费用待核实",
+        "installation": "源码构建需要OpenJDK 25及以上和Maven；仓库未说明普通用户安装包，难度中等",
+        "caution": "当前README主要说明从源码构建，需确认是否有适合Windows的预编译版本",
+        "scenario": "照片需要分层修图？用图层和蒙版完成局部调整。",
+        "workflow": {
+          "input": "准备待编辑的照片或图像",
+          "action": "建立图层并应用滤镜调整颜色",
+          "output": "得到可撤销的分层编辑图像"
+        },
+        "recommendation_reason": "功能覆盖图层、蒙版和滤镜，适合需要传统桌面修图能力的用户。",
+        "is_featured": false,
+        "url": "https://github.com/lbalazscs/Pixelitor",
+        "description": "A desktop image editor ",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/lbalazscs/Pixelitor/blob/master/LICENSE",
+        "commit": "2026-11-22T15:55:32Z",
+        "commit_url": "https://github.com/lbalazscs/Pixelitor/commit/debde893ef3ade2ec68579d18aefd641cbb2ddd6",
+        "release": {
+          "tag": "v4.3.1",
+          "date": "2023-09-06T12:09:31Z",
+          "url": "https://github.com/lbalazscs/Pixelitor/releases/tag/v4.3.1"
+        },
+        "readme_url": "https://github.com/lbalazscs/Pixelitor/blob/master/README.md"
+      },
+      {
+        "name": "SylphxAI/anymd",
+        "category": "办公处理",
+        "summary": "本地运行的Rust命令行和MCP工具，可将PDF、Word、PowerPoint、Excel、EPUB、网页、图片、音频和视频转换为适合阅读或交给AI处理的Markdown内容，支持OCR、字幕和转录。",
+        "platform": "跨平台；README提供npm、Cargo、Homebrew和Docker方式，Windows运行方式待核实",
+        "cost": "基础项目开源；anymd Pro为一次性29美元，部分高级验证功能需Pro",
+        "installation": "可用npm、Cargo或Docker安装；Windows优先通过npm尝试，具体依赖要求待核实，难度中等",
+        "caution": "处理含敏感信息的文件前应确认本地处理范围；高级PDF引用和视频帧验证属于Pro功能",
+        "scenario": "资料格式太杂？批量转成Markdown后统一检索和引用。",
+        "workflow": {
+          "input": "准备PDF、表格、网页或图片资料",
+          "action": "运行转换命令生成Markdown",
+          "output": "得到便于检索和引用的文本资料"
+        },
+        "recommendation_reason": "覆盖常见办公格式，能把分散资料整理成统一文本，适合资料归档。",
+        "is_featured": false,
+        "url": "https://github.com/SylphxAI/anymd",
+        "description": "Any file → clean Markdown for AI agents: PDF, Word, PowerPoint, Excel, EPUB, HTML and web pages, images (OCR), audio and video (metadata, subtitles, transcripts). A fast Rust MCP server and CLI that runs on your machine. No API key.",
+        "license": "MIT",
+        "license_url": "https://github.com/SylphxAI/anymd/blob/main/LICENSE",
+        "commit": "2026-11-22T16:45:19Z",
+        "commit_url": "https://github.com/SylphxAI/anymd/commit/623ddd6513086f7bce32c5a9a6b742409d73b641",
+        "release": {
+          "tag": "v8.5.15",
+          "date": "2026-11-22T07:40:20Z",
+          "url": "https://github.com/SylphxAI/anymd/releases/tag/v8.5.15"
+        },
+        "readme_url": "https://github.com/SylphxAI/anymd/blob/main/README.md"
+      },
+      {
+        "name": "alztrk/opentaskbar",
+        "category": "系统工具",
+        "summary": "Windows 10和11上的悬浮式任务栏与桌面启动器，提供应用固定、窗口缩略图预览、硬件和媒体小组件、应用分组、主题及原生任务栏恢复能力。",
+        "platform": "Windows 10和Windows 11；x64；需要.NET 10 WPF运行环境，具体打包方式待核实",
+        "cost": "MIT开源项目；费用待核实",
+        "installation": "仓库提供GitHub项目和Release入口；具体安装包方式待核实，难度待核实",
+        "caution": "会改变任务栏交互和桌面布局；使用前应确认原生任务栏恢复功能是否满足需求",
+        "scenario": "想快速启动常用程序？用悬浮 dock 固定并分组应用。",
+        "workflow": {
+          "input": "准备常用应用和桌面布局偏好",
+          "action": "固定应用并设置dock位置",
+          "output": "得到可快速访问的悬浮启动栏"
+        },
+        "recommendation_reason": "专注Windows桌面效率，适合需要应用分组和窗口预览的用户。",
+        "is_featured": false,
+        "url": "https://github.com/alztrk/opentaskbar",
+        "description": "Lightweight macOS-inspired floating dock and taskbar replacement for Windows 10 and 11",
+        "license": "MIT",
+        "license_url": "https://github.com/alztrk/opentaskbar/blob/master/LICENSE",
+        "commit": "2026-11-22T16:55:11Z",
+        "commit_url": "https://github.com/alztrk/opentaskbar/commit/0e2b777d1a912d4fed134e70db60f86712d74ac4",
+        "release": {
+          "tag": "v0.3.2",
+          "date": "2026-11-21T18:54:11Z",
+          "url": "https://github.com/alztrk/opentaskbar/releases/tag/v0.3.2"
+        },
+        "readme_url": "https://github.com/alztrk/opentaskbar/blob/master/README.md"
+      },
+      {
+        "name": "rtk-ai/rtk",
+        "category": "开发辅助",
+        "summary": "面向AI编码代理的Rust命令行代理，将测试、差异、日志和构建等常见命令输出压缩后再交给代理，支持Windows WinGet安装，并可通过钩子接入Claude Code等工具。",
+        "platform": "Windows、macOS、Linux和WSL；Windows支持WinGet",
+        "cost": "仓库同时包含Apache-2.0与BUSL-1.1许可范围；费用待核实",
+        "installation": "Windows可执行`winget install rtk-ai.rtk`，安装后运行初始化命令；难度低至中等",
+        "caution": "不同版本和组件的许可范围需单独确认；压缩输出可能隐藏代理排查所需的细节",
+        "scenario": "AI代理读日志太慢？先压缩命令输出，减少无关文本。",
+        "workflow": {
+          "input": "准备已有代码项目和AI代理环境",
+          "action": "安装钩子并运行测试或Git命令",
+          "output": "得到更短、更易读取的代理上下文"
+        },
+        "recommendation_reason": "Windows安装命令明确，能直接改善AI编码工具处理命令输出的效率。",
+        "is_featured": false,
+        "url": "https://github.com/rtk-ai/rtk",
+        "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/rtk-ai/rtk/blob/develop/LICENSE",
+        "commit": "2026-11-22T16:39:13Z",
+        "commit_url": "https://github.com/rtk-ai/rtk/commit/75d12498271f88d00f8ea7a13daf4524d0f62046",
+        "release": {
+          "tag": "v1.2.1",
+          "date": "2026-11-19T17:49:33Z",
+          "url": "https://github.com/rtk-ai/rtk/releases/tag/v1.2.1"
+        },
+        "readme_url": "https://github.com/rtk-ai/rtk/blob/develop/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-22T17:25:22.271Z",
+    "architecture": {
+      "version": 2,
+      "collected_at": "2026-11-22T17:25:22.271Z",
+      "status": "empty",
+      "projects": []
+    },
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-22T17:25:28.039Z",
+      "status": "empty",
+      "projects": []
+    }
   }
 }
