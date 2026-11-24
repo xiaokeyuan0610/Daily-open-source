@@ -6671,5 +6671,311 @@
     },
     "sent_at": "2026-11-22T17:25:34.813Z",
     "delivery_format_version": 6
+  },
+  "2026-11-24": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "Wox-launcher/Wox",
+        "category": "系统工具",
+        "summary": "跨平台快捷启动器，把打开应用、查找本地文件和执行操作集中在一个输入框中，也可通过插件扩展功能。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "软件费用待核实；第三方插件或服务费用待核实",
+        "installation": "Windows 可通过 Winget 等包管理器安装，也可从发布页下载；较容易",
+        "caution": "插件来自不同开发者，安装前留意其来源和权限。",
+        "scenario": "桌面窗口太多？调出输入框搜索应用名称，直接打开要用的程序。",
+        "workflow": {
+          "input": "想打开的应用名称",
+          "action": "在启动框搜索并选择应用",
+          "output": "打开目标应用"
+        },
+        "recommendation_reason": "Windows 有明确的安装途径，核心用途直观，适合作为今天先尝试的日常工具。",
+        "is_featured": true,
+        "url": "https://github.com/Wox-launcher/Wox",
+        "description": "A cross-platform launcher that simply works",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Wox-launcher/Wox/blob/master/LICENSE",
+        "commit": "2026-11-24T01:16:04Z",
+        "commit_url": "https://github.com/Wox-launcher/Wox/commit/c0df07f436b46094f5482d28e9fae0f39c124d7f",
+        "release": {
+          "tag": "v2.5.0",
+          "date": "2026-11-09T06:12:08Z",
+          "url": "https://github.com/Wox-launcher/Wox/releases/tag/v2.5.0"
+        },
+        "readme_url": "https://github.com/Wox-launcher/Wox/blob/master/README.md"
+      },
+      {
+        "name": "gelenmedya/rustyfiles",
+        "category": "文件管理",
+        "summary": "面向 Windows 和 macOS 的文件管理器，提供标签页、双栏浏览、空格键预览、批量重命名和文件名搜索索引，方便整理本地资料。",
+        "platform": "Windows 11；Apple 芯片 macOS 26 测试版",
+        "cost": "项目称软件免费；其他费用待核实",
+        "installation": "发布页提供 Windows 安装程序和 macOS 安装包；较容易",
+        "caution": "macOS 版本仍为测试版；勿把项目展示的速度数据视为自己设备上的结果。",
+        "scenario": "照片和文档散在多个文件夹？用双栏查看两处目录，再整理文件。",
+        "workflow": {
+          "input": "两个待整理的文件夹",
+          "action": "用双栏浏览并移动文件",
+          "output": "得到整理后的目录"
+        },
+        "recommendation_reason": "针对常见的文件整理需求，提供可下载的桌面安装包和明确的操作方式。",
+        "is_featured": false,
+        "url": "https://github.com/gelenmedya/rustyfiles",
+        "description": "A fast file manager for Windows and macOS that never freezes: tabs, dual panes, archives as folders, Quick Look-style previews. A File Explorer and Finder alternative written in Rust.",
+        "license": "MIT",
+        "license_url": "https://github.com/gelenmedya/rustyfiles/blob/main/LICENSE",
+        "commit": "2026-11-23T21:55:13Z",
+        "commit_url": "https://github.com/gelenmedya/rustyfiles/commit/7269d076cf44800055fb9af3aa208168e4b6b995",
+        "release": {
+          "tag": "v0.9.9",
+          "date": "2026-11-23T22:35:31Z",
+          "url": "https://github.com/gelenmedya/rustyfiles/releases/tag/v0.9.9"
+        },
+        "readme_url": "https://github.com/gelenmedya/rustyfiles/blob/main/README.md"
+      },
+      {
+        "name": "WinMerge/winmerge",
+        "category": "文件管理",
+        "summary": "Windows 文件与文件夹对比工具，可并排标出文本差异，找出两个目录中不同或缺失的文件，并选择性合并改动。",
+        "platform": "Windows",
+        "cost": "软件费用待核实",
+        "installation": "项目提供发布页及安装程序相关资料；具体安装步骤待核实",
+        "caution": "合并会修改文件，操作前保留原件；压缩包对比需要 7-Zip。",
+        "scenario": "两份资料夹不知差在哪？并排对比，找出缺失和修改过的文件。",
+        "workflow": {
+          "input": "两份需要核对的资料夹",
+          "action": "对比文件列表和差异",
+          "output": "得到差异清单"
+        },
+        "recommendation_reason": "能把备份盘与工作目录的差别清楚列出，适合核对文件版本。",
+        "is_featured": false,
+        "url": "https://github.com/WinMerge/winmerge",
+        "description": "WinMerge is an Open Source differencing and merging tool for Windows. WinMerge can compare both folders and files, presenting differences in a visual text format that is easy to understand and handle.",
+        "license": "GPL-2.0",
+        "license_url": "https://github.com/WinMerge/winmerge/blob/master/LICENSE.md",
+        "commit": "2026-11-23T23:12:20Z",
+        "commit_url": "https://github.com/WinMerge/winmerge/commit/de2d48f7e91420191a452126823f8a3e75d00e83",
+        "release": {
+          "tag": "v2.16.60",
+          "date": "2026-10-27T13:00:05Z",
+          "url": "https://github.com/WinMerge/winmerge/releases/tag/v2.16.60"
+        },
+        "readme_url": "https://github.com/WinMerge/winmerge/blob/master/README.md"
+      },
+      {
+        "name": "ericerkz/kept",
+        "category": "笔记写作",
+        "summary": "简洁的便笺应用，支持文字、清单、图片、标签和提醒。iOS 与 Android 应用可不注册账号、离线保存在本机；跨设备同步和协作需要服务器。",
+        "platform": "iOS、Android；连接服务器后可通过网页使用",
+        "cost": "本机模式费用待核实；云端服务费用待核实",
+        "installation": "手机可从 App Store 或 Google Play 安装并选择仅在本机使用；较容易。自托管需 Docker",
+        "caution": "仅存本机时，卸载应用或丢失设备可能造成笔记丢失，应另存备份。",
+        "scenario": "买菜时总漏掉东西？在手机建清单，到店后逐项勾选。",
+        "workflow": {
+          "input": "准备购买的物品",
+          "action": "建立清单并逐项勾选",
+          "output": "得到未购买物品清单"
+        },
+        "recommendation_reason": "手机端无需先搭服务器即可记录离线清单，入门步骤清楚。",
+        "is_featured": false,
+        "url": "https://github.com/ericerkz/kept",
+        "description": "Google Keep-style notes for iOS, Android, and self-hosting. Offline-first, with optional sync.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/ericerkz/kept/blob/master/LICENSE",
+        "commit": "2026-11-24T00:38:31Z",
+        "commit_url": "https://github.com/ericerkz/kept/commit/1efe1f1395756e88be9a1ec573b5decfb93f8df0",
+        "release": {
+          "tag": "v1.9.8",
+          "date": "2026-11-24T00:07:19Z",
+          "url": "https://github.com/ericerkz/kept/releases/tag/v1.9.8"
+        },
+        "readme_url": "https://github.com/ericerkz/kept/blob/master/README.md"
+      },
+      {
+        "name": "zhitongblog/solomd",
+        "category": "笔记写作",
+        "summary": "以本地文件夹保存笔记的 Markdown 编辑器，提供多种写作视图和 PDF、Word、网页等格式导出；另有可选的 AI 与同步功能。",
+        "platform": "资料称支持 Windows、macOS、Linux、Android；第五个平台待核实",
+        "cost": "项目称软件免费、无需订阅；外部 AI 服务及存储服务费用待核实",
+        "installation": "可从项目发布页下载桌面安装包；具体各平台步骤待核实",
+        "caution": "使用云端 AI 或第三方同步时，先核对相应服务的费用与数据设置。",
+        "scenario": "写好的 Markdown 要交给不用编辑器的同事？导出成 Word 文档。",
+        "workflow": {
+          "input": "本地 Markdown 文稿",
+          "action": "编辑内容并导出 Word",
+          "output": "得到可发送的文档"
+        },
+        "recommendation_reason": "本地写作与常用格式导出结合，适合需要交付文档的人。",
+        "is_featured": false,
+        "url": "https://github.com/zhitongblog/solomd",
+        "description": "A markdown editor — and the bridge to your LLM. Local-first, MIT, ~15 MB. Bundled MCP server lets Claude Code / Codex / Cursor drive your vault directly. 14 AI providers BYOK.",
+        "license": "MIT",
+        "license_url": "https://github.com/zhitongblog/solomd/blob/main/LICENSE",
+        "commit": "2026-11-23T23:46:30Z",
+        "commit_url": "https://github.com/zhitongblog/solomd/commit/1b44a25ca399d0fbc91e0a0d0d0dce88fc5f53d7",
+        "release": {
+          "tag": "v5.3.5",
+          "date": "2026-11-23T14:02:45Z",
+          "url": "https://github.com/zhitongblog/solomd/releases/tag/v5.3.5"
+        },
+        "readme_url": "https://github.com/zhitongblog/solomd/blob/main/README.md"
+      },
+      {
+        "name": "blinkdisk/blinkdisk",
+        "category": "备份同步",
+        "summary": "桌面备份工具，可选择重要文件夹，备份到外接硬盘、NAS 或受支持的远程存储，并在需要时恢复文件；资料还说明支持加密和去重。",
+        "platform": "Windows 10/11（64 位）、macOS、Linux",
+        "cost": "项目称使用自有存储免费；托管云存储有免费档及订阅方案，外部存储可能收费",
+        "installation": "官网提供下载入口；安装后选择备份文件夹和存储位置，难度取决于存储配置",
+        "caution": "妥善保管加密密码，并定期确认备份能否恢复；远程存储费用另行核对。",
+        "scenario": "担心电脑故障丢照片？选中照片文件夹，备份到外接硬盘。",
+        "workflow": {
+          "input": "照片文件夹和外接硬盘",
+          "action": "选择存储位置并备份",
+          "output": "得到照片备份副本"
+        },
+        "recommendation_reason": "解决误删和设备故障带来的实际风险，并支持使用自己的存储设备。",
+        "is_featured": false,
+        "url": "https://github.com/blinkdisk/blinkdisk",
+        "description": "💾 The easiest way to backup your files.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/blinkdisk/blinkdisk/blob/main/LICENSE",
+        "commit": "2026-11-23T21:39:22Z",
+        "commit_url": "https://github.com/blinkdisk/blinkdisk/commit/2a19c2a42d8f745c3e09e4e76b844e2cf06eeeb9",
+        "release": {
+          "tag": "v1.11.1",
+          "date": "2026-11-22T16:53:30Z",
+          "url": "https://github.com/blinkdisk/blinkdisk/releases/tag/v1.11.1"
+        },
+        "readme_url": "https://github.com/blinkdisk/blinkdisk/blob/main/README.md"
+      },
+      {
+        "name": "Sync-in/desktop",
+        "category": "备份同步",
+        "summary": "Sync-in Server 的桌面同步客户端，可在本地文件夹与服务器之间设置单向或双向同步，并提供同步预览、定时任务及文件筛选。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "客户端及所需服务器的使用费用待核实",
+        "installation": "官网提供下载入口和配置向导；需有可连接的 Sync-in Server，整体难度中等",
+        "caution": "它不是无需服务器的独立网盘；首次双向同步前先预览将执行的操作。",
+        "scenario": "家里和办公室都要改同一批文件？连接已有服务器，同步指定文件夹。",
+        "workflow": {
+          "input": "本地文件夹和服务器账号",
+          "action": "预览并执行双向同步",
+          "output": "得到同步后的文件夹"
+        },
+        "recommendation_reason": "适合已有 Sync-in Server、需要在多台电脑间保持文件一致的用户。",
+        "is_featured": false,
+        "url": "https://github.com/Sync-in/desktop",
+        "description": "Sync-in Desktop · Full-featured app for file sync and server access",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/Sync-in/desktop/blob/main/LICENSE",
+        "commit": "2026-11-23T22:19:19Z",
+        "commit_url": "https://github.com/Sync-in/desktop/commit/0b148cddce68f71ea2c6a31c724c1136f767c048",
+        "release": {
+          "tag": "v2.3.2",
+          "date": "2026-11-09T21:33:04Z",
+          "url": "https://github.com/Sync-in/desktop/releases/tag/v2.3.2"
+        },
+        "readme_url": "https://github.com/Sync-in/desktop/blob/main/README.md"
+      },
+      {
+        "name": "galfar/deskew",
+        "category": "办公处理",
+        "summary": "扫描文档图片的倾斜校正工具，通过检测文字行旋转页面，使文字恢复水平；提供命令行、图形界面和无需安装的网页版。",
+        "platform": "Windows、Linux、macOS；现代浏览器",
+        "cost": "软件及网页版费用待核实",
+        "installation": "可直接打开网页版，或下载对应平台压缩包使用图形界面；较容易",
+        "caution": "空白页或缺少文字行的图片可能无法校正；资料说明网页版在本机处理图片。",
+        "scenario": "扫描的合同歪了一点？放入图片，校正后再发给同事。",
+        "workflow": {
+          "input": "倾斜的扫描文档图片",
+          "action": "检测文字行并校正",
+          "output": "得到文字水平的图片"
+        },
+        "recommendation_reason": "用途具体，且有免安装网页版，偶尔处理扫描件也方便。",
+        "is_featured": false,
+        "url": "https://github.com/galfar/deskew",
+        "description": "Deskew is a command line tool for deskewing scanned text documents. It uses Hough transform to detect \"text lines\" in the image. As an output, you get an image rotated so that the lines are horizontal.",
+        "license": "MPL-2.0",
+        "license_url": "https://github.com/galfar/deskew/blob/master/LICENSE",
+        "commit": "2026-11-24T00:33:12Z",
+        "commit_url": "https://github.com/galfar/deskew/commit/992b1d8fc5b83f0a0dc1ac981febaf9e4d76bfd5",
+        "release": {
+          "tag": "v1.35",
+          "date": "2026-11-24T01:26:34Z",
+          "url": "https://github.com/galfar/deskew/releases/tag/v1.35"
+        },
+        "readme_url": "https://github.com/galfar/deskew/blob/master/Readme.md"
+      },
+      {
+        "name": "documenso/documenso",
+        "category": "办公处理",
+        "summary": "面向文档电子签署的应用，可选择使用其网站服务或自行托管。适合需要在线完成文件签署流程的人。",
+        "platform": "网页应用；自托管服务器平台待核实",
+        "cost": "网站服务及自托管所需资源的费用待核实；另有企业方案",
+        "installation": "可在项目提供的网站注册使用；自行托管的安装步骤与难度待核实",
+        "caution": "正式签署前，核对当地电子签名规则、文件内容及服务条款。",
+        "scenario": "文件需要异地签署？通过网页发起电子签署流程。",
+        "workflow": {
+          "input": "待签署的文件",
+          "action": "通过应用发起签署",
+          "output": "得到已签署的文件"
+        },
+        "recommendation_reason": "对应异地签文件的明确需求，并提供网站使用和自托管两种途径。",
+        "is_featured": false,
+        "url": "https://github.com/documenso/documenso",
+        "description": "The Open Source DocuSign Alternative.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/documenso/documenso/blob/main/LICENSE",
+        "commit": "2026-11-23T03:55:33Z",
+        "commit_url": "https://github.com/documenso/documenso/commit/e745c9ec339f1b16d2f8d181b6457323fb33ebe5",
+        "release": {
+          "tag": "v2.22.0",
+          "date": "2026-11-13T01:34:30Z",
+          "url": "https://github.com/documenso/documenso/releases/tag/v2.22.0"
+        },
+        "readme_url": "https://github.com/documenso/documenso/blob/main/README.md"
+      },
+      {
+        "name": "1038lab/ComfyUI-RMBG",
+        "category": "设计创作",
+        "summary": "ComfyUI 的图像处理自定义节点，提供图片去背景，以及物体、人脸和服装等区域分割能力，供已有 ComfyUI 工作流使用。",
+        "platform": "依赖 ComfyUI；具体系统支持范围待核实",
+        "cost": "节点费用待核实；所需模型及运行设备成本待核实",
+        "installation": "需先安装 ComfyUI，再添加自定义节点和所需模型；难度较高",
+        "caution": "它不是独立的一键抠图软件；不同模型的依赖和硬件要求需另行核对。",
+        "scenario": "商品照背景太杂？在 ComfyUI 工作流中去掉背景，取得主体图。",
+        "workflow": {
+          "input": "一张商品照片",
+          "action": "在工作流中运行去背景节点",
+          "output": "得到去背景的主体图"
+        },
+        "recommendation_reason": "为已有 ComfyUI 的用户提供明确的抠图用途，不必将其当作通用图片编辑器。",
+        "is_featured": false,
+        "url": "https://github.com/1038lab/ComfyUI-RMBG",
+        "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/1038lab/ComfyUI-RMBG/blob/main/LICENSE",
+        "commit": "2026-11-24T00:04:00Z",
+        "commit_url": "https://github.com/1038lab/ComfyUI-RMBG/commit/f871167b325835b627e233d5792c93f3cfb79b18",
+        "release": null,
+        "readme_url": "https://github.com/1038lab/ComfyUI-RMBG/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-24T01:32:58.240Z",
+    "architecture": {
+      "version": 2,
+      "collected_at": "2026-11-24T01:32:58.241Z",
+      "status": "empty",
+      "projects": []
+    },
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-24T01:33:04.029Z",
+      "status": "empty",
+      "projects": []
+    }
   }
 }
