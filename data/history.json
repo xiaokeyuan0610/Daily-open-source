@@ -6673,7 +6673,7 @@
     "delivery_format_version": 6
   },
   "2026-11-24": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Wox-launcher/Wox",
@@ -6976,6 +6976,8 @@
       "collected_at": "2026-11-24T01:33:04.029Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-24T01:33:11.690Z",
+    "delivery_format_version": 6
   }
 }
