@@ -6981,7 +6981,7 @@
     "delivery_format_version": 6
   },
   "2026-11-25": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "ben-milanko/dart-pdf",
@@ -7288,6 +7288,8 @@
       "collected_at": "2026-11-25T01:33:12.896Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-25T01:33:19.752Z",
+    "delivery_format_version": 6
   }
 }
