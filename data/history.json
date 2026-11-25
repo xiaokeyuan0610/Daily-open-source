@@ -6981,7 +6981,7 @@
     "delivery_format_version": 6
   },
   "2026-11-25": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "ben-milanko/dart-pdf",
