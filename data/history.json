@@ -7293,7 +7293,7 @@
     "delivery_format_version": 6
   },
   "2026-11-26": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "netease-youdao/LobsterAI",
@@ -7600,6 +7600,8 @@
       "collected_at": "2026-11-26T01:33:57.747Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-26T01:34:04.995Z",
+    "delivery_format_version": 6
   }
 }
