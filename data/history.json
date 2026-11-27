@@ -7603,5 +7603,311 @@
     },
     "sent_at": "2026-11-26T01:34:04.995Z",
     "delivery_format_version": 6
+  },
+  "2026-11-27": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "FarGroup/FarManager",
+        "category": "文件管理",
+        "summary": "Windows 文本界面文件管理器，可浏览目录、查看和编辑文件、复制及重命名；标准发行版还通过插件提供压缩包、FTP 和网络浏览等支持。",
+        "platform": "Windows",
+        "cost": "待核实",
+        "installation": "README 提供项目下载与构建信息；建议从官方项目渠道获取 Windows 发行版，具体安装步骤待核实。",
+        "caution": "文本界面与常见图形文件管理器不同；部分能力依赖插件。",
+        "scenario": "需要快速整理文件？用双面板式文本界面浏览、复制和重命名。",
+        "workflow": {
+          "input": "待整理的文件夹",
+          "action": "浏览目录并复制或重命名文件",
+          "output": "整理后的文件与目录"
+        },
+        "recommendation_reason": "Windows 原生文件管理用途明确，常见整理操作集中；使用前需适应文本界面。",
+        "is_featured": true,
+        "url": "https://github.com/FarGroup/FarManager",
+        "description": "File and Archive Manager",
+        "license": "BSD-3-Clause",
+        "license_url": "https://github.com/FarGroup/FarManager/blob/master/LICENSE",
+        "commit": "2026-11-26T20:43:36Z",
+        "commit_url": "https://github.com/FarGroup/FarManager/commit/bf6590fb6d042606cf6110ec85f497bd42f4601e",
+        "release": {
+          "tag": "ci/v3.0.6758.5048",
+          "date": "2026-11-26T21:56:33Z",
+          "url": "https://github.com/FarGroup/FarManager/releases/tag/ci/v3.0.6758.5048"
+        },
+        "readme_url": "https://github.com/FarGroup/FarManager/blob/master/README.md"
+      },
+      {
+        "name": "AKolenda/openxplorer",
+        "category": "文件管理",
+        "summary": "面向 Linux 的图形文件管理器，提供标签页、分栏视图、文件预览、压缩包浏览、网络协议访问和文件内容搜索等功能。",
+        "platform": "Linux；支持可运行 Flatpak 的发行版",
+        "cost": "README 称免费；其他费用待核实",
+        "installation": "可从 GitHub Releases 获取，或按项目安装文档安装；难度待核实。",
+        "caution": "仅面向 Linux，不适用于 Windows 原生桌面；项目说明其与微软无关联。",
+        "scenario": "在 Linux 上找不到文档？用文件名或内容搜索定位资料。",
+        "workflow": {
+          "input": "需要查找的文件名或文档内容",
+          "action": "搜索文件并浏览匹配结果",
+          "output": "找到目标文件及所在目录"
+        },
+        "recommendation_reason": "搜索、预览和压缩包浏览覆盖日常找文件需求；但只适合 Linux 用户。",
+        "is_featured": false,
+        "url": "https://github.com/AKolenda/openxplorer",
+        "description": "Windows File Explorer-inspired file manager for Linux, plus its companion website. AGPL-3.0-only.",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/AKolenda/openxplorer/blob/main/LICENSE",
+        "commit": "2026-11-26T22:24:22Z",
+        "commit_url": "https://github.com/AKolenda/openxplorer/commit/37f0277e1ff551cf127b5e38bda87562f81cd3c1",
+        "release": {
+          "tag": "v2.0.26",
+          "date": "2026-11-25T12:52:29Z",
+          "url": "https://github.com/AKolenda/openxplorer/releases/tag/v2.0.26"
+        },
+        "readme_url": "https://github.com/AKolenda/openxplorer/blob/main/README.md"
+      },
+      {
+        "name": "bholmesdev/hubble.md",
+        "category": "笔记写作",
+        "summary": "桌面 Markdown 笔记应用，支持 Markdown 编辑、斜杠命令和文件属性；笔记保存在文件夹中，也可供外部编码代理读取。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "README 称免费；其他费用待核实",
+        "installation": "从 GitHub Releases 下载桌面版本；Windows 版本未签名，首次启动可能出现系统警告。",
+        "caution": "云同步功能处于开发阶段；README 标注同步相关组件为重度开发中。",
+        "scenario": "想让笔记留在本地？用 Markdown 文件夹持续记录和整理。",
+        "workflow": {
+          "input": "会议要点或待记录事项",
+          "action": "创建并编辑 Markdown 笔记",
+          "output": "可继续修改的本地笔记"
+        },
+        "recommendation_reason": "有桌面发行版且支持 Windows，Markdown 文件便于长期保存；同步能力仍需留意其开发状态。",
+        "is_featured": false,
+        "url": "https://github.com/bholmesdev/hubble.md",
+        "description": "The best notepad for you and your agents",
+        "license": "MIT",
+        "license_url": "https://github.com/bholmesdev/hubble.md/blob/main/LICENSE",
+        "commit": "2026-11-26T22:42:58Z",
+        "commit_url": "https://github.com/bholmesdev/hubble.md/commit/c1cc404c27b6850f917efa701beb0916202110dd",
+        "release": {
+          "tag": "desktop-v0.3.5",
+          "date": "2026-11-25T20:48:53Z",
+          "url": "https://github.com/bholmesdev/hubble.md/releases/tag/desktop-v0.3.5"
+        },
+        "readme_url": "https://github.com/bholmesdev/hubble.md/blob/main/README.md"
+      },
+      {
+        "name": "stringer-rss/stringer",
+        "category": "影音阅读",
+        "summary": "自托管 RSS 阅读器，可订阅信息源、阅读文章并使用键盘快捷键；实现 Fever API，供兼容的第三方客户端连接。",
+        "platform": "通过 Docker 或服务器运行；具体客户端平台待核实",
+        "cost": "待核实；自托管可能产生服务器费用",
+        "installation": "README 提供 Docker、Linux VPS 和 Heroku 部署说明；需配置 Ruby、Rails、PostgreSQL 等服务，难度较高。",
+        "caution": "不是即装即用的 Windows 桌面软件；部署和维护需要服务器环境。",
+        "scenario": "不想依赖新闻推荐？自建 RSS 阅读器集中阅读订阅内容。",
+        "workflow": {
+          "input": "RSS 订阅源",
+          "action": "在阅读器中查看订阅文章",
+          "output": "按订阅来源整理的文章列表"
+        },
+        "recommendation_reason": "用途清晰且支持自托管；部署依赖较多，更适合有服务器维护经验的人。",
+        "is_featured": false,
+        "url": "https://github.com/stringer-rss/stringer",
+        "description": "A self-hosted, anti-social RSS reader.",
+        "license": "MIT",
+        "license_url": "https://github.com/stringer-rss/stringer/blob/main/LICENSE",
+        "commit": "2026-11-27T01:31:11Z",
+        "commit_url": "https://github.com/stringer-rss/stringer/commit/931cb582dac5dc0dc34a86682d700b6b655e4f18",
+        "release": null,
+        "readme_url": "https://github.com/stringer-rss/stringer/blob/main/README.md"
+      },
+      {
+        "name": "samuelclay/NewsBlur",
+        "category": "影音阅读",
+        "summary": "个人新闻阅读服务和可自托管项目，支持 RSS 订阅、全文搜索、标签、邮件简报、文章布局及对内容进行偏好训练。",
+        "platform": "网页、iOS、macOS、Android；自托管需服务器",
+        "cost": "在线服务有免费额度及付费方案；自托管费用待核实",
+        "installation": "可直接使用 NewsBlur 在线服务；自托管需 Docker 和 Docker Compose，并按 README 启动项目。",
+        "caution": "在线免费使用最多支持 64 个站点；自托管需维护数据库等服务。",
+        "scenario": "订阅来源太多？把 RSS、视频频道和邮件简报集中到新闻阅读器。",
+        "workflow": {
+          "input": "想追踪的网站或频道",
+          "action": "订阅来源并浏览新文章",
+          "output": "集中呈现的个人新闻流"
+        },
+        "recommendation_reason": "在线服务可直接试用，功能和平台说明较具体；免费账户有订阅数量限制。",
+        "is_featured": false,
+        "url": "https://github.com/samuelclay/NewsBlur",
+        "description": "NewsBlur is a personal news reader that brings people together to talk about the world. A new sound of an old instrument.",
+        "license": "MIT",
+        "license_url": "https://github.com/samuelclay/NewsBlur/blob/main/LICENSE.md",
+        "commit": "2026-11-26T23:54:44Z",
+        "commit_url": "https://github.com/samuelclay/NewsBlur/commit/009151eb130c430d401c10eeee077879a390619a",
+        "release": {
+          "tag": "v0.2.2",
+          "date": "2026-08-11T22:18:02Z",
+          "url": "https://github.com/samuelclay/NewsBlur/releases/tag/v0.2.2"
+        },
+        "readme_url": "https://github.com/samuelclay/NewsBlur/blob/main/README.md"
+      },
+      {
+        "name": "arkeep-io/arkeep",
+        "category": "备份同步",
+        "summary": "自托管备份管理工具，通过网页界面为多台机器配置备份策略、目的地、保留规则和恢复任务；底层使用 Restic 与 Rclone。",
+        "platform": "Linux 或 Docker Desktop；管理界面为网页",
+        "cost": "待核实；存储介质或云存储可能另收费",
+        "installation": "README 提供 Docker Compose 快速入门及独立程序等方式；需设置服务器、代理端和备份目的地，难度中等。",
+        "caution": "试用指南要求 Docker 与 Docker Compose；Windows 用户需借助 Docker Desktop。应先验证恢复结果。",
+        "scenario": "怕电脑故障丢文件？设置定期备份，并练习把文件恢复到其他位置。",
+        "workflow": {
+          "input": "待备份文件夹和存储位置",
+          "action": "创建备份策略并恢复文件",
+          "output": "可浏览的备份快照与恢复文件"
+        },
+        "recommendation_reason": "备份和恢复流程都有文档指引，适合管理多台机器；需要自行准备运行环境和存储。",
+        "is_featured": false,
+        "url": "https://github.com/arkeep-io/arkeep",
+        "description": "Self-hosted backup management for multiple servers. Built on Restic and Rclone, with Docker volume discovery and a central web UI.",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/arkeep-io/arkeep/blob/main/LICENSE",
+        "commit": "2026-11-26T10:54:43Z",
+        "commit_url": "https://github.com/arkeep-io/arkeep/commit/3bd54358a1d5c963d730f97048054b48e52251f3",
+        "release": {
+          "tag": "v0.13.0",
+          "date": "2026-11-26T10:28:34Z",
+          "url": "https://github.com/arkeep-io/arkeep/releases/tag/v0.13.0"
+        },
+        "readme_url": "https://github.com/arkeep-io/arkeep/blob/main/README.md"
+      },
+      {
+        "name": "fcorbelli/zpaqfranz",
+        "category": "备份同步",
+        "summary": "支持增量、去重和多版本存档的备份与压缩工具，提供加密、完整性检查和 Windows 图形界面配套项目 Catpaq。",
+        "platform": "Windows、Linux、macOS、FreeBSD 等；图形界面平台依配套项目而定",
+        "cost": "README 称免费；其他费用待核实",
+        "installation": "README 提供 Windows 版本下载和 Catpaq 图形界面入口；具体安装步骤待核实。",
+        "caution": "功能和选项较多；加密密钥需妥善保存，恢复能力应通过实际测试确认。",
+        "scenario": "备份文件常有重复内容？创建可保存多个版本的压缩存档。",
+        "workflow": {
+          "input": "要备份的文件或文件夹",
+          "action": "创建带版本的去重存档",
+          "output": "可用于后续恢复的备份文件"
+        },
+        "recommendation_reason": "支持 Windows 且兼顾多版本备份与图形界面入口；高级功能较多，初次配置需仔细核对。",
+        "is_featured": false,
+        "url": "https://github.com/fcorbelli/zpaqfranz",
+        "description": "Deduplicating archiver with encryption and paranoid-level tests. Swiss army knife for the serious backup and disaster recovery manager. Ransomware neutralizer. Win/Linux/Unix",
+        "license": "MIT",
+        "license_url": "https://github.com/fcorbelli/zpaqfranz/blob/main/LICENSE",
+        "commit": "2026-11-26T18:13:32Z",
+        "commit_url": "https://github.com/fcorbelli/zpaqfranz/commit/4a68c372fa30636b79a782b5ea6b7e7a3d8bc851",
+        "release": {
+          "tag": "65.24",
+          "date": "2026-11-26T18:41:41Z",
+          "url": "https://github.com/fcorbelli/zpaqfranz/releases/tag/65.24"
+        },
+        "readme_url": "https://github.com/fcorbelli/zpaqfranz/blob/main/README.md"
+      },
+      {
+        "name": "EvotecIT/OfficeIMO",
+        "category": "办公处理",
+        "summary": "面向 .NET 和 PowerShell 的 Office 文档处理库，可创建、读取、编辑和转换 Word、Excel、PowerPoint、PDF、Markdown 等格式。",
+        "platform": "支持 .NET 的平台；具体平台要求待核实",
+        "cost": "待核实",
+        "installation": "通过 .NET 包管理器安装 OfficeIMO；需要编写或运行 .NET 程序，适合开发者，普通用户不适用。",
+        "caution": "这是开发库，不是可直接使用的办公软件；复杂文档转换可能存在格式差异。",
+        "scenario": "需要批量生成报表？用 .NET 程序从数据创建 Word、表格和 PDF。",
+        "workflow": {
+          "input": "表格数据与报表字段",
+          "action": "用 .NET 代码生成文档和图表",
+          "output": "可交付的 Office 文档与 PDF"
+        },
+        "recommendation_reason": "提供清楚的文档生成和转换示例；适合有编程需求的人，而非寻找桌面办公套件的用户。",
+        "is_featured": false,
+        "url": "https://github.com/EvotecIT/OfficeIMO",
+        "description": "MIT-licensed, COM-free .NET libraries for creating, reading, editing, converting, rendering, and extracting Office, PDF, email, OneNote, and text formats.",
+        "license": "MIT",
+        "license_url": "https://github.com/EvotecIT/OfficeIMO/blob/master/LICENSE",
+        "commit": "2026-11-27T01:05:14Z",
+        "commit_url": "https://github.com/EvotecIT/OfficeIMO/commit/99d8394c7234504be97e11a631d1f57fcf0a3e3e",
+        "release": {
+          "tag": "OfficeIMO-v3.6.2",
+          "date": "2026-11-18T16:18:01Z",
+          "url": "https://github.com/EvotecIT/OfficeIMO/releases/tag/OfficeIMO-v3.6.2"
+        },
+        "readme_url": "https://github.com/EvotecIT/OfficeIMO/blob/master/README.md"
+      },
+      {
+        "name": "imagescript/ImageScript",
+        "category": "开发辅助",
+        "summary": "TypeScript 图像处理库，可解码、编辑和编码图像；支持调整尺寸等处理，适用于 Node.js、Deno、Bun 和浏览器等环境。",
+        "platform": "Node.js、Deno、Bun、浏览器及边缘运行环境",
+        "cost": "待核实",
+        "installation": "Node.js 项目可运行 npm install imagescript；需要 JavaScript 或 TypeScript 开发环境，安装难度低。",
+        "caution": "这是编程库，不带面向普通用户的桌面界面；需自行编写处理脚本。",
+        "scenario": "网站图片尺寸不合适？写脚本批量调整图片尺寸并另存。",
+        "workflow": {
+          "input": "待处理的图片文件",
+          "action": "用代码解码并调整图片尺寸",
+          "output": "指定尺寸的图片文件"
+        },
+        "recommendation_reason": "安装命令和示例明确，适合把重复图片处理写成脚本；不是独立图像编辑器。",
+        "is_featured": false,
+        "url": "https://github.com/imagescript/ImageScript",
+        "description": "Pure TypeScript image processing that runs everywhere",
+        "license": "MIT",
+        "license_url": "https://github.com/imagescript/ImageScript/blob/master/LICENSE",
+        "commit": "2026-11-26T22:13:14Z",
+        "commit_url": "https://github.com/imagescript/ImageScript/commit/9a86a7e222b08055ffac819faff1bf39893fd2a7",
+        "release": {
+          "tag": "v4.0.1",
+          "date": "2026-11-25T20:20:12Z",
+          "url": "https://github.com/imagescript/ImageScript/releases/tag/v4.0.1"
+        },
+        "readme_url": "https://github.com/imagescript/ImageScript/blob/master/README.md"
+      },
+      {
+        "name": "starling-build/starling",
+        "category": "办公处理",
+        "summary": "包含 Writer、Slides 和 Sheets 的办公应用项目，提供可在浏览器中试用的应用，同时开发终端和 Linux 桌面环境。",
+        "platform": "Office 可通过浏览器试用；桌面项目面向 Linux，另有 Windows WSL2 目标",
+        "cost": "README 称可免费使用；其他费用待核实",
+        "installation": "可先通过项目提供的 Writer、Slides 或 Sheets 网页入口试用；桌面安装需按产品指南操作。",
+        "caution": "项目处于积极开发阶段，功能和界面会变化；不同应用的成熟度和平台支持各异。",
+        "scenario": "临时编辑演示文稿？先在浏览器打开项目提供的 Slides 应用。",
+        "workflow": {
+          "input": "演示文稿内容",
+          "action": "在 Slides 网页应用中编辑",
+          "output": "完成编辑的演示文稿"
+        },
+        "recommendation_reason": "办公应用提供网页入口，可降低初次尝试门槛；项目仍在开发，需留意应用成熟度。",
+        "is_featured": false,
+        "url": "https://github.com/starling-build/starling",
+        "description": "Starling — a new Linux desktop environment: Swift shell, its own compositor, a Flutter-to-Swift framework port, and first-party apps",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/starling-build/starling/blob/main/LICENSE",
+        "commit": "2026-11-27T00:28:33Z",
+        "commit_url": "https://github.com/starling-build/starling/commit/103c533d997ab6d967afbf29e3a2c494e727b131",
+        "release": {
+          "tag": "office-v0.1.0",
+          "date": "2026-10-14T03:19:22Z",
+          "url": "https://github.com/starling-build/starling/releases/tag/office-v0.1.0"
+        },
+        "readme_url": "https://github.com/starling-build/starling/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-27T01:32:56.868Z",
+    "architecture": {
+      "version": 2,
+      "collected_at": "2026-11-27T01:32:56.869Z",
+      "status": "empty",
+      "projects": []
+    },
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-27T01:33:02.195Z",
+      "status": "empty",
+      "projects": []
+    }
   }
 }
