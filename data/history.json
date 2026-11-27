@@ -7605,7 +7605,7 @@
     "delivery_format_version": 6
   },
   "2026-11-27": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "FarGroup/FarManager",
