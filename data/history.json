@@ -7605,7 +7605,7 @@
     "delivery_format_version": 6
   },
   "2026-11-27": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "FarGroup/FarManager",
@@ -7908,6 +7908,8 @@
       "collected_at": "2026-11-27T01:33:02.195Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-27T01:33:09.766Z",
+    "delivery_format_version": 6
   }
 }
