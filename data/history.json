@@ -7911,5 +7911,311 @@
     },
     "sent_at": "2026-11-27T01:33:09.766Z",
     "delivery_format_version": 6
+  },
+  "2026-11-28": {
+    "status": "prepared",
+    "projects": [
+      {
+        "name": "Ciao1019/ArcMD",
+        "category": "笔记写作",
+        "summary": "原生 Markdown 编辑器，可直接读写本地 .md 文件，在同一编辑页面中呈现格式、表格和公式，适合整理笔记与撰写长文。",
+        "platform": "Windows、macOS、Linux",
+        "cost": "开源；是否有其他收费项目待核实",
+        "installation": "从发布页下载 Windows 安装程序或 ZIP，安装较简单",
+        "caution": "仍处于早期版本；重要文稿建议自行备份。",
+        "scenario": "想写笔记又不想被专有格式绑定？直接编辑本地 Markdown 文件。",
+        "workflow": {
+          "input": "准备一份本地笔记",
+          "action": "编辑文字、表格和公式",
+          "output": "得到可继续使用的 .md 文件"
+        },
+        "recommendation_reason": "提供明确的 Windows 安装方式，直接使用本地 Markdown 文件，普通用户容易开始尝试。",
+        "is_featured": true,
+        "url": "https://github.com/Ciao1019/ArcMD",
+        "description": "Proof that native MyGo apps can be works of art. ArcMD is an open-source Markdown editor delivering 120Hz fluid responsiveness—bringing Arc-inspired elegance and seamless performance to local writing.",
+        "license": "MIT",
+        "license_url": "https://github.com/Ciao1019/ArcMD/blob/main/LICENSE",
+        "commit": "2026-11-28T01:14:41Z",
+        "commit_url": "https://github.com/Ciao1019/ArcMD/commit/f7e52e84c0339fc41db0554be13fdc97f1a19ea3",
+        "release": {
+          "tag": "v0.5.1",
+          "date": "2026-11-27T13:51:50Z",
+          "url": "https://github.com/Ciao1019/ArcMD/releases/tag/v0.5.1"
+        },
+        "readme_url": "https://github.com/Ciao1019/ArcMD/blob/main/README.md"
+      },
+      {
+        "name": "FreshRSS/FreshRSS",
+        "category": "影音阅读",
+        "summary": "自托管 RSS 阅读器，可集中订阅网站更新，按标签整理文章，也支持通过浏览器在电脑和手机上阅读。",
+        "platform": "浏览器；服务器可运行于 Linux 或 Windows",
+        "cost": "项目标注免费；服务器等运行成本需自行承担",
+        "installation": "需配置 Web 服务器、PHP 和数据库，有一定部署难度",
+        "caution": "需要自行维护服务；手机浏览器上部分功能不可用。",
+        "scenario": "每天逐个打开新闻网站太费时？订阅来源后集中查看更新。",
+        "workflow": {
+          "input": "准备常看的 RSS 地址",
+          "action": "添加订阅并阅读更新",
+          "output": "得到集中的文章列表"
+        },
+        "recommendation_reason": "能解决多网站追更的问题，但更适合愿意自行部署阅读服务的人。",
+        "is_featured": false,
+        "url": "https://github.com/FreshRSS/FreshRSS",
+        "description": "A free, self-hostable news aggregator…",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/FreshRSS/FreshRSS/blob/edge/LICENSE.txt",
+        "commit": "2026-11-28T00:45:15Z",
+        "commit_url": "https://github.com/FreshRSS/FreshRSS/commit/5a58b2236130d664aff5b83d9aaee6fbeed7690d",
+        "release": {
+          "tag": "1.31.0",
+          "date": "2026-11-23T08:27:04Z",
+          "url": "https://github.com/FreshRSS/FreshRSS/releases/tag/1.31.0"
+        },
+        "readme_url": "https://github.com/FreshRSS/FreshRSS/blob/edge/README.md"
+      },
+      {
+        "name": "BRF-Tech/filex",
+        "category": "文件管理",
+        "summary": "带网页界面的自托管文件管理器，可并列浏览本地文件及 S3、SFTP、WebDAV 等存储，并在存储之间复制或移动文件。",
+        "platform": "网页端；资料提及 Windows、Linux 和 macOS 桌面端",
+        "cost": "开源；托管资源及其他费用待核实",
+        "installation": "可用 Docker 启动服务，也提供二进制运行方式；配置存储有一定难度",
+        "caution": "对外开放前应设置账户权限；Docker 示例默认以 root 运行容器。",
+        "scenario": "文件散落在本地和多个远程存储？放进同一个网页目录中整理。",
+        "workflow": {
+          "input": "准备本地文件夹和存储连接",
+          "action": "并列浏览并复制文件",
+          "output": "得到整理后的文件目录"
+        },
+        "recommendation_reason": "适合需要统一管理多处文件的人，但部署和权限配置需要花些时间。",
+        "is_featured": false,
+        "url": "https://github.com/BRF-Tech/filex",
+        "description": "Self-hosted file manager & sharing with a web UI, in one Go binary - open-source alternative to Nextcloud, Dropbox and Google Drive. Web-based file browser for local, S3, SFTP, WebDAV, FTP and SMB storage: private cloud served as S3, SFTP, NFS, WebDAV. SSO/LDAP, multi-tenant, encrypted folders, embeddable web component, desktop app, MCP server.",
+        "license": "MIT",
+        "license_url": "https://github.com/BRF-Tech/filex/blob/main/LICENSE",
+        "commit": "2026-11-28T00:22:28Z",
+        "commit_url": "https://github.com/BRF-Tech/filex/commit/33da87c1523a42ffe22a605f7b4a57e4693e9834",
+        "release": {
+          "tag": "v0.62.0",
+          "date": "2026-11-27T06:54:24Z",
+          "url": "https://github.com/BRF-Tech/filex/releases/tag/v0.62.0"
+        },
+        "readme_url": "https://github.com/BRF-Tech/filex/blob/main/README.md"
+      },
+      {
+        "name": "x007xyz/flycut",
+        "category": "设计创作",
+        "summary": "基于浏览器的视频编辑工具，支持导入素材、在时间线上剪切片段并导出视频；当前草稿及导入媒体会保存在所用浏览器中。",
+        "platform": "网页端；具体浏览器兼容范围待核实",
+        "cost": "开源；网站服务是否收费待核实",
+        "installation": "资料提供在线网站；自行部署方式待核实",
+        "caution": "清除该网站的浏览器数据会删除本地草稿，应及时导出成品。",
+        "scenario": "要把几段视频剪成短片？在浏览器时间线上修剪并导出。",
+        "workflow": {
+          "input": "准备视频和音频素材",
+          "action": "导入素材并修剪片段",
+          "output": "得到导出的视频"
+        },
+        "recommendation_reason": "有明确的在线使用入口和剪辑流程，适合先处理简单的视频素材。",
+        "is_featured": false,
+        "url": "https://github.com/x007xyz/flycut",
+        "description": "A web-based video editing tool implemented with WebCodecs, similar to CapCut Web.使用webcodecs实现的Web端视频编辑工具，类似剪映Web版。",
+        "license": "AGPL-3.0",
+        "license_url": "https://github.com/x007xyz/flycut/blob/main/LICENSE",
+        "commit": "2026-11-28T00:41:54Z",
+        "commit_url": "https://github.com/x007xyz/flycut/commit/edccd258f20b67f22f4d2834682b07c039f59e07",
+        "release": null,
+        "readme_url": "https://github.com/x007xyz/flycut/blob/main/README.md"
+      },
+      {
+        "name": "wzh4869/AppPorts",
+        "category": "系统工具",
+        "summary": "macOS 应用与数据迁移工具，可把适合迁移的大型应用或数据移至外置存储，原位置保留访问入口，以腾出内置磁盘空间。",
+        "platform": "macOS",
+        "cost": "项目说明免费",
+        "installation": "可从发布页获取应用；具体安装步骤待核实",
+        "caution": "迁移后的应用依赖外置磁盘保持连接；迁移前应备份重要数据。",
+        "scenario": "Mac 内置磁盘快满了？把适合迁移的大型应用移到外置硬盘。",
+        "workflow": {
+          "input": "准备外置硬盘和大型应用",
+          "action": "选择应用并迁移",
+          "output": "腾出部分内置磁盘空间"
+        },
+        "recommendation_reason": "针对磁盘空间不足给出具体办法，但仅适合 Mac，且操作前需考虑外置盘依赖。",
+        "is_featured": false,
+        "url": "https://github.com/wzh4869/AppPorts",
+        "description": "📦 A macOS utility to seamlessly migrate applications to external storage and reclaim local disk space.【一款 macOS 工具，无缝迁移应用到外部存储并自动建立链接，释放宝贵的本地空间】",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/wzh4869/AppPorts/blob/main/LICENSE",
+        "commit": "2026-11-28T00:56:25Z",
+        "commit_url": "https://github.com/wzh4869/AppPorts/commit/1c9503699420737bc1512c7fffec409520618153",
+        "release": {
+          "tag": "2.4.0",
+          "date": "2026-11-27T05:18:11Z",
+          "url": "https://github.com/wzh4869/AppPorts/releases/tag/2.4.0"
+        },
+        "readme_url": "https://github.com/wzh4869/AppPorts/blob/main/README.md"
+      },
+      {
+        "name": "javadev/file-manager",
+        "category": "文件管理",
+        "summary": "Java Swing 文件管理器，可通过目录树和列表浏览文件，按名称筛选当前目录，并执行复制、重命名和删除等操作。",
+        "platform": "支持 Java 8 及以上版本的桌面系统；具体系统范围待核实",
+        "cost": "开源；其他费用待核实",
+        "installation": "资料说明克隆源码后用 Maven 构建，再通过 Java 运行；需要一定技术基础",
+        "caution": "删除目录可递归进行；操作前确认目标，运行时还需满足 Java 依赖。",
+        "scenario": "文件夹内容太多？按文件名筛选，再复制需要的文件。",
+        "workflow": {
+          "input": "准备要整理的文件夹",
+          "action": "筛选文件并复制到目标目录",
+          "output": "得到整理好的文件"
+        },
+        "recommendation_reason": "文件浏览和基础操作描述明确，但需要自行构建，入门便利性一般。",
+        "is_featured": false,
+        "url": "https://github.com/javadev/file-manager",
+        "description": "A java/swing basic File Manager",
+        "license": "MIT",
+        "license_url": "https://github.com/javadev/file-manager/blob/main/LICENSE",
+        "commit": "2026-11-28T00:10:43Z",
+        "commit_url": "https://github.com/javadev/file-manager/commit/064b35d1f5dae9a5e1001a1b50cf52cc64c6df26",
+        "release": {
+          "tag": "v1.0",
+          "date": "2015-08-06T06:03:10Z",
+          "url": "https://github.com/javadev/file-manager/releases/tag/v1.0"
+        },
+        "readme_url": "https://github.com/javadev/file-manager/blob/main/README.md"
+      },
+      {
+        "name": "Euphoriyy/appearance.koplugin",
+        "category": "影音阅读",
+        "summary": "KOReader 外观插件，可分别调整阅读界面和书页的主题、字体与颜色，改善电子书及文档的阅读观感。",
+        "platform": "运行 KOReader 的设备；具体兼容设备待核实",
+        "cost": "开源；其他费用待核实",
+        "installation": "下载发布包，将插件目录放入 KOReader 的 plugins 文件夹并重启；难度较低",
+        "caution": "必须先有 KOReader；具体显示效果取决于设备和文档。",
+        "scenario": "电子书页面颜色看着不舒服？调整书页背景和文字颜色。",
+        "workflow": {
+          "input": "准备正在阅读的电子书",
+          "action": "调整书页主题和字体",
+          "output": "得到更合适的阅读页面"
+        },
+        "recommendation_reason": "针对阅读观感提供直接可调的选项，但使用前提是已安装 KOReader。",
+        "is_featured": false,
+        "url": "https://github.com/Euphoriyy/appearance.koplugin",
+        "description": "A plugin that allows you to customize KOReader's look and color scheme. It adds color options for the interface and books, plus progress bar and highlights. It also adds themes, fonts, and background images. ",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/Euphoriyy/appearance.koplugin/blob/master/LICENSE",
+        "commit": "2026-11-28T00:36:30Z",
+        "commit_url": "https://github.com/Euphoriyy/appearance.koplugin/commit/70b25877b031a88a67b45ef8cef3e788cf150745",
+        "release": {
+          "tag": "v1.9.0",
+          "date": "2026-10-12T06:52:08Z",
+          "url": "https://github.com/Euphoriyy/appearance.koplugin/releases/tag/v1.9.0"
+        },
+        "readme_url": "https://github.com/Euphoriyy/appearance.koplugin/blob/master/README.md"
+      },
+      {
+        "name": "jchultarsky/mirador",
+        "category": "任务管理",
+        "summary": "终端个人看板，重点提供可编辑的任务列表，支持截止日期、优先级、标签和筛选，同时展示日历、天气等信息。",
+        "platform": "Windows、macOS、Linux、NetBSD",
+        "cost": "开源；其他费用待核实",
+        "installation": "资料显示可通过发布包或 Rust 包渠道获取；具体步骤待核实，需适应终端操作",
+        "caution": "天气、行情及新闻面板会访问相应网络来源；不需要时可关闭。",
+        "scenario": "待办事项总被其他窗口盖住？在常开的终端看板里查看和编辑。",
+        "workflow": {
+          "input": "准备要完成的事项",
+          "action": "添加任务并设置截止日期",
+          "output": "得到可随时查看的任务列表"
+        },
+        "recommendation_reason": "任务管理能力具体，且覆盖 Windows；终端界面更适合习惯键盘操作的人。",
+        "is_featured": false,
+        "url": "https://github.com/jchultarsky/mirador",
+        "description": "An opinionated personal dashboard for your terminal — world clocks, calendar and agenda, weather, tasks, notes, markets and live system metrics in a tab you leave open all day. Rust + ratatui.",
+        "license": "MIT",
+        "license_url": "https://github.com/jchultarsky/mirador/blob/main/LICENSE",
+        "commit": "2026-11-28T00:51:45Z",
+        "commit_url": "https://github.com/jchultarsky/mirador/commit/9d0960326d55b5abbc95c2bc8b21fd048a7531df",
+        "release": {
+          "tag": "v1.22.2",
+          "date": "2026-10-22T16:51:10Z",
+          "url": "https://github.com/jchultarsky/mirador/releases/tag/v1.22.2"
+        },
+        "readme_url": "https://github.com/jchultarsky/mirador/blob/main/README.md"
+      },
+      {
+        "name": "gyroflow/gyroflow",
+        "category": "设计创作",
+        "summary": "利用陀螺仪运动数据稳定视频画面的工具，可预览并调整防抖参数，适合处理运动相机拍摄的抖动画面。",
+        "platform": "Windows、Linux、macOS、Android、iOS",
+        "cost": "开源；其他费用待核实",
+        "installation": "从项目发布页下载对应平台版本；具体安装步骤待核实",
+        "caution": "防抖依赖视频内含或另行提供可用的陀螺仪数据，并非所有视频都适用。",
+        "scenario": "运动相机视频晃得厉害？用拍摄时的陀螺仪数据稳定画面。",
+        "workflow": {
+          "input": "准备视频及陀螺仪数据",
+          "action": "预览并调整防抖参数",
+          "output": "得到稳定后的视频"
+        },
+        "recommendation_reason": "解决的问题明确且支持 Windows，但素材必须具备可用的运动数据。",
+        "is_featured": false,
+        "url": "https://github.com/gyroflow/gyroflow",
+        "description": "Video stabilization using gyroscope data",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/gyroflow/gyroflow/blob/master/LICENSE",
+        "commit": "2026-11-28T00:18:20Z",
+        "commit_url": "https://github.com/gyroflow/gyroflow/commit/f63df855bc5bb4430528997423e2c3613a8baaec",
+        "release": {
+          "tag": "v1.7.1",
+          "date": "2026-11-20T04:58:59Z",
+          "url": "https://github.com/gyroflow/gyroflow/releases/tag/v1.7.1"
+        },
+        "readme_url": "https://github.com/gyroflow/gyroflow/blob/master/README.md"
+      },
+      {
+        "name": "cvzi/WallpaperExport",
+        "category": "备份同步",
+        "summary": "Android 当前壁纸备份工具，主要用途是从设备导出正在使用的壁纸，方便在更换壁纸前留存一份。",
+        "platform": "Android",
+        "cost": "开源；其他费用待核实",
+        "installation": "可从 F-Droid 或项目发布页获取 APK，安装较简单",
+        "caution": "资料指出在 Android 13 上读取当前壁纸涉及较宽的文件访问权限，授权前应了解权限范围。",
+        "scenario": "想换壁纸又怕找不回旧图？先导出当前壁纸留存。",
+        "workflow": {
+          "input": "准备当前使用的壁纸",
+          "action": "用应用导出壁纸",
+          "output": "得到留存的壁纸文件"
+        },
+        "recommendation_reason": "用途单一但清晰，有直接下载安装渠道；需留意文件访问权限。",
+        "is_featured": false,
+        "url": "https://github.com/cvzi/WallpaperExport",
+        "description": "Export the current and default wallpaper on Android",
+        "license": "GPL-3.0",
+        "license_url": "https://github.com/cvzi/WallpaperExport/blob/main/LICENSE",
+        "commit": "2026-11-27T20:58:52Z",
+        "commit_url": "https://github.com/cvzi/WallpaperExport/commit/bf1322a13186e57bb8a14b31c94ba31a0ff757d2",
+        "release": {
+          "tag": "v1.1.5",
+          "date": "2026-11-27T21:06:15Z",
+          "url": "https://github.com/cvzi/WallpaperExport/releases/tag/v1.1.5"
+        },
+        "readme_url": "https://github.com/cvzi/WallpaperExport/blob/main/README.md"
+      }
+    ],
+    "editorial_version": 2,
+    "generated_at": "2026-11-28T01:32:49.797Z",
+    "architecture": {
+      "version": 2,
+      "collected_at": "2026-11-28T01:32:49.798Z",
+      "status": "empty",
+      "projects": []
+    },
+    "trending": {
+      "version": 2,
+      "source": "https://github.com/trending?since=daily",
+      "collected_at": "2026-11-28T01:32:55.187Z",
+      "status": "empty",
+      "projects": []
+    }
   }
 }
