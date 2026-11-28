@@ -7913,7 +7913,7 @@
     "delivery_format_version": 6
   },
   "2026-11-28": {
-    "status": "sending",
+    "status": "sent",
     "projects": [
       {
         "name": "Ciao1019/ArcMD",
@@ -8216,6 +8216,8 @@
       "collected_at": "2026-11-28T01:32:55.187Z",
       "status": "empty",
       "projects": []
-    }
+    },
+    "sent_at": "2026-11-28T01:33:01.339Z",
+    "delivery_format_version": 6
   }
 }
