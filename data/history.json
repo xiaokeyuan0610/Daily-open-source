@@ -7913,7 +7913,7 @@
     "delivery_format_version": 6
   },
   "2026-11-28": {
-    "status": "prepared",
+    "status": "sending",
     "projects": [
       {
         "name": "Ciao1019/ArcMD",
